@@ -12,7 +12,6 @@ public class OreRealgar extends Block {
                 .sound(SoundType.STONE)
                 .harvestLevel(3)
                 .harvestTool(ToolType.PICKAXE)
-
                 );
     }
 }

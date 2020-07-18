@@ -13,13 +13,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class RegistryHandler {
 
+    //Init Handler
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Lumens.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Lumens.MOD_ID);
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
-    //Init Handler
 
     //Item Registry
         //Crystals
@@ -86,12 +86,12 @@ public class RegistryHandler {
     public static final RegistryObject<Item> YALITE = ITEMS.register("ingot_yalite", ItemBase::new);
     public static final RegistryObject<Item> ZINC = ITEMS.register("ingot_zinc", ItemBase::new);
 
-    //Blocks
+    //Block Registry
         //Ores
     public static final RegistryObject<Block> ORE_REALGAR= BLOCKS.register("ore_realgar", OreRealgar::new);
 
 
-    //Block Items
+    //Block Item Registry
         //Ores
     public static final RegistryObject<Item> ORE_REALGAR_ITEM = ITEMS.register("ore_realgar", () -> new BlockItemBase(ORE_REALGAR.get()));
 }
