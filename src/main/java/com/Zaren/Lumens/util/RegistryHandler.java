@@ -1,7 +1,10 @@
 package com.Zaren.Lumens.util;
 
 import com.Zaren.Lumens.Lumens;
+import com.Zaren.Lumens.blocks.BlockItemBase;
+import com.Zaren.Lumens.blocks.OreRealgar;
 import com.Zaren.Lumens.items.ItemBase;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -11,12 +14,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class RegistryHandler {
 
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Lumens.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Lumens.MOD_ID);
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
     //Init Handler
 
-    //Crystals
+    //Item Registry
+        //Crystals
     public static final RegistryObject<Item> AZURITE = ITEMS.register("crystal_azurite", ItemBase::new);
     public static final RegistryObject<Item> REALGAR = ITEMS.register("crystal_realgar", ItemBase::new);
     public static final RegistryObject<Item> NEPHRITE = ITEMS.register("crystal_nephrite", ItemBase::new);
@@ -31,7 +37,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> ORTALOS = ITEMS.register("crystal_ortalos", ItemBase::new);
     public static final RegistryObject<Item> DRAKANINE = ITEMS.register("crystal_drakanine", ItemBase::new);
 
-    //Ingots
+        //Ingots
     public static final RegistryObject<Item> ADAMANT = ITEMS.register("ingot_adamant", ItemBase::new);
     public static final RegistryObject<Item> ALSCAN = ITEMS.register("ingot_alscan", ItemBase::new);
     public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("ingot_aluminium", ItemBase::new);
@@ -79,5 +85,13 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TUNGSTEN = ITEMS.register("ingot_tungsten", ItemBase::new);
     public static final RegistryObject<Item> YALITE = ITEMS.register("ingot_yalite", ItemBase::new);
     public static final RegistryObject<Item> ZINC = ITEMS.register("ingot_zinc", ItemBase::new);
-    //Item Registry
+
+    //Blocks
+        //Ores
+    public static final RegistryObject<Block> ORE_REALGAR= BLOCKS.register("ore_realgar", OreRealgar::new);
+
+
+    //Block Items
+        //Ores
+    public static final RegistryObject<Item> ORE_REALGAR_ITEM = ITEMS.register("ore_realgar", () -> new BlockItemBase(ORE_REALGAR.get()));
 }

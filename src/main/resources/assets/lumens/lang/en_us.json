@@ -60,5 +60,9 @@
   "item.lumens.ingot_titanium": "Titanium Ingot",
   "item.lumens.ingot_tungsten": "Tungsten Ingot",
   "item.lumens.ingot_yalite": "Yalite Ingot",
-  "item.lumens.ingot_zinc": "Zinc Ingot"
+  "item.lumens.ingot_zinc": "Zinc Ingot",
+
+
+
+  "block.lumens.ore_realgar": "Realgar Ore"
 }
