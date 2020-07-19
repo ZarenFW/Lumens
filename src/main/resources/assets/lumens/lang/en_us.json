@@ -14,6 +14,9 @@
   "item.lumens.crystal_arnalios": "Arnalios",
   "item.lumens.crystal_ortalos": "Ortalos",
   "item.lumens.crystal_drakanine": "Drakanine",
+
+
+
   "item.lumens.ingot_adamant": "Adamant Ingot",
   "item.lumens.ingot_alscan": "Alscan Ingot",
   "item.lumens.ingot_aluminium": "Aluminium Ingot",
@@ -64,5 +67,34 @@
 
 
 
-  "block.lumens.ore_realgar": "Realgar Ore"
+  "block.lumens.ore_aluminium": "Aluminium Ore",
+  "block.lumens.ore_antarium": "Antarium Ore",
+  "block.lumens.ore_azurite": "Azurite Ore",
+  "block.lumens.ore_celestine": "Celestine Ore",
+  "block.lumens.ore_copper": "Copper Ore",
+  "block.lumens.ore_kai_stone": "Kai Stone Ore",
+  "block.lumens.ore_lithium": "Lithium Ore",
+  "block.lumens.ore_lorite": "Lorite Ore",
+  "block.lumens.ore_lunarite": "Lunarite Ore",
+  "block.lumens.ore_manganese": "Manganese Ore",
+  "block.lumens.ore_mythril": "Mythril Ore",
+  "block.lumens.ore_realgar": "Realgar Ore",
+  "block.lumens.ore_silver": "Silver Ore",
+  "block.lumens.ore_tin": "Tin Ore",
+  "block.lumens.ore_yalite": "Yalite Ore",
+  "block.lumens.ore_zinc": "Zinc Ore",
+
+  "block.lumens.ore_arnalios": "Arnalios Ore",
+  "block.lumens.ore_carnelian": "Carnelian Ore",
+  "block.lumens.ore_chrome": "Chrome Ore",
+  "block.lumens.ore_germanium": "Germanium Ore",
+  "block.lumens.ore_indium": "Indium Ore",
+  "block.lumens.ore_karrosh": "Karrosh Ore",
+  "block.lumens.ore_magnesium": "Magnesium Ore",
+  "block.lumens.ore_nanite": "Nanite Ore",
+  "block.lumens.ore_nephrite": "Nephrite Ore",
+  "block.lumens.ore_pyrolite": "Pyrolite Ore",
+  "block.lumens.ore_rhodium": "Rhodium Ore",
+  "block.lumens.ore_syraltite": "Syraltite Ore",
+  "block.lumens.ore_titanium": "Titanium Ore"
 }

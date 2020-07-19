@@ -2,8 +2,9 @@ package com.Zaren.Lumens.util;
 
 import com.Zaren.Lumens.Lumens;
 import com.Zaren.Lumens.blocks.BlockItemBase;
-import com.Zaren.Lumens.blocks.OreRealgar;
-import com.Zaren.Lumens.items.ItemBase;
+import com.Zaren.Lumens.blocks.OreBlock;
+import com.Zaren.Lumens.items.ItemCrystal;
+import com.Zaren.Lumens.items.ItemIngot;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -23,75 +24,137 @@ public class RegistryHandler {
 
     //Item Registry
         //Crystals
-    public static final RegistryObject<Item> AZURITE = ITEMS.register("crystal_azurite", ItemBase::new);
-    public static final RegistryObject<Item> REALGAR = ITEMS.register("crystal_realgar", ItemBase::new);
-    public static final RegistryObject<Item> NEPHRITE = ITEMS.register("crystal_nephrite", ItemBase::new);
-    public static final RegistryObject<Item> CARNELIAN = ITEMS.register("crystal_carnelian", ItemBase::new);
-    public static final RegistryObject<Item> TANZANITE = ITEMS.register("crystal_tanzanite", ItemBase::new);
-    public static final RegistryObject<Item> HELIOTROPE = ITEMS.register("crystal_heliotrope", ItemBase::new);
-    public static final RegistryObject<Item> CELESTINE = ITEMS.register("crystal_celestine", ItemBase::new);
-    public static final RegistryObject<Item> KAI_STONE = ITEMS.register("crystal_kai_stone", ItemBase::new);
-    public static final RegistryObject<Item> LUNARITE = ITEMS.register("crystal_lunarite", ItemBase::new);
-    public static final RegistryObject<Item> SYRALTITE = ITEMS.register("crystal_syraltite", ItemBase::new);
-    public static final RegistryObject<Item> ARNALIOS = ITEMS.register("crystal_arnalios", ItemBase::new);
-    public static final RegistryObject<Item> ORTALOS = ITEMS.register("crystal_ortalos", ItemBase::new);
-    public static final RegistryObject<Item> DRAKANINE = ITEMS.register("crystal_drakanine", ItemBase::new);
+        public static final RegistryObject<Item> AZURITE = ITEMS.register("crystal_azurite", ItemCrystal::new);
+        public static final RegistryObject<Item> REALGAR = ITEMS.register("crystal_realgar", ItemCrystal::new);
+        public static final RegistryObject<Item> NEPHRITE = ITEMS.register("crystal_nephrite", ItemCrystal::new);
+        public static final RegistryObject<Item> CARNELIAN = ITEMS.register("crystal_carnelian", ItemCrystal::new);
+        public static final RegistryObject<Item> TANZANITE = ITEMS.register("crystal_tanzanite", ItemCrystal::new);
+        public static final RegistryObject<Item> HELIOTROPE = ITEMS.register("crystal_heliotrope", ItemCrystal::new);
+        public static final RegistryObject<Item> CELESTINE = ITEMS.register("crystal_celestine", ItemCrystal::new);
+        public static final RegistryObject<Item> KAI_STONE = ITEMS.register("crystal_kai_stone", ItemCrystal::new);
+        public static final RegistryObject<Item> LUNARITE = ITEMS.register("crystal_lunarite", ItemCrystal::new);
+        public static final RegistryObject<Item> SYRALTITE = ITEMS.register("crystal_syraltite", ItemCrystal::new);
+        public static final RegistryObject<Item> ARNALIOS = ITEMS.register("crystal_arnalios", ItemCrystal::new);
+        public static final RegistryObject<Item> ORTALOS = ITEMS.register("crystal_ortalos", ItemCrystal::new);
+        public static final RegistryObject<Item> DRAKANINE = ITEMS.register("crystal_drakanine", ItemCrystal::new);
 
         //Ingots
-    public static final RegistryObject<Item> ADAMANT = ITEMS.register("ingot_adamant", ItemBase::new);
-    public static final RegistryObject<Item> ALSCAN = ITEMS.register("ingot_alscan", ItemBase::new);
-    public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("ingot_aluminium", ItemBase::new);
-    public static final RegistryObject<Item> ANTARIUM = ITEMS.register("ingot_antarium", ItemBase::new);
-    public static final RegistryObject<Item> BLAZING_ALLOY = ITEMS.register("ingot_blazing_alloy", ItemBase::new);
-    public static final RegistryObject<Item> BRASS = ITEMS.register("ingot_brass", ItemBase::new);
-    public static final RegistryObject<Item> BRONZE = ITEMS.register("ingot_bronze", ItemBase::new);
-    public static final RegistryObject<Item> CELESTIAL_KALINITE = ITEMS.register("ingot_celestial_kalinite", ItemBase::new);
-    public static final RegistryObject<Item> CHROME = ITEMS.register("ingot_chrome", ItemBase::new);
-    public static final RegistryObject<Item> CHROME_STEEL = ITEMS.register("ingot_chrome_steel", ItemBase::new);
-    public static final RegistryObject<Item> COPPER = ITEMS.register("ingot_copper", ItemBase::new);
-    public static final RegistryObject<Item> DRACONIAN_SCRITH = ITEMS.register("ingot_draconian_scrith", ItemBase::new);
-    public static final RegistryObject<Item> ELECTRUM = ITEMS.register("ingot_electrum", ItemBase::new);
-    public static final RegistryObject<Item> ENCHANTED_MYTHRIL = ITEMS.register("ingot_enchanted_mythril", ItemBase::new);
-    public static final RegistryObject<Item> ENDER_GOLD = ITEMS.register("ingot_ender_gold", ItemBase::new);
-    public static final RegistryObject<Item> GALINSTAN = ITEMS.register("ingot_galinstan", ItemBase::new);
-    public static final RegistryObject<Item> GALLIUM = ITEMS.register("ingot_gallium", ItemBase::new);
-    public static final RegistryObject<Item> HC_STEEL = ITEMS.register("ingot_hc_steel", ItemBase::new);
-    public static final RegistryObject<Item> INDIUM = ITEMS.register("ingot_indium", ItemBase::new);
-    public static final RegistryObject<Item> KAI_BRONZE = ITEMS.register("ingot_kai_bronze", ItemBase::new);
-    public static final RegistryObject<Item> KALINITE = ITEMS.register("ingot_kalinite", ItemBase::new);
-    public static final RegistryObject<Item> KARROSH = ITEMS.register("ingot_karrosh", ItemBase::new);
-    public static final RegistryObject<Item> KOVAR = ITEMS.register("ingot_kovar", ItemBase::new);
-    public static final RegistryObject<Item> LITHIUM = ITEMS.register("ingot_lithium", ItemBase::new);
-    public static final RegistryObject<Item> LORITE = ITEMS.register("ingot_lorite", ItemBase::new);
-    public static final RegistryObject<Item> MAGNALIUM = ITEMS.register("ingot_magnalium", ItemBase::new);
-    public static final RegistryObject<Item> MAGNESIUM = ITEMS.register("ingot_magnesium", ItemBase::new);
-    public static final RegistryObject<Item> MANGANESE = ITEMS.register("ingot_manganese", ItemBase::new);
-    public static final RegistryObject<Item> MYTHRIL = ITEMS.register("ingot_mythril", ItemBase::new);
-    public static final RegistryObject<Item> NANITE = ITEMS.register("ingot_nanite", ItemBase::new);
-    public static final RegistryObject<Item> NETHER_SILVER = ITEMS.register("ingot_nether_silver", ItemBase::new);
-    public static final RegistryObject<Item> PYROLITE = ITEMS.register("ingot_pyrolite", ItemBase::new);
-    public static final RegistryObject<Item> RADIUM = ITEMS.register("ingot_radium", ItemBase::new);
-    public static final RegistryObject<Item> RHENIUM = ITEMS.register("ingot_rhenium", ItemBase::new);
-    public static final RegistryObject<Item> RHODIUM = ITEMS.register("ingot_rhodium", ItemBase::new);
-    public static final RegistryObject<Item> SCRITH = ITEMS.register("ingot_scrith", ItemBase::new);
-    public static final RegistryObject<Item> SILVER = ITEMS.register("ingot_silver", ItemBase::new);
-    public static final RegistryObject<Item> SPRING_STEEL = ITEMS.register("ingot_spring_steel", ItemBase::new);
-    public static final RegistryObject<Item> STEEL = ITEMS.register("ingot_steel", ItemBase::new);
-    public static final RegistryObject<Item> SYRAL_STEEL = ITEMS.register("ingot_syral_steel", ItemBase::new);
-    public static final RegistryObject<Item> TANTALUM = ITEMS.register("ingot_tantalum", ItemBase::new);
-    public static final RegistryObject<Item> TIGO = ITEMS.register("ingot_tigo", ItemBase::new);
-    public static final RegistryObject<Item> TIN = ITEMS.register("ingot_tin", ItemBase::new);
-    public static final RegistryObject<Item> TITANIUM = ITEMS.register("ingot_titanium", ItemBase::new);
-    public static final RegistryObject<Item> TUNGSTEN = ITEMS.register("ingot_tungsten", ItemBase::new);
-    public static final RegistryObject<Item> YALITE = ITEMS.register("ingot_yalite", ItemBase::new);
-    public static final RegistryObject<Item> ZINC = ITEMS.register("ingot_zinc", ItemBase::new);
+        public static final RegistryObject<Item> ADAMANT = ITEMS.register("ingot_adamant", ItemIngot::new);
+        public static final RegistryObject<Item> ALSCAN = ITEMS.register("ingot_alscan", ItemIngot::new);
+        public static final RegistryObject<Item> ALUMINIUM = ITEMS.register("ingot_aluminium", ItemIngot::new);
+        public static final RegistryObject<Item> ANTARIUM = ITEMS.register("ingot_antarium", ItemIngot::new);
+        public static final RegistryObject<Item> BLAZING_ALLOY = ITEMS.register("ingot_blazing_alloy", ItemIngot::new);
+        public static final RegistryObject<Item> BRASS = ITEMS.register("ingot_brass", ItemIngot::new);
+        public static final RegistryObject<Item> BRONZE = ITEMS.register("ingot_bronze", ItemIngot::new);
+        public static final RegistryObject<Item> CELESTIAL_KALINITE = ITEMS.register("ingot_celestial_kalinite", ItemIngot::new);
+        public static final RegistryObject<Item> CHROME = ITEMS.register("ingot_chrome", ItemIngot::new);
+        public static final RegistryObject<Item> CHROME_STEEL = ITEMS.register("ingot_chrome_steel", ItemIngot::new);
+        public static final RegistryObject<Item> COPPER = ITEMS.register("ingot_copper", ItemIngot::new);
+        public static final RegistryObject<Item> DRACONIAN_SCRITH = ITEMS.register("ingot_draconian_scrith", ItemIngot::new);
+        public static final RegistryObject<Item> ELECTRUM = ITEMS.register("ingot_electrum", ItemIngot::new);
+        public static final RegistryObject<Item> ENCHANTED_MYTHRIL = ITEMS.register("ingot_enchanted_mythril", ItemIngot::new);
+        public static final RegistryObject<Item> ENDER_GOLD = ITEMS.register("ingot_ender_gold", ItemIngot::new);
+        public static final RegistryObject<Item> GALINSTAN = ITEMS.register("ingot_galinstan", ItemIngot::new);
+        public static final RegistryObject<Item> GALLIUM = ITEMS.register("ingot_gallium", ItemIngot::new);
+        public static final RegistryObject<Item> HC_STEEL = ITEMS.register("ingot_hc_steel", ItemIngot::new);
+        public static final RegistryObject<Item> INDIUM = ITEMS.register("ingot_indium", ItemIngot::new);
+        public static final RegistryObject<Item> KAI_BRONZE = ITEMS.register("ingot_kai_bronze", ItemIngot::new);
+        public static final RegistryObject<Item> KALINITE = ITEMS.register("ingot_kalinite", ItemIngot::new);
+        public static final RegistryObject<Item> KARROSH = ITEMS.register("ingot_karrosh", ItemIngot::new);
+        public static final RegistryObject<Item> KOVAR = ITEMS.register("ingot_kovar", ItemIngot::new);
+        public static final RegistryObject<Item> LITHIUM = ITEMS.register("ingot_lithium", ItemIngot::new);
+        public static final RegistryObject<Item> LORITE = ITEMS.register("ingot_lorite", ItemIngot::new);
+        public static final RegistryObject<Item> MAGNALIUM = ITEMS.register("ingot_magnalium", ItemIngot::new);
+        public static final RegistryObject<Item> MAGNESIUM = ITEMS.register("ingot_magnesium", ItemIngot::new);
+        public static final RegistryObject<Item> MANGANESE = ITEMS.register("ingot_manganese", ItemIngot::new);
+        public static final RegistryObject<Item> MYTHRIL = ITEMS.register("ingot_mythril", ItemIngot::new);
+        public static final RegistryObject<Item> NANITE = ITEMS.register("ingot_nanite", ItemIngot::new);
+        public static final RegistryObject<Item> NETHER_SILVER = ITEMS.register("ingot_nether_silver", ItemIngot::new);
+        public static final RegistryObject<Item> PYROLITE = ITEMS.register("ingot_pyrolite", ItemIngot::new);
+        public static final RegistryObject<Item> RADIUM = ITEMS.register("ingot_radium", ItemIngot::new);
+        public static final RegistryObject<Item> RHENIUM = ITEMS.register("ingot_rhenium", ItemIngot::new);
+        public static final RegistryObject<Item> RHODIUM = ITEMS.register("ingot_rhodium", ItemIngot::new);
+        public static final RegistryObject<Item> SCRITH = ITEMS.register("ingot_scrith", ItemIngot::new);
+        public static final RegistryObject<Item> SILVER = ITEMS.register("ingot_silver", ItemIngot::new);
+        public static final RegistryObject<Item> SPRING_STEEL = ITEMS.register("ingot_spring_steel", ItemIngot::new);
+        public static final RegistryObject<Item> STEEL = ITEMS.register("ingot_steel", ItemIngot::new);
+        public static final RegistryObject<Item> SYRAL_STEEL = ITEMS.register("ingot_syral_steel", ItemIngot::new);
+        public static final RegistryObject<Item> TANTALUM = ITEMS.register("ingot_tantalum", ItemIngot::new);
+        public static final RegistryObject<Item> TIGO = ITEMS.register("ingot_tigo", ItemIngot::new);
+        public static final RegistryObject<Item> TIN = ITEMS.register("ingot_tin", ItemIngot::new);
+        public static final RegistryObject<Item> TITANIUM = ITEMS.register("ingot_titanium", ItemIngot::new);
+        public static final RegistryObject<Item> TUNGSTEN = ITEMS.register("ingot_tungsten", ItemIngot::new);
+        public static final RegistryObject<Item> YALITE = ITEMS.register("ingot_yalite", ItemIngot::new);
+        public static final RegistryObject<Item> ZINC = ITEMS.register("ingot_zinc", ItemIngot::new);
 
     //Block Registry
         //Ores
-    public static final RegistryObject<Block> ORE_REALGAR= BLOCKS.register("ore_realgar", OreRealgar::new);
-
+            //Overworld Ores
+            public static final RegistryObject<Block> ORE_ALUMINIUM = BLOCKS.register("ore_aluminium", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_ANTARIUM = BLOCKS.register("ore_antarium", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_AZURITE = BLOCKS.register("ore_azurite", () -> new OreBlock(2,2));
+            public static final RegistryObject<Block> ORE_CELESTINE = BLOCKS.register("ore_celestine", () -> new OreBlock(2,2));
+            public static final RegistryObject<Block> ORE_COPPER = BLOCKS.register("ore_copper", () -> new OreBlock(2,2));
+            public static final RegistryObject<Block> ORE_KAI_STONE = BLOCKS.register("ore_kai_stone", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_LITHIUM = BLOCKS.register("ore_lithium", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_LORITE = BLOCKS.register("ore_lorite", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_LUNARITE = BLOCKS.register("ore_lunarite", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_MANGANESE = BLOCKS.register("ore_manganese", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_MYTHRIL = BLOCKS.register("ore_mythril", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_REALGAR = BLOCKS.register("ore_realgar", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_SILVER = BLOCKS.register("ore_silver", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_TIN = BLOCKS.register("ore_tin", () -> new OreBlock(2,2));
+            public static final RegistryObject<Block> ORE_YALITE = BLOCKS.register("ore_yalite", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_ZINC = BLOCKS.register("ore_zinc", () -> new OreBlock(3,3));
+            //Nether Ores
+            public static final RegistryObject<Block> ORE_ARNALIOS = BLOCKS.register("ore_arnalios", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_CARNELIAN = BLOCKS.register("ore_carnelian", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_CHROME = BLOCKS.register("ore_chrome", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_GERMANIUM = BLOCKS.register("ore_germanium", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_INDIUM = BLOCKS.register("ore_indium", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_KARROSH = BLOCKS.register("ore_karrosh", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_MAGNESIUM = BLOCKS.register("ore_magnesium", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_NANITE = BLOCKS.register("ore_nanite", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_NEPHRITE = BLOCKS.register("ore_nephrite", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_PYROLITE = BLOCKS.register("ore_pyrolite", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_RHODIUM = BLOCKS.register("ore_rhodium", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_SYRALTITE = BLOCKS.register("ore_syraltite", () -> new OreBlock(3,3));
+            public static final RegistryObject<Block> ORE_TITANIUM = BLOCKS.register("ore_titanium", () -> new OreBlock(3,3));
+            //Ender Ores
 
     //Block Item Registry
-        //Ores
+            //Ores
+            //Overworld Ores
+    public static final RegistryObject<Item> ORE_ALUMINIUM_ITEM = ITEMS.register("ore_aluminium", () -> new BlockItemBase(ORE_ALUMINIUM.get()));
+    public static final RegistryObject<Item> ORE_ANTARIUM_ITEM = ITEMS.register("ore_antarium", () -> new BlockItemBase(ORE_ANTARIUM.get()));
+    public static final RegistryObject<Item> ORE_AZURITE_ITEM = ITEMS.register("ore_azurite", () -> new BlockItemBase(ORE_AZURITE.get()));
+    public static final RegistryObject<Item> ORE_CELESTINE_ITEM = ITEMS.register("ore_celestine", () -> new BlockItemBase(ORE_CELESTINE.get()));
+    public static final RegistryObject<Item> ORE_COPPER_ITEM = ITEMS.register("ore_copper", () -> new BlockItemBase(ORE_COPPER.get()));
+    public static final RegistryObject<Item> ORE_KAI_STONE_ITEM = ITEMS.register("ore_kai_stone", () -> new BlockItemBase(ORE_KAI_STONE.get()));
+    public static final RegistryObject<Item> ORE_LITHIUM_ITEM = ITEMS.register("ore_lithium", () -> new BlockItemBase(ORE_LITHIUM.get()));
+    public static final RegistryObject<Item> ORE_LORITE_ITEM = ITEMS.register("ore_lorite", () -> new BlockItemBase(ORE_LORITE.get()));
+    public static final RegistryObject<Item> ORE_LUNARITE_ITEM = ITEMS.register("ore_lunarite", () -> new BlockItemBase(ORE_LUNARITE.get()));
+    public static final RegistryObject<Item> ORE_MANGANESE_ITEM = ITEMS.register("ore_manganese", () -> new BlockItemBase(ORE_MANGANESE.get()));
+    public static final RegistryObject<Item> ORE_MYTHRIL_ITEM = ITEMS.register("ore_mythril", () -> new BlockItemBase(ORE_MYTHRIL.get()));
     public static final RegistryObject<Item> ORE_REALGAR_ITEM = ITEMS.register("ore_realgar", () -> new BlockItemBase(ORE_REALGAR.get()));
+    public static final RegistryObject<Item> ORE_SILVER_ITEM = ITEMS.register("ore_silver", () -> new BlockItemBase(ORE_SILVER.get()));
+    public static final RegistryObject<Item> ORE_TIN_ITEM = ITEMS.register("ore_tin", () -> new BlockItemBase(ORE_TIN.get()));
+    public static final RegistryObject<Item> ORE_YALITE_ITEM = ITEMS.register("ore_yalite", () -> new BlockItemBase(ORE_YALITE.get()));
+    public static final RegistryObject<Item> ORE_ZINC_ITEM = ITEMS.register("ore_zinc", () -> new BlockItemBase(ORE_ZINC.get()));
+            //Nether Ores
+    public static final RegistryObject<Item> ORE_ARNALIOS_ITEM = ITEMS.register("ore_arnalios", () -> new BlockItemBase(ORE_ARNALIOS.get()));
+    public static final RegistryObject<Item> ORE_CARNELIAN_ITEM = ITEMS.register("ore_carnelian", () -> new BlockItemBase(ORE_CARNELIAN.get()));
+    public static final RegistryObject<Item> ORE_CHROME_ITEM = ITEMS.register("ore_chrome", () -> new BlockItemBase(ORE_CHROME.get()));
+    public static final RegistryObject<Item> ORE_GERMANIUM_ITEM = ITEMS.register("ore_germanium", () -> new BlockItemBase(ORE_GERMANIUM.get()));
+    public static final RegistryObject<Item> ORE_INDIUM_ITEM = ITEMS.register("ore_indium", () -> new BlockItemBase(ORE_INDIUM.get()));
+    public static final RegistryObject<Item> ORE_KARROSH_ITEM = ITEMS.register("ore_karrosh", () -> new BlockItemBase(ORE_KARROSH.get()));
+    public static final RegistryObject<Item> ORE_MAGNESIUM_ITEM = ITEMS.register("ore_magnesium", () -> new BlockItemBase(ORE_MAGNESIUM.get()));
+    public static final RegistryObject<Item> ORE_NANITE_ITEM = ITEMS.register("ore_nanite", () -> new BlockItemBase(ORE_NANITE.get()));
+    public static final RegistryObject<Item> ORE_NEPHRITE_ITEM = ITEMS.register("ore_nephrite", () -> new BlockItemBase(ORE_NEPHRITE.get()));
+    public static final RegistryObject<Item> ORE_PYROLITE_ITEM = ITEMS.register("ore_pyrolite", () -> new BlockItemBase(ORE_PYROLITE.get()));
+    public static final RegistryObject<Item> ORE_RHODIUM_ITEM = ITEMS.register("ore_rhodium", () -> new BlockItemBase(ORE_RHODIUM.get()));
+    public static final RegistryObject<Item> ORE_SYRALTITE_ITEM = ITEMS.register("ore_syraltite", () -> new BlockItemBase(ORE_SYRALTITE.get()));
+    public static final RegistryObject<Item> ORE_TITANIUM_ITEM = ITEMS.register("ore_titanium", () -> new BlockItemBase(ORE_TITANIUM.get()));
+            //Ender Ores
+    
 }

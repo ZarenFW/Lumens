@@ -5,12 +5,12 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 
-public class OreRealgar extends Block {
-    public OreRealgar() {
+public class OreBlock extends Block {
+    public OreBlock(int harvestLevel, float hardness) {
         super(Block.Properties.create(Material.ROCK)
-                .hardnessAndResistance(5.0F, 6.0F)
+                .hardnessAndResistance(hardness, 6.0F)
                 .sound(SoundType.STONE)
-                .harvestLevel(3)
+                .harvestLevel(harvestLevel)
                 .harvestTool(ToolType.PICKAXE)
                 );
     }
