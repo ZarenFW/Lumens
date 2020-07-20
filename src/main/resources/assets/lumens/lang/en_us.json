@@ -96,5 +96,17 @@
   "block.lumens.ore_pyrolite": "Pyrolite Ore",
   "block.lumens.ore_rhodium": "Rhodium Ore",
   "block.lumens.ore_syraltite": "Syraltite Ore",
-  "block.lumens.ore_titanium": "Titanium Ore"
+  "block.lumens.ore_titanium": "Titanium Ore",
+
+  "block.lumens.ore_adamant": "Adamant Ore",
+  "block.lumens.ore_drakanine": "Drakanine Ore",
+  "block.lumens.ore_gallium": "Gallium Ore",
+  "block.lumens.ore_heliotrope": "Heliotrope Ore",
+  "block.lumens.ore_kalinite": "Kalinite Ore",
+  "block.lumens.ore_ortalos": "Ortalos Ore",
+  "block.lumens.ore_radium": "Radium Ore",
+  "block.lumens.ore_rhenium": "Rhenium Ore",
+  "block.lumens.ore_scrith": "Scrith Ore",
+  "block.lumens.ore_tantalum": "Tantalum Ore",
+  "block.lumens.ore_tungsten": "Tungsten Ore"
 }

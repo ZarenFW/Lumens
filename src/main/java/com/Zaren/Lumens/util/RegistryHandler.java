@@ -11,6 +11,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.lwjgl.system.CallbackI;
 
 public class RegistryHandler {
 
@@ -121,6 +122,17 @@ public class RegistryHandler {
             public static final RegistryObject<Block> ORE_SYRALTITE = BLOCKS.register("ore_syraltite", () -> new OreBlock(3,3));
             public static final RegistryObject<Block> ORE_TITANIUM = BLOCKS.register("ore_titanium", () -> new OreBlock(3,3));
             //Ender Ores
+            public static final RegistryObject<Block> ORE_ADAMANT = BLOCKS.register("ore_adamant", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_DRAKANINE = BLOCKS.register("ore_drakanine", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_GALLIUM = BLOCKS.register("ore_gallium", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_HELIOTROPE = BLOCKS.register("ore_heliotrope", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_KALINITE = BLOCKS.register("ore_kalinite", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_ORTALOS = BLOCKS.register("ore_ortalos", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_RADIUM = BLOCKS.register("ore_radium", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_RHENIUM = BLOCKS.register("ore_rhenium", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_SCRITH = BLOCKS.register("ore_scrith", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_TANTALUM = BLOCKS.register("ore_tantalum", () -> new OreBlock(4,3));
+            public static final RegistryObject<Block> ORE_TUNGSTEN = BLOCKS.register("ore_tungsten", () -> new OreBlock(4,3));
 
     //Block Item Registry
             //Ores
@@ -156,5 +168,15 @@ public class RegistryHandler {
     public static final RegistryObject<Item> ORE_SYRALTITE_ITEM = ITEMS.register("ore_syraltite", () -> new BlockItemBase(ORE_SYRALTITE.get()));
     public static final RegistryObject<Item> ORE_TITANIUM_ITEM = ITEMS.register("ore_titanium", () -> new BlockItemBase(ORE_TITANIUM.get()));
             //Ender Ores
-    
+    public static final RegistryObject<Item> ORE_ADAMANT_ITEM = ITEMS.register("ore_adamant", () -> new BlockItemBase(ORE_ADAMANT.get()));
+    public static final RegistryObject<Item> ORE_DRAKANINE_ITEM = ITEMS.register("ore_drakanine", () -> new BlockItemBase(ORE_DRAKANINE.get()));
+    public static final RegistryObject<Item> ORE_GALLIUM_ITEM = ITEMS.register("ore_gallium", () -> new BlockItemBase(ORE_GALLIUM.get()));
+    public static final RegistryObject<Item> ORE_HELIOTROPE_ITEM = ITEMS.register("ore_heliotrope", () -> new BlockItemBase(ORE_HELIOTROPE.get()));
+    public static final RegistryObject<Item> ORE_KALINITE_ITEM = ITEMS.register("ore_kalinite", () -> new BlockItemBase(ORE_KALINITE.get()));
+    public static final RegistryObject<Item> ORE_ORTALOS_ITEM = ITEMS.register("ore_ortalos", () -> new BlockItemBase(ORE_ORTALOS.get()));
+    public static final RegistryObject<Item> ORE_RADIUM_ITEM = ITEMS.register("ore_radium", () -> new BlockItemBase(ORE_RADIUM.get()));
+    public static final RegistryObject<Item> ORE_RHENIUM_ITEM = ITEMS.register("ore_rhenium", () -> new BlockItemBase(ORE_RHENIUM.get()));
+    public static final RegistryObject<Item> ORE_SCRITH_ITEM = ITEMS.register("ore_scrith", () -> new BlockItemBase(ORE_SCRITH.get()));
+    public static final RegistryObject<Item> ORE_TANTALUM_ITEM = ITEMS.register("ore_tantalum", () -> new BlockItemBase(ORE_TANTALUM.get()));
+    public static final RegistryObject<Item> ORE_TUNGSTEN_ITEM = ITEMS.register("ore_tungsten", () -> new BlockItemBase(ORE_TUNGSTEN.get()));
 }
