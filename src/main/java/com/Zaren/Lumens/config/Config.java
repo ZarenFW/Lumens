@@ -401,7 +401,7 @@ public class Config {
                         .defineInRange("maxY", 40, 0, 256);
                 COMMON_BUILDER.pop();
             //Lor Ore
-                COMMON_BUILDER.comment("Aluminium Ore").push(LORITE_ORE);
+                COMMON_BUILDER.comment("Lorite Ore").push(LORITE_ORE);
                 LORITE_ORE_CHANCES = COMMON_BUILDER
                         .comment("Number of times to try and generate the ore - set to 0 to disable")
                         .defineInRange("oreChances", 5, 0, 256);
