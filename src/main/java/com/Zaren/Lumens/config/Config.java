@@ -34,8 +34,10 @@ public class Config {
     public static String DRAKANINE_ORE = "drakanine_ore";
     public static String GALLIUM_ORE = "gallium_ore";
     public static String GERMANIUM_ORE = "germanium_ore";
+    public static String HALLINITE_ORE = "hallinite_ore";
     public static String HELIOTROPE_ORE = "heliotrope_ore";
     public static String INDIUM_ORE = "indium_ore";
+    public static String JALSHADE_ORE = "jalshade ore";
     public static String KAI_STONE_ORE = "kai_stone_ore";
     public static String KALINITE_ORE = "kalinite_ore";
     public static String KARROSH_ORE = "karrosh_ore";
@@ -50,6 +52,7 @@ public class Config {
     public static String ORTALOS_ORE = "ortalos_ore";
     public static String PYROLITE_ORE = "pyrolite_ore";
     public static String RADIUM_ORE = "radium_ore";
+    public static String RASHADINE_ORE = "rashadine_ore";
     public static String REALGAR_ORE = "realgar_ore";
     public static String RHENIUM_ORE = "rhenium_ore";
     public static String RHODIUM_ORE = "rhodium_ore";
@@ -60,8 +63,12 @@ public class Config {
     public static String TANZANITE_ORE = "tanzanite_ore";
     public static String TIN_ORE = "tin_ore";
     public static String TITANIUM_ORE = "titanium_ore";
+    public static String TRALLINISH_ORE = "trallinish_ore";
     public static String TUNGSTEN_ORE = "tungsten_ore";
+    public static String UVAORITE_ORE = "uvaorite_ore";
+    public static String XANDANZINE_ORE = "xandanzine_ore";
     public static String YALITE_ORE = "yalite_ore";
+    public static String ZARITE_ORE = "zarite_ore";
     public static String ZINC_ORE = "zinc_ore";
 
 
@@ -127,6 +134,11 @@ public class Config {
     public static ForgeConfigSpec.IntValue GERMANIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue GERMANIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue GERMANIUM_ORE_MAXY;
+    //HALLINITE
+    public static ForgeConfigSpec.IntValue HALLINITE_ORE_CHANCES;
+    public static ForgeConfigSpec.IntValue HALLINITE_ORE_VEINSIZE;
+    public static ForgeConfigSpec.IntValue HALLINITE_ORE_MINY;
+    public static ForgeConfigSpec.IntValue HALLINITE_ORE_MAXY;
     //HELIOTROPE
     public static ForgeConfigSpec.IntValue HELIOTROPE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue HELIOTROPE_ORE_VEINSIZE;
@@ -137,6 +149,11 @@ public class Config {
     public static ForgeConfigSpec.IntValue INDIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue INDIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue INDIUM_ORE_MAXY;
+    //JALSHADE
+    public static ForgeConfigSpec.IntValue JALSHADE_ORE_CHANCES;
+    public static ForgeConfigSpec.IntValue JALSHADE_ORE_VEINSIZE;
+    public static ForgeConfigSpec.IntValue JALSHADE_ORE_MINY;
+    public static ForgeConfigSpec.IntValue JALSHADE_ORE_MAXY;
     //KAI STONE
     public static ForgeConfigSpec.IntValue KAI_STONE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue KAI_STONE_ORE_VEINSIZE;
@@ -207,6 +224,11 @@ public class Config {
     public static ForgeConfigSpec.IntValue RADIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue RADIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue RADIUM_ORE_MAXY;
+    //RASHADINE
+    public static ForgeConfigSpec.IntValue RASHADINE_ORE_CHANCES;
+    public static ForgeConfigSpec.IntValue RASHADINE_ORE_VEINSIZE;
+    public static ForgeConfigSpec.IntValue RASHADINE_ORE_MINY;
+    public static ForgeConfigSpec.IntValue RASHADINE_ORE_MAXY;
     //REALGAR
     public static ForgeConfigSpec.IntValue REALGAR_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue REALGAR_ORE_VEINSIZE;
@@ -257,16 +279,36 @@ public class Config {
     public static ForgeConfigSpec.IntValue TITANIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue TITANIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue TITANIUM_ORE_MAXY;
+    //TRALLINISH
+    public static ForgeConfigSpec.IntValue TRALLINISH_ORE_CHANCES;
+    public static ForgeConfigSpec.IntValue TRALLINISH_ORE_VEINSIZE;
+    public static ForgeConfigSpec.IntValue TRALLINISH_ORE_MINY;
+    public static ForgeConfigSpec.IntValue TRALLINISH_ORE_MAXY;
     //TUNGSTEN
     public static ForgeConfigSpec.IntValue TUNGSTEN_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue TUNGSTEN_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue TUNGSTEN_ORE_MINY;
     public static ForgeConfigSpec.IntValue TUNGSTEN_ORE_MAXY;
+    //UVAORITE
+    public static ForgeConfigSpec.IntValue UVAORITE_ORE_CHANCES;
+    public static ForgeConfigSpec.IntValue UVAORITE_ORE_VEINSIZE;
+    public static ForgeConfigSpec.IntValue UVAORITE_ORE_MINY;
+    public static ForgeConfigSpec.IntValue UVAORITE_ORE_MAXY;
+    //XANDANZINE
+    public static ForgeConfigSpec.IntValue XANDANZINE_ORE_CHANCES;
+    public static ForgeConfigSpec.IntValue XANDANZINE_ORE_VEINSIZE;
+    public static ForgeConfigSpec.IntValue XANDANZINE_ORE_MINY;
+    public static ForgeConfigSpec.IntValue XANDANZINE_ORE_MAXY;
     //YALITE
     public static ForgeConfigSpec.IntValue YALITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue YALITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue YALITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue YALITE_ORE_MAXY;
+    //ZARITE
+    public static ForgeConfigSpec.IntValue ZARITE_ORE_CHANCES;
+    public static ForgeConfigSpec.IntValue ZARITE_ORE_VEINSIZE;
+    public static ForgeConfigSpec.IntValue ZARITE_ORE_MINY;
+    public static ForgeConfigSpec.IntValue ZARITE_ORE_MAXY;
     //ZINC
     public static ForgeConfigSpec.IntValue ZINC_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue ZINC_ORE_VEINSIZE;
@@ -371,6 +413,21 @@ public class Config {
                             .comment("Maximum Y value at which the ore can spawn")
                             .defineInRange("maxY", 85, 0, 256);
                     COMMON_BUILDER.pop();
+            //Jal Ore
+                    COMMON_BUILDER.comment("Jalshade Ore").push(JALSHADE_ORE);
+                    JALSHADE_ORE_CHANCES = COMMON_BUILDER
+                            .comment("Number of times to try and generate the ore - set to 0 to disable")
+                            .defineInRange("oreChances", 2, 0, 256);
+                    JALSHADE_ORE_VEINSIZE = COMMON_BUILDER
+                            .comment("Maximum size of a single vein")
+                            .defineInRange("veinSize", 12, 1, 256);
+                    JALSHADE_ORE_MINY = COMMON_BUILDER
+                            .comment("Minimum Y value at which the ore can spawn")
+                            .defineInRange("minY", 4, 0, 256);
+                    JALSHADE_ORE_MAXY = COMMON_BUILDER
+                            .comment("Maximum Y value at which the ore can spawn")
+                            .defineInRange("maxY", 20, 0, 256);
+                    COMMON_BUILDER.pop();
             //Kai Ore
                 COMMON_BUILDER.comment("Kai Stone Ore").push(KAI_STONE_ORE);
                 KAI_STONE_ORE_CHANCES = COMMON_BUILDER
@@ -461,6 +518,21 @@ public class Config {
                         .comment("Maximum Y value at which the ore can spawn")
                         .defineInRange("maxY", 60, 0, 256);
                 COMMON_BUILDER.pop();
+            //Ras Ore
+                COMMON_BUILDER.comment("Rashadine Ore").push(RASHADINE_ORE);
+                RASHADINE_ORE_CHANCES = COMMON_BUILDER
+                        .comment("Number of times to try and generate the ore - set to 0 to disable")
+                        .defineInRange("oreChances", 2, 0, 256);
+                RASHADINE_ORE_VEINSIZE = COMMON_BUILDER
+                        .comment("Maximum size of a single vein")
+                        .defineInRange("veinSize", 12, 1, 256);
+                RASHADINE_ORE_MINY = COMMON_BUILDER
+                        .comment("Minimum Y value at which the ore can spawn")
+                        .defineInRange("minY", 4, 0, 256);
+                RASHADINE_ORE_MAXY = COMMON_BUILDER
+                        .comment("Maximum Y value at which the ore can spawn")
+                        .defineInRange("maxY", 20, 0, 256);
+                COMMON_BUILDER.pop();
             //Rea Ore
                 COMMON_BUILDER.comment("Realgar Ore").push(REALGAR_ORE);
                 REALGAR_ORE_CHANCES = COMMON_BUILDER
@@ -505,6 +577,21 @@ public class Config {
                 TIN_ORE_MAXY = COMMON_BUILDER
                         .comment("Maximum Y value at which the ore can spawn")
                         .defineInRange("maxY", 85, 0, 256);
+                COMMON_BUILDER.pop();
+            //Uva Ore
+                COMMON_BUILDER.comment("Uvaorite Ore").push(UVAORITE_ORE);
+                UVAORITE_ORE_CHANCES = COMMON_BUILDER
+                        .comment("Number of times to try and generate the ore - set to 0 to disable")
+                        .defineInRange("oreChances", 2, 0, 256);
+                UVAORITE_ORE_VEINSIZE = COMMON_BUILDER
+                        .comment("Maximum size of a single vein")
+                        .defineInRange("veinSize", 12, 1, 256);
+                UVAORITE_ORE_MINY = COMMON_BUILDER
+                        .comment("Minimum Y value at which the ore can spawn")
+                        .defineInRange("minY", 4, 0, 256);
+                UVAORITE_ORE_MAXY = COMMON_BUILDER
+                        .comment("Maximum Y value at which the ore can spawn")
+                        .defineInRange("maxY", 20, 0, 256);
                 COMMON_BUILDER.pop();
             //Yal Ore
                 COMMON_BUILDER.comment("Yalite Ore").push(YALITE_ORE);
@@ -596,6 +683,21 @@ public class Config {
                         .comment("Minimum Y value at which the ore can spawn")
                         .defineInRange("minY", 10, 0, 256);
                 GERMANIUM_ORE_MAXY = COMMON_BUILDER
+                        .comment("Maximum Y value at which the ore can spawn")
+                        .defineInRange("maxY", 150, 0, 256);
+                COMMON_BUILDER.pop();
+                //Hal Ore
+                COMMON_BUILDER.comment("Hallinite Ore").push(HALLINITE_ORE);
+                HALLINITE_ORE_CHANCES = COMMON_BUILDER
+                        .comment("Number of times to try and generate the ore - set to 0 to disable")
+                        .defineInRange("oreChances", 2, 0, 256);
+                HALLINITE_ORE_VEINSIZE = COMMON_BUILDER
+                        .comment("Maximum size of a single vein")
+                        .defineInRange("veinSize", 18, 1, 256);
+                HALLINITE_ORE_MINY = COMMON_BUILDER
+                        .comment("Minimum Y value at which the ore can spawn")
+                        .defineInRange("minY", 10, 0, 256);
+                HALLINITE_ORE_MAXY = COMMON_BUILDER
                         .comment("Maximum Y value at which the ore can spawn")
                         .defineInRange("maxY", 150, 0, 256);
                 COMMON_BUILDER.pop();
@@ -731,6 +833,21 @@ public class Config {
                         .comment("Minimum Y value at which the ore can spawn")
                         .defineInRange("minY", 10, 0, 256);
                 TITANIUM_ORE_MAXY = COMMON_BUILDER
+                        .comment("Maximum Y value at which the ore can spawn")
+                        .defineInRange("maxY", 150, 0, 256);
+                COMMON_BUILDER.pop();
+                //Tra Ore
+                COMMON_BUILDER.comment("Trallinish Ore").push(TRALLINISH_ORE);
+                TRALLINISH_ORE_CHANCES = COMMON_BUILDER
+                        .comment("Number of times to try and generate the ore - set to 0 to disable")
+                        .defineInRange("oreChances", 2, 0, 256);
+                TRALLINISH_ORE_VEINSIZE = COMMON_BUILDER
+                        .comment("Maximum size of a single vein")
+                        .defineInRange("veinSize", 18, 1, 256);
+                TRALLINISH_ORE_MINY = COMMON_BUILDER
+                        .comment("Minimum Y value at which the ore can spawn")
+                        .defineInRange("minY", 10, 0, 256);
+                TRALLINISH_ORE_MAXY = COMMON_BUILDER
                         .comment("Maximum Y value at which the ore can spawn")
                         .defineInRange("maxY", 150, 0, 256);
                 COMMON_BUILDER.pop();
@@ -913,6 +1030,36 @@ public class Config {
                 .comment("Minimum Y value at which the ore can spawn")
                 .defineInRange("minY", 10, 0, 256);
         TUNGSTEN_ORE_MAXY = COMMON_BUILDER
+                .comment("Maximum Y value at which the ore can spawn")
+                .defineInRange("maxY", 150, 0, 256);
+        COMMON_BUILDER.pop();
+        //Xan Ore
+        COMMON_BUILDER.comment("Xandanzine Ore").push(XANDANZINE_ORE);
+        XANDANZINE_ORE_CHANCES = COMMON_BUILDER
+                .comment("Number of times to try and generate the ore - set to 0 to disable")
+                .defineInRange("oreChances", 4, 0, 256);
+        XANDANZINE_ORE_VEINSIZE = COMMON_BUILDER
+                .comment("Maximum size of a single vein")
+                .defineInRange("veinSize", 24, 1, 256);
+        XANDANZINE_ORE_MINY = COMMON_BUILDER
+                .comment("Minimum Y value at which the ore can spawn")
+                .defineInRange("minY", 10, 0, 256);
+        XANDANZINE_ORE_MAXY = COMMON_BUILDER
+                .comment("Maximum Y value at which the ore can spawn")
+                .defineInRange("maxY", 150, 0, 256);
+        COMMON_BUILDER.pop();
+        //Zar Ore
+        COMMON_BUILDER.comment("Zarite Ore").push(ZARITE_ORE);
+        ZARITE_ORE_CHANCES = COMMON_BUILDER
+                .comment("Number of times to try and generate the ore - set to 0 to disable")
+                .defineInRange("oreChances", 4, 0, 256);
+        ZARITE_ORE_VEINSIZE = COMMON_BUILDER
+                .comment("Maximum size of a single vein")
+                .defineInRange("veinSize", 24, 1, 256);
+        ZARITE_ORE_MINY = COMMON_BUILDER
+                .comment("Minimum Y value at which the ore can spawn")
+                .defineInRange("minY", 10, 0, 256);
+        ZARITE_ORE_MAXY = COMMON_BUILDER
                 .comment("Maximum Y value at which the ore can spawn")
                 .defineInRange("maxY", 150, 0, 256);
         COMMON_BUILDER.pop();

@@ -133,6 +133,14 @@ public class RegistryHandler {
             public static final RegistryObject<Block> ORE_SCRITH = BLOCKS.register("ore_scrith", () -> new OreBlock(4,3));
             public static final RegistryObject<Block> ORE_TANTALUM = BLOCKS.register("ore_tantalum", () -> new OreBlock(4,3));
             public static final RegistryObject<Block> ORE_TUNGSTEN = BLOCKS.register("ore_tungsten", () -> new OreBlock(4,3));
+            //Celestial Ores
+            public static final RegistryObject<Block> ORE_JALSHADE = BLOCKS.register("ore_jalshade", () -> new OreBlock(5,3));
+            public static final RegistryObject<Block> ORE_RASHADINE = BLOCKS.register("ore_rashadine", () -> new OreBlock(5,3));
+            public static final RegistryObject<Block> ORE_UVAORITE = BLOCKS.register("ore_uvaorite", () -> new OreBlock(5,3));
+            public static final RegistryObject<Block> ORE_TRALLINISH = BLOCKS.register("ore_trallinish", () -> new OreBlock(5,3));
+            public static final RegistryObject<Block> ORE_HALLINITE = BLOCKS.register("ore_hallinite", () -> new OreBlock(5,3));
+            public static final RegistryObject<Block> ORE_XANDANZINE = BLOCKS.register("ore_xandanzine", () -> new OreBlock(5,3));
+            public static final RegistryObject<Block> ORE_ZARITE = BLOCKS.register("ore_zarite", () -> new OreBlock(5,3));
 
     //Block Item Registry
             //Ores
@@ -179,4 +187,12 @@ public class RegistryHandler {
     public static final RegistryObject<Item> ORE_SCRITH_ITEM = ITEMS.register("ore_scrith", () -> new BlockItemBase(ORE_SCRITH.get()));
     public static final RegistryObject<Item> ORE_TANTALUM_ITEM = ITEMS.register("ore_tantalum", () -> new BlockItemBase(ORE_TANTALUM.get()));
     public static final RegistryObject<Item> ORE_TUNGSTEN_ITEM = ITEMS.register("ore_tungsten", () -> new BlockItemBase(ORE_TUNGSTEN.get()));
+            //Celestial Ores
+    public static final RegistryObject<Item> ORE_JALSHADE_ITEM = ITEMS.register("ore_jalshade", () -> new BlockItemBase(ORE_JALSHADE.get()));
+    public static final RegistryObject<Item> ORE_RASHADINE_ITEM = ITEMS.register("ore_rashadine", () -> new BlockItemBase(ORE_RASHADINE.get()));
+    public static final RegistryObject<Item> ORE_UVAORITE_ITEM = ITEMS.register("ore_uvaorite", () -> new BlockItemBase(ORE_UVAORITE.get()));
+    public static final RegistryObject<Item> ORE_TRALLINISH_ITEM = ITEMS.register("ore_trallinish", () -> new BlockItemBase(ORE_TRALLINISH.get()));
+    public static final RegistryObject<Item> ORE_HALLINITE_ITEM = ITEMS.register("ore_hallinite", () -> new BlockItemBase(ORE_HALLINITE.get()));
+    public static final RegistryObject<Item> ORE_XANDANZINE_ITEM = ITEMS.register("ore_xandanzine", () -> new BlockItemBase(ORE_XANDANZINE.get()));
+    public static final RegistryObject<Item> ORE_ZARITE_ITEM = ITEMS.register("ore_zarite", () -> new BlockItemBase(ORE_ZARITE.get()));
 }

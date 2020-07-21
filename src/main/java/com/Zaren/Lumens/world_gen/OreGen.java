@@ -33,6 +33,7 @@ public class OreGen{
                 int carnelianOreChances = Config.CARNELIAN_ORE_CHANCES.get();
                 int chromeOreChances = Config.CHROME_ORE_CHANCES.get();
                 int germaniumOreChances = Config.GERMANIUM_ORE_CHANCES.get();
+                int halliniteOreChances = Config.HALLINITE_ORE_CHANCES.get();   
                 int indiumOreChanes = Config.INDIUM_ORE_CHANCES.get();
                 int karroshOreChances = Config.KARROSH_ORE_CHANCES.get();
                 int magnesiumOreChances = Config.MAGNESIUM_ORE_CHANCES.get();
@@ -42,6 +43,7 @@ public class OreGen{
                 int rhodiumOreChances = Config.RHODIUM_ORE_CHANCES.get();
                 int syraltiteOreChances = Config.SYRALTITE_ORE_CHANCES.get();
                 int titaniumOreChances = Config.TITANIUM_ORE_CHANCES.get();
+                int trallinishOreChances = Config.TRALLINISH_ORE_CHANCES.get();
                     if (arnaliosOreChances > 0) {
                         genOre(biome, Config.ARNALIOS_ORE_CHANCES.get(), Config.ARNALIOS_ORE_MINY.get(), 0, Config.ARNALIOS_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.ORE_ARNALIOS.get().getDefaultState(), Config.ARNALIOS_ORE_VEINSIZE.get());
                     };
@@ -53,6 +55,9 @@ public class OreGen{
                     };
                     if (germaniumOreChances > 0) {
                         genOre(biome, Config.GERMANIUM_ORE_CHANCES.get(), Config.GERMANIUM_ORE_MINY.get(), 0, Config.GERMANIUM_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.ORE_GERMANIUM.get().getDefaultState(), Config.GERMANIUM_ORE_VEINSIZE.get());
+                    };
+                    if (halliniteOreChances > 0) {
+                        genOre(biome, Config.HALLINITE_ORE_CHANCES.get(), Config.HALLINITE_ORE_MINY.get(), 0, Config.HALLINITE_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.ORE_HALLINITE.get().getDefaultState(), Config.HALLINITE_ORE_VEINSIZE.get());
                     };
                     if (indiumOreChanes > 0) {
                         genOre(biome, Config.INDIUM_ORE_CHANCES.get(), Config.INDIUM_ORE_MINY.get(), 0, Config.INDIUM_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.ORE_INDIUM.get().getDefaultState(), Config.INDIUM_ORE_VEINSIZE.get());
@@ -75,11 +80,15 @@ public class OreGen{
                     if (rhodiumOreChances > 0) {
                         genOre(biome, Config.RHODIUM_ORE_CHANCES.get(), Config.RHODIUM_ORE_MINY.get(), 0, Config.RHODIUM_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.ORE_RHODIUM.get().getDefaultState(), Config.RHODIUM_ORE_VEINSIZE.get());
                     };
+                    
                     if (syraltiteOreChances > 0) {
                         genOre(biome, Config.SYRALTITE_ORE_CHANCES.get(), Config.SYRALTITE_ORE_MINY.get(), 0, Config.SYRALTITE_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.ORE_SYRALTITE.get().getDefaultState(), Config.SYRALTITE_ORE_VEINSIZE.get());
                     };
                     if (titaniumOreChances > 0) {
                         genOre(biome, Config.TITANIUM_ORE_CHANCES.get(), Config.TITANIUM_ORE_MINY.get(), 0, Config.TITANIUM_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.ORE_TITANIUM.get().getDefaultState(), Config.TITANIUM_ORE_VEINSIZE.get());
+                    };
+                    if (trallinishOreChances > 0) {
+                        genOre(biome, Config.TRALLINISH_ORE_CHANCES.get(), Config.TRALLINISH_ORE_MINY.get(), 0, Config.TRALLINISH_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NETHERRACK, RegistryHandler.ORE_TRALLINISH.get().getDefaultState(), Config.TRALLINISH_ORE_VEINSIZE.get());
                     };
                //End
                  } else if (biome.getCategory() == Biome.Category.THEEND) {
@@ -94,6 +103,8 @@ public class OreGen{
                 int scrithOreChances = Config.SCRITH_ORE_CHANCES.get();
                 int tantalumOreChances = Config.TANTALUM_ORE_CHANCES.get();
                 int tungstenOreChances = Config.TUNGSTEN_ORE_CHANCES.get();
+                int xandanzineOreChances = Config.XANDANZINE_ORE_CHANCES.get();
+                int zariteOreChances = Config.ZARITE_ORE_CHANCES.get();
                     if (adamantOreChances > 0) {
                         genOre(biome, Config.ADAMANT_ORE_CHANCES.get(), Config.ADAMANT_ORE_MINY.get(), 0, Config.ADAMANT_ORE_MAXY.get(), END_STONE, RegistryHandler.ORE_ADAMANT.get().getDefaultState(), Config.ADAMANT_ORE_VEINSIZE.get());
                     };
@@ -127,6 +138,12 @@ public class OreGen{
                     if (tungstenOreChances > 0) {
                         genOre(biome, Config.TUNGSTEN_ORE_CHANCES.get(), Config.TUNGSTEN_ORE_MINY.get(), 0, Config.TUNGSTEN_ORE_MAXY.get(), END_STONE, RegistryHandler.ORE_TUNGSTEN.get().getDefaultState(), Config.TUNGSTEN_ORE_VEINSIZE.get());
                     };
+                    if (xandanzineOreChances > 0) {
+                        genOre(biome, Config.XANDANZINE_ORE_CHANCES.get(), Config.XANDANZINE_ORE_MINY.get(), 0, Config.XANDANZINE_ORE_MAXY.get(), END_STONE, RegistryHandler.ORE_XANDANZINE.get().getDefaultState(), Config.XANDANZINE_ORE_VEINSIZE.get());
+                    };
+                    if (zariteOreChances > 0) {
+                        genOre(biome, Config.ZARITE_ORE_CHANCES.get(), Config.ZARITE_ORE_MINY.get(), 0, Config.ZARITE_ORE_MAXY.get(), END_STONE, RegistryHandler.ORE_ZARITE.get().getDefaultState(), Config.ZARITE_ORE_VEINSIZE.get());
+                    };
                     //OverWorld
                     } else {
                 int aluminiumOreChances = Config.ALUMINIUM_ORE_CHANCES.get();
@@ -135,14 +152,17 @@ public class OreGen{
                 int celestineOreChances = Config.CELESTINE_ORE_CHANCES.get();
                 int copperOreChances = Config.COPPER_ORE_CHANCES.get();
                 int kaiStoneOreChances = Config.KAI_STONE_ORE_CHANCES.get();
+                int jalshadeOreChances = Config.JALSHADE_ORE_CHANCES.get();
                 int lithiumOreChances = Config.LITHIUM_ORE_CHANCES.get();
                 int loriteOreChances = Config.LORITE_ORE_CHANCES.get();
                 int lunariteOreChances = Config.LUNARITE_ORE_CHANCES.get();
                 int manganeseOreChances = Config.MANGANESE_ORE_CHANCES.get();
                 int mythrilOreChances = Config.MYTHRIL_ORE_CHANCES.get();
+                int rashadineOreChances = Config.RASHADINE_ORE_CHANCES.get();
                 int realgarOreChances = Config.REALGAR_ORE_CHANCES.get();
                 int silverOreChances = Config.SILVER_ORE_CHANCES.get();
                 int tinOreChances = Config.TIN_ORE_CHANCES.get();
+                int uvaoriteOreChances = Config.UVAORITE_ORE_CHANCES.get();
                 int yaliteOreChances = Config.YALITE_ORE_CHANCES.get();
                 int zincOreChances = Config.ZINC_ORE_CHANCES.get();
                     if (aluminiumOreChances > 0) {
@@ -163,6 +183,9 @@ public class OreGen{
                     if (kaiStoneOreChances > 0) {
                         genOre(biome, Config.KAI_STONE_ORE_CHANCES.get(), Config.KAI_STONE_ORE_MINY.get(), 0, Config.KAI_STONE_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_KAI_STONE.get().getDefaultState(), Config.KAI_STONE_ORE_VEINSIZE.get());
                     };
+                    if (jalshadeOreChances > 0) {
+                        genOre(biome, Config.JALSHADE_ORE_CHANCES.get(), Config.JALSHADE_ORE_MINY.get(), 0, Config.JALSHADE_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_JALSHADE.get().getDefaultState(), Config.JALSHADE_ORE_VEINSIZE.get());
+                    };
                     if (lithiumOreChances > 0) {
                         genOre(biome, Config.LITHIUM_ORE_CHANCES.get(), Config.LITHIUM_ORE_MINY.get(), 0, Config.LITHIUM_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_LITHIUM.get().getDefaultState(), Config.LITHIUM_ORE_VEINSIZE.get());
                     };
@@ -178,6 +201,9 @@ public class OreGen{
                     if (mythrilOreChances > 0) {
                         genOre(biome, Config.MYTHRIL_ORE_CHANCES.get(), Config.MYTHRIL_ORE_MINY.get(), 0, Config.MYTHRIL_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_MYTHRIL.get().getDefaultState(), Config.MYTHRIL_ORE_VEINSIZE.get());
                     };
+                    if (rashadineOreChances > 0) {
+                        genOre(biome, Config.RASHADINE_ORE_CHANCES.get(), Config.RASHADINE_ORE_MINY.get(), 0, Config.RASHADINE_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_RASHADINE.get().getDefaultState(), Config.RASHADINE_ORE_VEINSIZE.get());
+                    };
                     if (realgarOreChances > 0) {
                         genOre(biome, Config.REALGAR_ORE_CHANCES.get(), Config.REALGAR_ORE_MINY.get(), 0, Config.REALGAR_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_REALGAR.get().getDefaultState(), Config.REALGAR_ORE_VEINSIZE.get());
                     };
@@ -186,6 +212,9 @@ public class OreGen{
                     };
                     if (tinOreChances > 0) {
                         genOre(biome, Config.TIN_ORE_CHANCES.get(), Config.TIN_ORE_MINY.get(), 0, Config.TIN_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_TIN.get().getDefaultState(), Config.TIN_ORE_VEINSIZE.get());
+                    };
+                    if (uvaoriteOreChances > 0) {
+                        genOre(biome, Config.UVAORITE_ORE_CHANCES.get(), Config.UVAORITE_ORE_MINY.get(), 0, Config.UVAORITE_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_UVAORITE.get().getDefaultState(), Config.UVAORITE_ORE_VEINSIZE.get());
                     };
                     if (yaliteOreChances > 0) {
                         genOre(biome, Config.YALITE_ORE_CHANCES.get(), Config.YALITE_ORE_MINY.get(), 0, Config.YALITE_ORE_MAXY.get(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.ORE_YALITE.get().getDefaultState(), Config.YALITE_ORE_VEINSIZE.get());

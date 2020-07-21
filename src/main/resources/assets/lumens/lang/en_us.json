@@ -108,5 +108,13 @@
   "block.lumens.ore_rhenium": "Rhenium Ore",
   "block.lumens.ore_scrith": "Scrith Ore",
   "block.lumens.ore_tantalum": "Tantalum Ore",
-  "block.lumens.ore_tungsten": "Tungsten Ore"
+  "block.lumens.ore_tungsten": "Tungsten Ore",
+
+  "block.lumens.ore_jalshade": "Jalshade Ore",
+  "block.lumens.ore_rashadine": "Rashadine Ore",
+  "block.lumens.ore_uvaorite": "Uvaorite Ore",
+  "block.lumens.ore_trallinish": "Trallinish Ore",
+  "block.lumens.ore_hallinite": "Hallinite Ore",
+  "block.lumens.ore_xandanzine": "Xandanzine Ore",
+  "block.lumens.ore_zarite": "Zarite Ore"
 }
