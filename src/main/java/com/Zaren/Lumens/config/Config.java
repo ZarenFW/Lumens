@@ -4,17 +4,19 @@ import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.Builder;
+import net.minecraftforge.fml.common.Mod;
 
 import java.nio.file.Path;
 
 
+@Mod.EventBusSubscriber
 public class Config {
 
     private static final Builder COMMON_BUILDER = new Builder();
 
     public static final ForgeConfigSpec COMMON_CONFIG;
 
-   //Categories
+    //Categories
 
     public static String CATEGORY_WORLDGEN = "worldgen";
     public static String SUB_CATEGORY_OVERWORLD = "overworld";
@@ -64,213 +66,213 @@ public class Config {
 
 
     //Ores Config
-        //ADAMANT
+    //ADAMANT
     public static ForgeConfigSpec.IntValue ADAMANT_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue ADAMANT_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue ADAMANT_ORE_MINY;
-    public static ForgeConfigSpec.IntValue ADAMANT_ORE_MAXY;  
-        //ALUMINIUM
+    public static ForgeConfigSpec.IntValue ADAMANT_ORE_MAXY;
+    //ALUMINIUM
     public static ForgeConfigSpec.IntValue ALUMINIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue ALUMINIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue ALUMINIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_ORE_MAXY;
     public static ForgeConfigSpec.IntValue ALUMINIUM_DIM;
-        //ANTARIUM
+    //ANTARIUM
     public static ForgeConfigSpec.IntValue ANTARIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue ANTARIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue ANTARIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue ANTARIUM_ORE_MAXY;
-        //ARNALIOS
+    //ARNALIOS
     public static ForgeConfigSpec.IntValue ARNALIOS_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue ARNALIOS_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue ARNALIOS_ORE_MINY;
     public static ForgeConfigSpec.IntValue ARNALIOS_ORE_MAXY;
-        //AZURITE
+    //AZURITE
     public static ForgeConfigSpec.IntValue AZURITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue AZURITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue AZURITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue AZURITE_ORE_MAXY;
-        //CARNELIAN
+    //CARNELIAN
     public static ForgeConfigSpec.IntValue CARNELIAN_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue CARNELIAN_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue CARNELIAN_ORE_MINY;
     public static ForgeConfigSpec.IntValue CARNELIAN_ORE_MAXY;
-        //CELESTINE
+    //CELESTINE
     public static ForgeConfigSpec.IntValue CELESTINE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue CELESTINE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue CELESTINE_ORE_MINY;
     public static ForgeConfigSpec.IntValue CELESTINE_ORE_MAXY;
-        //CHROME
+    //CHROME
     public static ForgeConfigSpec.IntValue CHROME_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue CHROME_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue CHROME_ORE_MINY;
     public static ForgeConfigSpec.IntValue CHROME_ORE_MAXY;
-        //COPPER
+    //COPPER
     public static ForgeConfigSpec.IntValue COPPER_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue COPPER_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue COPPER_ORE_MINY;
     public static ForgeConfigSpec.IntValue COPPER_ORE_MAXY;
-        //DRAKANINE
+    //DRAKANINE
     public static ForgeConfigSpec.IntValue DRAKANINE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue DRAKANINE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue DRAKANINE_ORE_MINY;
     public static ForgeConfigSpec.IntValue DRAKANINE_ORE_MAXY;
-        //GALLIUM
+    //GALLIUM
     public static ForgeConfigSpec.IntValue GALLIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue GALLIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue GALLIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue GALLIUM_ORE_MAXY;
-        //GERMANIUM
+    //GERMANIUM
     public static ForgeConfigSpec.IntValue GERMANIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue GERMANIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue GERMANIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue GERMANIUM_ORE_MAXY;
-        //HELIOTROPE
+    //HELIOTROPE
     public static ForgeConfigSpec.IntValue HELIOTROPE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue HELIOTROPE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue HELIOTROPE_ORE_MINY;
     public static ForgeConfigSpec.IntValue HELIOTROPE_ORE_MAXY;
-        //INDIUM
+    //INDIUM
     public static ForgeConfigSpec.IntValue INDIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue INDIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue INDIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue INDIUM_ORE_MAXY;
-        //KAI STONE
+    //KAI STONE
     public static ForgeConfigSpec.IntValue KAI_STONE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue KAI_STONE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue KAI_STONE_ORE_MINY;
     public static ForgeConfigSpec.IntValue KAI_STONE_ORE_MAXY;
-        //KALINITE
+    //KALINITE
     public static ForgeConfigSpec.IntValue KALINITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue KALINITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue KALINITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue KALINITE_ORE_MAXY;
-        //KARROSH
+    //KARROSH
     public static ForgeConfigSpec.IntValue KARROSH_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue KARROSH_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue KARROSH_ORE_MINY;
     public static ForgeConfigSpec.IntValue KARROSH_ORE_MAXY;
-        //LITHIUM
+    //LITHIUM
     public static ForgeConfigSpec.IntValue LITHIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue LITHIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue LITHIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue LITHIUM_ORE_MAXY;
-        //LORITE
+    //LORITE
     public static ForgeConfigSpec.IntValue LORITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue LORITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue LORITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue LORITE_ORE_MAXY;
-        //LUNARITE
+    //LUNARITE
     public static ForgeConfigSpec.IntValue LUNARITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue LUNARITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue LUNARITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue LUNARITE_ORE_MAXY;
-        //MAGNESIUM
+    //MAGNESIUM
     public static ForgeConfigSpec.IntValue MAGNESIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue MAGNESIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue MAGNESIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue MAGNESIUM_ORE_MAXY;
-        //MANGANESE
+    //MANGANESE
     public static ForgeConfigSpec.IntValue MANGANESE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue MANGANESE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue MANGANESE_ORE_MINY;
     public static ForgeConfigSpec.IntValue MANGANESE_ORE_MAXY;
-        //MYTHRIL
+    //MYTHRIL
     public static ForgeConfigSpec.IntValue MYTHRIL_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue MYTHRIL_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue MYTHRIL_ORE_MINY;
     public static ForgeConfigSpec.IntValue MYTHRIL_ORE_MAXY;
-        //NANITE
+    //NANITE
     public static ForgeConfigSpec.IntValue NANITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue NANITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue NANITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue NANITE_ORE_MAXY;
-        //NEPHRITE
+    //NEPHRITE
     public static ForgeConfigSpec.IntValue NEPHRITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue NEPHRITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue NEPHRITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue NEPHRITE_ORE_MAXY;
-        //ORTALOS
+    //ORTALOS
     public static ForgeConfigSpec.IntValue ORTALOS_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue ORTALOS_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue ORTALOS_ORE_MINY;
     public static ForgeConfigSpec.IntValue ORTALOS_ORE_MAXY;
-        //PYROLITE
+    //PYROLITE
     public static ForgeConfigSpec.IntValue PYROLITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue PYROLITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue PYROLITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue PYROLITE_ORE_MAXY;
-        //RADIUM
+    //RADIUM
     public static ForgeConfigSpec.IntValue RADIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue RADIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue RADIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue RADIUM_ORE_MAXY;
-        //REALGAR
+    //REALGAR
     public static ForgeConfigSpec.IntValue REALGAR_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue REALGAR_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue REALGAR_ORE_MINY;
     public static ForgeConfigSpec.IntValue REALGAR_ORE_MAXY;
-        //RHENIUM
+    //RHENIUM
     public static ForgeConfigSpec.IntValue RHENIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue RHENIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue RHENIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue RHENIUM_ORE_MAXY;
-        //RHODIUM
+    //RHODIUM
     public static ForgeConfigSpec.IntValue RHODIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue RHODIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue RHODIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue RHODIUM_ORE_MAXY;
-        //SCRITH
+    //SCRITH
     public static ForgeConfigSpec.IntValue SCRITH_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue SCRITH_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue SCRITH_ORE_MINY;
     public static ForgeConfigSpec.IntValue SCRITH_ORE_MAXY;
-        //SILVER
+    //SILVER
     public static ForgeConfigSpec.IntValue SILVER_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue SILVER_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue SILVER_ORE_MINY;
     public static ForgeConfigSpec.IntValue SILVER_ORE_MAXY;
-        //SYRALTITE
+    //SYRALTITE
     public static ForgeConfigSpec.IntValue SYRALTITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue SYRALTITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue SYRALTITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue SYRALTITE_ORE_MAXY;
-        //TANTALUM
+    //TANTALUM
     public static ForgeConfigSpec.IntValue TANTALUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue TANTALUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue TANTALUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue TANTALUM_ORE_MAXY;
-        //TANZANITE
+    //TANZANITE
     public static ForgeConfigSpec.IntValue TANZANITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue TANZANITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue TANZANITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue TANZANITE_ORE_MAXY;
-        //TIN
+    //TIN
     public static ForgeConfigSpec.IntValue TIN_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue TIN_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue TIN_ORE_MINY;
     public static ForgeConfigSpec.IntValue TIN_ORE_MAXY;
-        //TITANIUM
+    //TITANIUM
     public static ForgeConfigSpec.IntValue TITANIUM_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue TITANIUM_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue TITANIUM_ORE_MINY;
     public static ForgeConfigSpec.IntValue TITANIUM_ORE_MAXY;
-        //TUNGSTEN
+    //TUNGSTEN
     public static ForgeConfigSpec.IntValue TUNGSTEN_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue TUNGSTEN_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue TUNGSTEN_ORE_MINY;
     public static ForgeConfigSpec.IntValue TUNGSTEN_ORE_MAXY;
-        //YALITE
+    //YALITE
     public static ForgeConfigSpec.IntValue YALITE_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue YALITE_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue YALITE_ORE_MINY;
     public static ForgeConfigSpec.IntValue YALITE_ORE_MAXY;
-        //ZINC
+    //ZINC
     public static ForgeConfigSpec.IntValue ZINC_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue ZINC_ORE_VEINSIZE;
     public static ForgeConfigSpec.IntValue ZINC_ORE_MINY;
     public static ForgeConfigSpec.IntValue ZINC_ORE_MAXY;
-    
+
     public static void loadConfig(ForgeConfigSpec spec, Path path) {
 
         final CommentedFileConfig configData = CommentedFileConfig.builder(path)
@@ -287,7 +289,6 @@ public class Config {
         COMMON_CONFIG = COMMON_BUILDER.build();
 
     }
-
     private static void setupWorldgenConfig() {
         COMMON_BUILDER.comment("Ore generation").push(CATEGORY_WORLDGEN);
         COMMON_BUILDER.comment("Overworld").push(SUB_CATEGORY_OVERWORLD);
@@ -535,7 +536,7 @@ public class Config {
                         .comment("Maximum Y value at which the ore can spawn")
                         .defineInRange("maxY", 55, 0, 256);
                 COMMON_BUILDER.pop();
-
+                COMMON_BUILDER.pop();
             COMMON_BUILDER.comment("Nether").push(SUB_CATEGORY_NETHER);
 
                 //Arn Ore
@@ -733,7 +734,7 @@ public class Config {
                         .comment("Maximum Y value at which the ore can spawn")
                         .defineInRange("maxY", 150, 0, 256);
                 COMMON_BUILDER.pop();
-
+            COMMON_BUILDER.pop();
         COMMON_BUILDER.comment("The End").push(SUB_CATEGORY_THE_END);
         //Ad Ore
         COMMON_BUILDER.comment("Adamant Ore").push(ADAMANT_ORE);
