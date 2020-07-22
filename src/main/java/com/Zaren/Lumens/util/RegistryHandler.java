@@ -5,6 +5,7 @@ import com.Zaren.Lumens.blocks.BlockItemBase;
 import com.Zaren.Lumens.blocks.OreBlock;
 import com.Zaren.Lumens.items.ItemCrystal;
 import com.Zaren.Lumens.items.ItemIngot;
+import com.Zaren.Lumens.items.ItemPlate;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -38,7 +39,13 @@ public class RegistryHandler {
         public static final RegistryObject<Item> ARNALIOS = ITEMS.register("crystal_arnalios", ItemCrystal::new);
         public static final RegistryObject<Item> ORTALOS = ITEMS.register("crystal_ortalos", ItemCrystal::new);
         public static final RegistryObject<Item> DRAKANINE = ITEMS.register("crystal_drakanine", ItemCrystal::new);
-
+        public static final RegistryObject<Item> JALSHADE = ITEMS.register("crystal_jalshade", ItemCrystal::new);
+        public static final RegistryObject<Item> RASHADINE = ITEMS.register("crystal_rashadine", ItemCrystal::new);
+        public static final RegistryObject<Item> UVAORITE = ITEMS.register("crystal_uvaorite", ItemCrystal::new);
+        public static final RegistryObject<Item> TRALLINISH = ITEMS.register("crystal_trallinish", ItemCrystal::new);
+        public static final RegistryObject<Item> HALLINITE = ITEMS.register("crystal_hallinite", ItemCrystal::new);
+        public static final RegistryObject<Item> XANDANZINE = ITEMS.register("crystal_xandanzine", ItemCrystal::new);
+        public static final RegistryObject<Item> ZARITE = ITEMS.register("crystal_zarite", ItemCrystal::new);
         //Ingots
         public static final RegistryObject<Item> ADAMANT = ITEMS.register("ingot_adamant", ItemIngot::new);
         public static final RegistryObject<Item> ALSCAN = ITEMS.register("ingot_alscan", ItemIngot::new);
@@ -87,8 +94,35 @@ public class RegistryHandler {
         public static final RegistryObject<Item> TUNGSTEN = ITEMS.register("ingot_tungsten", ItemIngot::new);
         public static final RegistryObject<Item> YALITE = ITEMS.register("ingot_yalite", ItemIngot::new);
         public static final RegistryObject<Item> ZINC = ITEMS.register("ingot_zinc", ItemIngot::new);
-
-    //Block Registry
+        //Plates
+        public static final RegistryObject<Item> ALSCAN_PLATE = ITEMS.register("plate_alscan", ItemPlate::new);
+        public static final RegistryObject<Item> BLACK_GLASS_PLATE = ITEMS.register("plate_black_glass", ItemPlate::new);
+        public static final RegistryObject<Item> BLAZING_ALLOY_PLATE = ITEMS.register("plate_blazing_alloy", ItemPlate::new);
+        public static final RegistryObject<Item> BRASS_PLATE = ITEMS.register("plate_brass", ItemPlate::new);
+        public static final RegistryObject<Item> BRONZE_PLATE = ITEMS.register("plate_bronze", ItemPlate::new);
+        public static final RegistryObject<Item> CELESTIAL_KALINITE_PLATE = ITEMS.register("plate_celestial_kalinite", ItemPlate::new);
+        public static final RegistryObject<Item> COPPER_PLATE = ITEMS.register("plate_copper", ItemPlate::new);
+        public static final RegistryObject<Item> DRACONIAN_SCRITH_PLATE = ITEMS.register("plate_draconian_scrith", ItemPlate::new);
+        public static final RegistryObject<Item> ENCHANTED_MYTHRIL_PLATE = ITEMS.register("plate_enchanted_mythril", ItemPlate::new);
+        public static final RegistryObject<Item> ENDER_GLASS_PLATE = ITEMS.register("plate_ender_glass", ItemPlate::new);
+        public static final RegistryObject<Item> GLASS_PLATE = ITEMS.register("plate_glass", ItemPlate::new);
+        public static final RegistryObject<Item> IRON_PLATE = ITEMS.register("plate_iron", ItemPlate::new);
+        public static final RegistryObject<Item> KAI_BRONZE_PLATE = ITEMS.register("plate_kai_bronze", ItemPlate::new);
+        public static final RegistryObject<Item> KOVAR_PLATE = ITEMS.register("plate_kovar", ItemPlate::new);
+        public static final RegistryObject<Item> MAGNALIUM_PLATE = ITEMS.register("plate_magnalium", ItemPlate::new);
+        public static final RegistryObject<Item> NETHER_GLASS_PLATE = ITEMS.register("plate_nether_glass", ItemPlate::new);
+        public static final RegistryObject<Item> PURPUR_GLASS_PLATE = ITEMS.register("plate_purpur_glass", ItemPlate::new);
+        public static final RegistryObject<Item> RHENIUM_PLATE = ITEMS.register("plate_rhenium", ItemPlate::new);
+        public static final RegistryObject<Item> RHODIUM_PLATE = ITEMS.register("plate_rhodium", ItemPlate::new);
+        public static final RegistryObject<Item> SOUL_GLASS_PLATE = ITEMS.register("plate_soul_glass", ItemPlate::new);
+        public static final RegistryObject<Item> SPRING_STEEL_PLATE = ITEMS.register("plate_spring_steel", ItemPlate::new);
+        public static final RegistryObject<Item> STEEL_PLATE = ITEMS.register("plate_steel", ItemPlate::new);
+        public static final RegistryObject<Item> SYRAL_STEEL_PLATE = ITEMS.register("plate_syral_steel", ItemPlate::new);
+        public static final RegistryObject<Item> TIGO_PLATE = ITEMS.register("plate_tigo", ItemPlate::new);
+        public static final RegistryObject<Item> TIN_PLATE = ITEMS.register("plate_tin", ItemPlate::new);
+        public static final RegistryObject<Item> TITANIUM_PLATE = ITEMS.register("plate_titanium", ItemPlate::new);
+        public static final RegistryObject<Item> TUNGSTEN_PLATE = ITEMS.register("plate_tungsten", ItemPlate::new);
+        //Block Registry
         //Ores
             //Overworld Ores
             public static final RegistryObject<Block> ORE_ALUMINIUM = BLOCKS.register("ore_aluminium", () -> new OreBlock(3,3));

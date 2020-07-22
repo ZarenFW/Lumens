@@ -43,7 +43,7 @@ public class Lumens
     public static final ItemGroup TAB = new ItemGroup("LumensTab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(RegistryHandler.DRAKANINE.get());
+            return new ItemStack(RegistryHandler.ZARITE.get());
         }
     };
 }
