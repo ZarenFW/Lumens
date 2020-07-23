@@ -4,6 +4,7 @@ import com.Zaren.Lumens.Lumens;
 import com.Zaren.Lumens.blocks.BlockItemBase;
 import com.Zaren.Lumens.blocks.OreBlock;
 import com.Zaren.Lumens.items.ItemCrystal;
+import com.Zaren.Lumens.items.ItemGeode;
 import com.Zaren.Lumens.items.ItemIngot;
 import com.Zaren.Lumens.items.ItemPlate;
 import net.minecraft.block.Block;
@@ -46,6 +47,20 @@ public class RegistryHandler {
         public static final RegistryObject<Item> HALLINITE = ITEMS.register("crystal_hallinite", ItemCrystal::new);
         public static final RegistryObject<Item> XANDANZINE = ITEMS.register("crystal_xandanzine", ItemCrystal::new);
         public static final RegistryObject<Item> ZARITE = ITEMS.register("crystal_zarite", ItemCrystal::new);
+        //Geodes
+        public static final RegistryObject<Item> ARNALIOS_GEODE = ITEMS.register("geode_arnalios", ItemGeode::new);
+        public static final RegistryObject<Item> AZURITE_GEODE = ITEMS.register("geode_azurite", ItemGeode::new);
+        public static final RegistryObject<Item> CARNELIAN_GEODE = ITEMS.register("geode_carnelian", ItemGeode::new);
+        public static final RegistryObject<Item> CELESTINE_GEODE = ITEMS.register("geode_celestine", ItemGeode::new);
+        public static final RegistryObject<Item> DRAKANINE_GEODE = ITEMS.register("geode_drakanine", ItemGeode::new);
+        public static final RegistryObject<Item> HELIOTROPE_GEODE = ITEMS.register("geode_heliotrope", ItemGeode::new);
+        public static final RegistryObject<Item> KAI_STONE_GEODE = ITEMS.register("geode_kai_stone", ItemGeode::new);
+        public static final RegistryObject<Item> LUNARITE_GEODE = ITEMS.register("geode_lunarite", ItemGeode::new);
+        public static final RegistryObject<Item> NEPHRITE_GEODE = ITEMS.register("geode_nephrite", ItemGeode::new);
+        public static final RegistryObject<Item> ORTALOS_GEODE = ITEMS.register("geode_ortalos", ItemGeode::new);
+        public static final RegistryObject<Item> REALGAR_GEODE = ITEMS.register("geode_realgar", ItemGeode::new);
+        public static final RegistryObject<Item> SYRALTITE_GEODE = ITEMS.register("geode_syraltite", ItemGeode::new);
+        public static final RegistryObject<Item> TANZANITE_GEODE = ITEMS.register("geode_tanzanite", ItemGeode::new);
         //Ingots
         public static final RegistryObject<Item> ADAMANT = ITEMS.register("ingot_adamant", ItemIngot::new);
         public static final RegistryObject<Item> ALSCAN = ITEMS.register("ingot_alscan", ItemIngot::new);
