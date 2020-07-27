@@ -186,6 +186,29 @@
   "item.lumens.plate_titanium": "Titanium Plate",
   "item.lumens.plate_tungsten": "Tungsten Plate",
 
+  "item.lumens.wire_adamant": "Adamant Wire",
+  "item.lumens.wire_copper": "Copper Wire",
+  "item.lumens.wire_ender_gold": "Ender Gold Wire",
+  "item.lumens.wire_galinstan": "Galinstan Wire",
+  "item.lumens.wire_gallium": "Gallium Wire",
+  "item.lumens.wire_germanium": "Germanium Wire",
+  "item.lumens.wire_hc_steel": "HC Steel Wire",
+  "item.lumens.wire_lapis": "Lapis Wire",
+  "item.lumens.wire_lithium": "Lithium Wire",
+  "item.lumens.wire_lorite": "Lorite Wire",
+  "item.lumens.wire_nanite": "Nanite Wire",
+  "item.lumens.wire_nether_silver": "Nether Silver Wire",
+  "item.lumens.wire_redstone": "Redstone Wire",
+  "item.lumens.wire_yalite": "Yalite Wire",
+
+  "item.lumens.wire_shell_primitive": "Primitive Wire Shell",
+  "item.lumens.wire_shell_basic": "Basic Wire Shell",
+  "item.lumens.wire_shell_advanced": "Advanced Wire Shell",
+  "item.lumens.wire_shell_elite": "Elite Wire Shell",
+  "item.lumens.wire_shell_hellborn": "Hellborn Wire Shell",
+  "item.lumens.wire_shell_quantum": "Quantum Wire Shell",
+  "item.lumens.wire_shell_dragonforged": "Dragonforged Wire Shell",
+
   "block.lumens.ore_aluminium": "Aluminium Ore",
   "block.lumens.ore_antarium": "Antarium Ore",
   "block.lumens.ore_azurite": "Azurite Ore",
@@ -235,5 +258,15 @@
   "block.lumens.ore_trallinish": "Trallinish Ore",
   "block.lumens.ore_hallinite": "Hallinite Ore",
   "block.lumens.ore_xandanzine": "Xandanzine Ore",
-  "block.lumens.ore_zarite": "Zarite Ore"
+  "block.lumens.ore_zarite": "Zarite Ore",
+
+  "block.lumens.wire_primitive": "Primitive Wire",
+  "block.lumens.wire_basic": "Basic Wire",
+  "block.lumens.wire_advanced": "Advanced Wire",
+  "block.lumens.wire_elite": "Elite Wire",
+  "block.lumens.wire_hellborn": "Hellborn Wire",
+  "block.lumens.wire_quantum": "Quantum Wire",
+  "block.lumens.wire_dragonforged": "Dragonforged Wire",
+  "block.lumens.fluid_pipe": "Fluid Pipe"
+
 }

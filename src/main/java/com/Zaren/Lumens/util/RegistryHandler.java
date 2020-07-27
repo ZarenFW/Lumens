@@ -3,6 +3,8 @@ package com.Zaren.Lumens.util;
 import com.Zaren.Lumens.Lumens;
 import com.Zaren.Lumens.blocks.BlockItemBase;
 import com.Zaren.Lumens.blocks.OreBlock;
+import com.Zaren.Lumens.blocks.PipeBlock;
+import com.Zaren.Lumens.blocks.WireBlock;
 import com.Zaren.Lumens.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -11,6 +13,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.lwjgl.system.CallbackI;
+
+import java.rmi.registry.Registry;
 
 public class RegistryHandler {
 
@@ -208,7 +212,30 @@ public class RegistryHandler {
         public static final RegistryObject<Item> TIN_PLATE = ITEMS.register("plate_tin", ItemPlate::new);
         public static final RegistryObject<Item> TITANIUM_PLATE = ITEMS.register("plate_titanium", ItemPlate::new);
         public static final RegistryObject<Item> TUNGSTEN_PLATE = ITEMS.register("plate_tungsten", ItemPlate::new);
-        //Block Registry
+        // Wires
+        public static final RegistryObject<Item> ADAMANT_WIRE = ITEMS.register("wire_adamant", ItemWire::new);
+        public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("wire_copper", ItemWire::new);
+        public static final RegistryObject<Item> ENDER_GOLD_WIRE = ITEMS.register("wire_ender_gold", ItemWire::new);
+        public static final RegistryObject<Item> GALINSTAN_WIRE = ITEMS.register("wire_galinstan", ItemWire::new);
+        public static final RegistryObject<Item> GALLIUM_WIRE = ITEMS.register("wire_gallium", ItemWire::new);
+        public static final RegistryObject<Item> GERMANIUM_WIRE = ITEMS.register("wire_germanium", ItemWire::new);
+        public static final RegistryObject<Item> HC_STEEL_WIRE = ITEMS.register("wire_hc_steel", ItemWire::new);
+        public static final RegistryObject<Item> LAPIS_WIRE = ITEMS.register("wire_lapis", ItemWire::new);
+        public static final RegistryObject<Item> LITHIUM_WIRE = ITEMS.register("wire_lithium", ItemWire::new);
+        public static final RegistryObject<Item> LORITE_WIRE = ITEMS.register("wire_lorite", ItemWire::new);
+        public static final RegistryObject<Item> NANITE_WIRE = ITEMS.register("wire_nanite", ItemWire::new);
+        public static final RegistryObject<Item> NETHER_SILVER_WIRE = ITEMS.register("wire_nether_silver", ItemWire::new);
+        public static final RegistryObject<Item> REDSTONE_WIRE = ITEMS.register("wire_redstone", ItemWire::new);
+        public static final RegistryObject<Item> YALITE_WIRE = ITEMS.register("wire_yalite", ItemWire::new);
+        // Wire Shells
+        public static final RegistryObject<Item> PRIMITIVE_WIRE_SHELL = ITEMS.register("wire_shell_primitive", ItemWire::new);
+        public static final RegistryObject<Item> BASIC_WIRE_SHELL = ITEMS.register("wire_shell_basic", ItemWire::new);
+        public static final RegistryObject<Item> ADVANCED_WIRE_SHELL = ITEMS.register("wire_shell_advanced", ItemWire::new);
+        public static final RegistryObject<Item> ELITE_WIRE_SHELL = ITEMS.register("wire_shell_elite", ItemWire::new);
+        public static final RegistryObject<Item> HELLBORN_WIRE_SHELL = ITEMS.register("wire_shell_hellborn", ItemWire::new);
+        public static final RegistryObject<Item> QUANTUM_WIRE_SHELL = ITEMS.register("wire_shell_quantum", ItemWire::new);
+        public static final RegistryObject<Item> DRAGONFORGED_WIRE_SHELL = ITEMS.register("wire_shell_dragonforged", ItemWire::new);
+        // Block Registry
         //Ores
             //Overworld Ores
             public static final RegistryObject<Block> ORE_ALUMINIUM = BLOCKS.register("ore_aluminium", () -> new OreBlock(3,3));
@@ -261,9 +288,18 @@ public class RegistryHandler {
             public static final RegistryObject<Block> ORE_HALLINITE = BLOCKS.register("ore_hallinite", () -> new OreBlock(5,3));
             public static final RegistryObject<Block> ORE_XANDANZINE = BLOCKS.register("ore_xandanzine", () -> new OreBlock(5,3));
             public static final RegistryObject<Block> ORE_ZARITE = BLOCKS.register("ore_zarite", () -> new OreBlock(5,3));
+            //Wire Blocks
+            public static final RegistryObject<Block> WIRE_PRIMITIVE = BLOCKS.register("wire_primitive", () -> new WireBlock(0, 3));
+            public static final RegistryObject<Block> WIRE_BASIC = BLOCKS.register("wire_basic", () -> new WireBlock(0, 3));
+            public static final RegistryObject<Block> WIRE_ADVANCED = BLOCKS.register("wire_advanced", () -> new WireBlock(0, 3));
+            public static final RegistryObject<Block> WIRE_ELITE = BLOCKS.register("wire_elite", () -> new WireBlock(0, 3));
+            public static final RegistryObject<Block> WIRE_HELLBORN = BLOCKS.register("wire_hellborn", () -> new WireBlock(0, 3));
+            public static final RegistryObject<Block> WIRE_QUANTUM = BLOCKS.register("wire_quantum", () -> new WireBlock(0, 3));
+            public static final RegistryObject<Block> WIRE_DRAGONFORGED = BLOCKS.register("wire_dragonforged", () -> new WireBlock(0, 3));
+            public static final RegistryObject<Block> FLUID_PIPE = BLOCKS.register("fluid_pipe", () -> new PipeBlock(0, 3));
 
     //Block Item Registry
-            //Ores
+        //Ores
             //Overworld Ores
     public static final RegistryObject<Item> ORE_ALUMINIUM_ITEM = ITEMS.register("ore_aluminium", () -> new BlockItemBase(ORE_ALUMINIUM.get()));
     public static final RegistryObject<Item> ORE_ANTARIUM_ITEM = ITEMS.register("ore_antarium", () -> new BlockItemBase(ORE_ANTARIUM.get()));
@@ -315,4 +351,13 @@ public class RegistryHandler {
     public static final RegistryObject<Item> ORE_HALLINITE_ITEM = ITEMS.register("ore_hallinite", () -> new BlockItemBase(ORE_HALLINITE.get()));
     public static final RegistryObject<Item> ORE_XANDANZINE_ITEM = ITEMS.register("ore_xandanzine", () -> new BlockItemBase(ORE_XANDANZINE.get()));
     public static final RegistryObject<Item> ORE_ZARITE_ITEM = ITEMS.register("ore_zarite", () -> new BlockItemBase(ORE_ZARITE.get()));
+            //Wire Blocks
+    public static final RegistryObject<Item> WIRE_PRIMITIVE_ITEM = ITEMS.register("wire_primitive", () -> new BlockItemBase(WIRE_PRIMITIVE.get()));
+    public static final RegistryObject<Item> WIRE_BASIC_ITEM = ITEMS.register("wire_basic", () -> new BlockItemBase(WIRE_BASIC.get()));
+    public static final RegistryObject<Item> WIRE_ADVANCED_ITEM = ITEMS.register("wire_advanced", () -> new BlockItemBase(WIRE_ADVANCED.get()));
+    public static final RegistryObject<Item> WIRE_ELITE_ITEM = ITEMS.register("wire_elite", () -> new BlockItemBase(WIRE_ELITE.get()));
+    public static final RegistryObject<Item> WIRE_HELLBORN_ITEM = ITEMS.register("wire_hellborn", () -> new BlockItemBase(WIRE_HELLBORN.get()));
+    public static final RegistryObject<Item> WIRE_QUANTUM_ITEM = ITEMS.register("wire_quantum", () -> new BlockItemBase(WIRE_QUANTUM.get()));
+    public static final RegistryObject<Item> WIRE_DRAGONFORGED_ITEM = ITEMS.register("wire_dragonforged", () -> new BlockItemBase(WIRE_DRAGONFORGED.get()));
+    public static final RegistryObject<Item> FLUID_PIPE_ITEM = ITEMS.register("fluid_pipe", () -> new BlockItemBase(FLUID_PIPE.get()));
 }
