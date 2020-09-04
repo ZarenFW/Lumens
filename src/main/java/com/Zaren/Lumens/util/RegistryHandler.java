@@ -235,6 +235,37 @@ public class RegistryHandler {
         public static final RegistryObject<Item> HELLBORN_WIRE_SHELL = ITEMS.register("wire_shell_hellborn", ItemWire::new);
         public static final RegistryObject<Item> QUANTUM_WIRE_SHELL = ITEMS.register("wire_shell_quantum", ItemWire::new);
         public static final RegistryObject<Item> DRAGONFORGED_WIRE_SHELL = ITEMS.register("wire_shell_dragonforged", ItemWire::new);
+        // PVBs
+        public static final RegistryObject<Item> PRIMITIVE_PVB = ITEMS.register("pvb_primitive", ItemVB::new);
+        public static final RegistryObject<Item> BASIC_PVB = ITEMS.register("pvb_basic", ItemVB::new);
+        public static final RegistryObject<Item> ADVANCED_PVB = ITEMS.register("pvb_advanced", ItemVB::new);
+        public static final RegistryObject<Item> ELITE_PVB = ITEMS.register("pvb_elite", ItemVB::new);
+        public static final RegistryObject<Item> HELLBORN_PVB = ITEMS.register("pvb_hellborn", ItemVB::new);
+        public static final RegistryObject<Item> QUANTUM_PVB = ITEMS.register("pvb_quantum", ItemVB::new);
+        public static final RegistryObject<Item> DRAGONFORGED_PVB = ITEMS.register("pvb_dragonforged", ItemVB::new);
+        // LVBs
+        public static final RegistryObject<Item> PRIMITIVE_LVB = ITEMS.register("lvb_primitive", ItemVB::new);
+        public static final RegistryObject<Item> BASIC_LVB = ITEMS.register("lvb_basic", ItemVB::new);
+        public static final RegistryObject<Item> ADVANCED_LVB = ITEMS.register("lvb_advanced", ItemVB::new);
+        public static final RegistryObject<Item> ELITE_LVB = ITEMS.register("lvb_elite", ItemVB::new);
+        public static final RegistryObject<Item> HELLBORN_LVB = ITEMS.register("lvb_hellborn", ItemVB::new);
+        public static final RegistryObject<Item> QUANTUM_LVB = ITEMS.register("lvb_quantum", ItemVB::new);
+        public static final RegistryObject<Item> DRAGONFORGED_LVB = ITEMS.register("lvb_dragonforged", ItemVB::new);
+        // Reflectors
+        public static final RegistryObject<Item> PRIMITIVE_REFLECTOR = ITEMS.register("reflector_primitive", ItemReflector::new);
+        public static final RegistryObject<Item> BASIC_REFLECTOR = ITEMS.register("reflector_basic", ItemReflector::new);
+        public static final RegistryObject<Item> ADVANCED_REFLECTOR = ITEMS.register("reflector_advanced", ItemReflector::new);
+        public static final RegistryObject<Item> ELITE_REFLECTOR = ITEMS.register("reflector_elite", ItemReflector::new);
+        public static final RegistryObject<Item> HELLBORN_REFLECTOR = ITEMS.register("reflector_hellborn", ItemReflector::new);
+        public static final RegistryObject<Item> QUANTUM_REFLECTOR = ITEMS.register("reflector_quantum", ItemReflector::new);
+        public static final RegistryObject<Item> DRAGONFORGED_REFLECTOR = ITEMS.register("reflector_dragonforged", ItemReflector::new);
+        public static final RegistryObject<Item> PRIMITIVE_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_primitive", ItemReflector::new);
+        public static final RegistryObject<Item> BASIC_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_basic", ItemReflector::new);
+        public static final RegistryObject<Item> ADVANCED_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_advanced", ItemReflector::new);
+        public static final RegistryObject<Item> ELITE_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_elite", ItemReflector::new);
+        public static final RegistryObject<Item> HELLBORN_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_hellborn", ItemReflector::new);
+        public static final RegistryObject<Item> QUANTUM_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_quantum", ItemReflector::new);
+        public static final RegistryObject<Item> DRAGONFORGED_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_dragonforged", ItemReflector::new);
         // Block Registry
         //Ores
             //Overworld Ores
