@@ -298,6 +298,8 @@
   "block.lumens.wire_hellborn": "Hellborn Wire",
   "block.lumens.wire_quantum": "Quantum Wire",
   "block.lumens.wire_dragonforged": "Dragonforged Wire",
-  "block.lumens.fluid_pipe": "Fluid Pipe"
+  "block.lumens.fluid_pipe": "Fluid Pipe",
 
+
+  "block.lumens.solar_dragonforged": "Dragonforged Solar Panel"
 }

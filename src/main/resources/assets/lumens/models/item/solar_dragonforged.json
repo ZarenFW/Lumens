@@ -1,5 +1,5 @@
 {
-  "parent": "lumens:block/fluid_pipe",
+  "parent": "lumens:block/solar_dragonforged",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

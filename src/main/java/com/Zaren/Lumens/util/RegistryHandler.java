@@ -1,10 +1,7 @@
 package com.Zaren.Lumens.util;
 
 import com.Zaren.Lumens.Lumens;
-import com.Zaren.Lumens.blocks.BlockItemBase;
-import com.Zaren.Lumens.blocks.OreBlock;
-import com.Zaren.Lumens.blocks.PipeBlock;
-import com.Zaren.Lumens.blocks.WireBlock;
+import com.Zaren.Lumens.blocks.*;
 import com.Zaren.Lumens.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -328,7 +325,8 @@ public class RegistryHandler {
             public static final RegistryObject<Block> WIRE_QUANTUM = BLOCKS.register("wire_quantum", () -> new WireBlock(0, 3));
             public static final RegistryObject<Block> WIRE_DRAGONFORGED = BLOCKS.register("wire_dragonforged", () -> new WireBlock(0, 3));
             public static final RegistryObject<Block> FLUID_PIPE = BLOCKS.register("fluid_pipe", () -> new PipeBlock(0, 3));
-
+            //Solar Panels
+            public static final RegistryObject<Block> SOLAR_DRAGONFORGED = BLOCKS.register("solar_dragonforged", () -> new SolarBlock(0, 3));
     //Block Item Registry
         //Ores
             //Overworld Ores
@@ -391,4 +389,6 @@ public class RegistryHandler {
     public static final RegistryObject<Item> WIRE_QUANTUM_ITEM = ITEMS.register("wire_quantum", () -> new BlockItemBase(WIRE_QUANTUM.get()));
     public static final RegistryObject<Item> WIRE_DRAGONFORGED_ITEM = ITEMS.register("wire_dragonforged", () -> new BlockItemBase(WIRE_DRAGONFORGED.get()));
     public static final RegistryObject<Item> FLUID_PIPE_ITEM = ITEMS.register("fluid_pipe", () -> new BlockItemBase(FLUID_PIPE.get()));
+            //Solar Panels
+    public static final RegistryObject<Item> SOLAR_DRAGONFORGED_ITEM = ITEMS.register("solar_dragonforged", () -> new BlockItemBase(SOLAR_DRAGONFORGED.get()));
 }
