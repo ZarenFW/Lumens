@@ -200,6 +200,13 @@
   "item.lumens.wire_nether_silver": "Nether Silver Wire",
   "item.lumens.wire_redstone": "Redstone Wire",
   "item.lumens.wire_yalite": "Yalite Wire",
+  "item.lumens.wire_primitive": "Primitive Wire",
+  "item.lumens.wire_basic": "Basic Wire",
+  "item.lumens.wire_advanced": "Advanced Wire",
+  "item.lumens.wire_elite": "Elite Wire",
+  "item.lumens.wire_hellborn": "Hellborn Wire",
+  "item.lumens.wire_quantum": "Quantum Wire",
+  "item.lumens.wire_dragonforged": "Dragonforged Wire",
 
   "item.lumens.wire_shell_primitive": "Primitive Wire Shell",
   "item.lumens.wire_shell_basic": "Basic Wire Shell",
@@ -239,6 +246,28 @@
   "item.lumens.reflector_lunar_hellborn": "Hellborn Lunar Reflector",
   "item.lumens.reflector_lunar_quantum": "Quantum Lunar Reflector",
   "item.lumens.reflector_lunar_dragonforged": "Dragonforged Lunar Reflector",
+
+  "block.lumens.solar_primitive": "Primitive Solar Panel",
+  "block.lumens.solar_basic": "Basic Solar Panel",
+  "block.lumens.solar_advanced": "Advanced Solar Panel",
+  "block.lumens.solar_elite": "Elite Solar Panel",
+  "block.lumens.solar_hellborn": "Hellborn Solar Panel",
+  "block.lumens.solar_quantum": "Quantum Solar Panel",
+  "block.lumens.solar_dragonforged": "Dragonforged Solar Panel",
+  "block.lumens.lunar_primitive": "Primitive Lunar Panel",
+  "block.lumens.lunar_basic": "Basic Lunar Panel",
+  "block.lumens.lunar_advanced": "Advanced Lunar Panel",
+  "block.lumens.lunar_elite": "Elite Lunar Panel",
+  "block.lumens.lunar_hellborn": "Hellborn Lunar Panel",
+  "block.lumens.lunar_quantum": "Quantum Lunar Panel",
+  "block.lumens.lunar_dragonforged": "Dragonforged Lunar Panel",
+  "block.lumens.celestial_primitive": "Primitive Celestial Panel",
+  "block.lumens.celestial_basic": "Basic Celestial Panel",
+  "block.lumens.celestial_advanced": "Advanced Celestial Panel",
+  "block.lumens.celestial_elite": "Elite Celestial Panel",
+  "block.lumens.celestial_hellborn": "Hellborn Celestial Panel",
+  "block.lumens.celestial_quantum": "Quantum Celestial Panel",
+  "block.lumens.celestial_dragonforged": "Dragonforged Celestial Panel",
   
   "block.lumens.ore_aluminium": "Aluminium Ore",
   "block.lumens.ore_antarium": "Antarium Ore",
@@ -289,17 +318,5 @@
   "block.lumens.ore_trallinish": "Trallinish Ore",
   "block.lumens.ore_hallinite": "Hallinite Ore",
   "block.lumens.ore_xandanzine": "Xandanzine Ore",
-  "block.lumens.ore_zarite": "Zarite Ore",
-
-  "block.lumens.wire_primitive": "Primitive Wire",
-  "block.lumens.wire_basic": "Basic Wire",
-  "block.lumens.wire_advanced": "Advanced Wire",
-  "block.lumens.wire_elite": "Elite Wire",
-  "block.lumens.wire_hellborn": "Hellborn Wire",
-  "block.lumens.wire_quantum": "Quantum Wire",
-  "block.lumens.wire_dragonforged": "Dragonforged Wire",
-  "block.lumens.fluid_pipe": "Fluid Pipe",
-
-
-  "block.lumens.solar_dragonforged": "Dragonforged Solar Panel"
+  "block.lumens.ore_zarite": "Zarite Ore"
 }

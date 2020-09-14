@@ -1,3 +1,6 @@
 {
-  "parent": "lumens:block/wire_advanced"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lumens:items/wire_advanced"
+  }
 }

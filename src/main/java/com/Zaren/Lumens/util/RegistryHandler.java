@@ -224,6 +224,13 @@ public class RegistryHandler {
         public static final RegistryObject<Item> NETHER_SILVER_WIRE = ITEMS.register("wire_nether_silver", ItemWire::new);
         public static final RegistryObject<Item> REDSTONE_WIRE = ITEMS.register("wire_redstone", ItemWire::new);
         public static final RegistryObject<Item> YALITE_WIRE = ITEMS.register("wire_yalite", ItemWire::new);
+        public static final RegistryObject<Item> PRIMITIVE_WIRE = ITEMS.register("wire_primitive", ItemWire::new);
+        public static final RegistryObject<Item> BASIC_WIRE = ITEMS.register("wire_basic", ItemWire::new);
+        public static final RegistryObject<Item> ADVANCED_WIRE = ITEMS.register("wire_advanced", ItemWire::new);
+        public static final RegistryObject<Item> ELITE_WIRE = ITEMS.register("wire_elite", ItemWire::new);
+        public static final RegistryObject<Item> HELLBORN_WIRE = ITEMS.register("wire_hellborn", ItemWire::new);
+        public static final RegistryObject<Item> QUANTUM_WIRE = ITEMS.register("wire_quantum", ItemWire::new);
+        public static final RegistryObject<Item> DRAGONFORGED_WIRE = ITEMS.register("wire_dragonforged", ItemWire::new);
         // Wire Shells
         public static final RegistryObject<Item> PRIMITIVE_WIRE_SHELL = ITEMS.register("wire_shell_primitive", ItemWire::new);
         public static final RegistryObject<Item> BASIC_WIRE_SHELL = ITEMS.register("wire_shell_basic", ItemWire::new);
@@ -316,17 +323,30 @@ public class RegistryHandler {
             public static final RegistryObject<Block> ORE_HALLINITE = BLOCKS.register("ore_hallinite", () -> new OreBlock(5,3));
             public static final RegistryObject<Block> ORE_XANDANZINE = BLOCKS.register("ore_xandanzine", () -> new OreBlock(5,3));
             public static final RegistryObject<Block> ORE_ZARITE = BLOCKS.register("ore_zarite", () -> new OreBlock(5,3));
-            //Wire Blocks
-            public static final RegistryObject<Block> WIRE_PRIMITIVE = BLOCKS.register("wire_primitive", () -> new WireBlock(0, 3));
-            public static final RegistryObject<Block> WIRE_BASIC = BLOCKS.register("wire_basic", () -> new WireBlock(0, 3));
-            public static final RegistryObject<Block> WIRE_ADVANCED = BLOCKS.register("wire_advanced", () -> new WireBlock(0, 3));
-            public static final RegistryObject<Block> WIRE_ELITE = BLOCKS.register("wire_elite", () -> new WireBlock(0, 3));
-            public static final RegistryObject<Block> WIRE_HELLBORN = BLOCKS.register("wire_hellborn", () -> new WireBlock(0, 3));
-            public static final RegistryObject<Block> WIRE_QUANTUM = BLOCKS.register("wire_quantum", () -> new WireBlock(0, 3));
-            public static final RegistryObject<Block> WIRE_DRAGONFORGED = BLOCKS.register("wire_dragonforged", () -> new WireBlock(0, 3));
-            public static final RegistryObject<Block> FLUID_PIPE = BLOCKS.register("fluid_pipe", () -> new PipeBlock(0, 3));
             //Solar Panels
+            public static final RegistryObject<Block> SOLAR_ADVANCED = BLOCKS.register("solar_advanced", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> SOLAR_BASIC = BLOCKS.register("solar_basic", () -> new SolarBlock(0, 3));
             public static final RegistryObject<Block> SOLAR_DRAGONFORGED = BLOCKS.register("solar_dragonforged", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> SOLAR_ELITE = BLOCKS.register("solar_elite", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> SOLAR_HELLBORN = BLOCKS.register("solar_hellborn", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> SOLAR_PRIMITIVE = BLOCKS.register("solar_primitive", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> SOLAR_QUANTUM = BLOCKS.register("solar_quantum", () -> new SolarBlock(0, 3));
+            //Lunar Panels
+            public static final RegistryObject<Block> LUNAR_ADVANCED = BLOCKS.register("lunar_advanced", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> LUNAR_BASIC = BLOCKS.register("lunar_basic", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> LUNAR_DRAGONFORGED = BLOCKS.register("lunar_dragonforged", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> LUNAR_ELITE = BLOCKS.register("lunar_elite", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> LUNAR_HELLBORN = BLOCKS.register("lunar_hellborn", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> LUNAR_PRIMITIVE = BLOCKS.register("lunar_primitive", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> LUNAR_QUANTUM = BLOCKS.register("lunar_quantum", () -> new SolarBlock(0, 3));
+            //Lunar Panels
+            public static final RegistryObject<Block> CELESTIAL_ADVANCED = BLOCKS.register("celestial_advanced", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> CELESTIAL_BASIC = BLOCKS.register("celestial_basic", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> CELESTIAL_DRAGONFORGED = BLOCKS.register("celestial_dragonforged", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> CELESTIAL_ELITE = BLOCKS.register("celestial_elite", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> CELESTIAL_HELLBORN = BLOCKS.register("celestial_hellborn", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> CELESTIAL_PRIMITIVE = BLOCKS.register("celestial_primitive", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> CELESTIAL_QUANTUM = BLOCKS.register("celestial_quantum", () -> new SolarBlock(0, 3));
     //Block Item Registry
         //Ores
             //Overworld Ores
@@ -380,15 +400,28 @@ public class RegistryHandler {
     public static final RegistryObject<Item> ORE_HALLINITE_ITEM = ITEMS.register("ore_hallinite", () -> new BlockItemBase(ORE_HALLINITE.get()));
     public static final RegistryObject<Item> ORE_XANDANZINE_ITEM = ITEMS.register("ore_xandanzine", () -> new BlockItemBase(ORE_XANDANZINE.get()));
     public static final RegistryObject<Item> ORE_ZARITE_ITEM = ITEMS.register("ore_zarite", () -> new BlockItemBase(ORE_ZARITE.get()));
-            //Wire Blocks
-    public static final RegistryObject<Item> WIRE_PRIMITIVE_ITEM = ITEMS.register("wire_primitive", () -> new BlockItemBase(WIRE_PRIMITIVE.get()));
-    public static final RegistryObject<Item> WIRE_BASIC_ITEM = ITEMS.register("wire_basic", () -> new BlockItemBase(WIRE_BASIC.get()));
-    public static final RegistryObject<Item> WIRE_ADVANCED_ITEM = ITEMS.register("wire_advanced", () -> new BlockItemBase(WIRE_ADVANCED.get()));
-    public static final RegistryObject<Item> WIRE_ELITE_ITEM = ITEMS.register("wire_elite", () -> new BlockItemBase(WIRE_ELITE.get()));
-    public static final RegistryObject<Item> WIRE_HELLBORN_ITEM = ITEMS.register("wire_hellborn", () -> new BlockItemBase(WIRE_HELLBORN.get()));
-    public static final RegistryObject<Item> WIRE_QUANTUM_ITEM = ITEMS.register("wire_quantum", () -> new BlockItemBase(WIRE_QUANTUM.get()));
-    public static final RegistryObject<Item> WIRE_DRAGONFORGED_ITEM = ITEMS.register("wire_dragonforged", () -> new BlockItemBase(WIRE_DRAGONFORGED.get()));
-    public static final RegistryObject<Item> FLUID_PIPE_ITEM = ITEMS.register("fluid_pipe", () -> new BlockItemBase(FLUID_PIPE.get()));
             //Solar Panels
+    public static final RegistryObject<Item> SOLAR_ADVANCED_ITEM = ITEMS.register("solar_advanced", () -> new BlockItemBase(SOLAR_ADVANCED.get()));
+    public static final RegistryObject<Item> SOLAR_BASIC_ITEM = ITEMS.register("solar_basic", () -> new BlockItemBase(SOLAR_BASIC.get()));
     public static final RegistryObject<Item> SOLAR_DRAGONFORGED_ITEM = ITEMS.register("solar_dragonforged", () -> new BlockItemBase(SOLAR_DRAGONFORGED.get()));
+    public static final RegistryObject<Item> SOLAR_ELITE_ITEM = ITEMS.register("solar_elite", () -> new BlockItemBase(SOLAR_ELITE.get()));
+    public static final RegistryObject<Item> SOLAR_HELLBORN_ITEM = ITEMS.register("solar_hellborn", () -> new BlockItemBase(SOLAR_HELLBORN.get()));
+    public static final RegistryObject<Item> SOLAR_PRIMITIVE_ITEM = ITEMS.register("solar_primitive", () -> new BlockItemBase(SOLAR_PRIMITIVE.get()));
+    public static final RegistryObject<Item> SOLAR_QUANTUM_ITEM = ITEMS.register("solar_quantum", () -> new BlockItemBase(SOLAR_QUANTUM.get()));
+            //Lunar Panels
+    public static final RegistryObject<Item> LUNAR_ADVANCED_ITEM = ITEMS.register("lunar_advanced", () -> new BlockItemBase(LUNAR_ADVANCED.get()));
+    public static final RegistryObject<Item> LUNAR_BASIC_ITEM = ITEMS.register("lunar_basic", () -> new BlockItemBase(LUNAR_BASIC.get()));
+    public static final RegistryObject<Item> LUNAR_DRAGONFORGED_ITEM = ITEMS.register("lunar_dragonforged", () -> new BlockItemBase(LUNAR_DRAGONFORGED.get()));
+    public static final RegistryObject<Item> LUNAR_ELITE_ITEM = ITEMS.register("lunar_elite", () -> new BlockItemBase(LUNAR_ELITE.get()));
+    public static final RegistryObject<Item> LUNAR_HELLBORN_ITEM = ITEMS.register("lunar_hellborn", () -> new BlockItemBase(LUNAR_HELLBORN.get()));
+    public static final RegistryObject<Item> LUNAR_PRIMITIVE_ITEM = ITEMS.register("lunar_primitive", () -> new BlockItemBase(LUNAR_PRIMITIVE.get()));
+    public static final RegistryObject<Item> LUNAR_QUANTUM_ITEM = ITEMS.register("lunar_quantum", () -> new BlockItemBase(LUNAR_QUANTUM.get()));
+            //Lunar Panels
+    public static final RegistryObject<Item> CELESTIAL_ADVANCED_ITEM = ITEMS.register("celestial_advanced", () -> new BlockItemBase(CELESTIAL_ADVANCED.get()));
+    public static final RegistryObject<Item> CELESTIAL_BASIC_ITEM = ITEMS.register("celestial_basic", () -> new BlockItemBase(CELESTIAL_BASIC.get()));
+    public static final RegistryObject<Item> CELESTIAL_DRAGONFORGED_ITEM = ITEMS.register("celestial_dragonforged", () -> new BlockItemBase(CELESTIAL_DRAGONFORGED.get()));
+    public static final RegistryObject<Item> CELESTIAL_ELITE_ITEM = ITEMS.register("celestial_elite", () -> new BlockItemBase(CELESTIAL_ELITE.get()));
+    public static final RegistryObject<Item> CELESTIAL_HELLBORN_ITEM = ITEMS.register("celestial_hellborn", () -> new BlockItemBase(CELESTIAL_HELLBORN.get()));
+    public static final RegistryObject<Item> CELESTIAL_PRIMITIVE_ITEM = ITEMS.register("celestial_primitive", () -> new BlockItemBase(CELESTIAL_PRIMITIVE.get()));
+    public static final RegistryObject<Item> CELESTIAL_QUANTUM_ITEM = ITEMS.register("celestial_quantum", () -> new BlockItemBase(CELESTIAL_QUANTUM.get()));
 }

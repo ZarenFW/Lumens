@@ -13,7 +13,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraftforge.common.ToolType;
 
 public class SolarBlock extends Block {
-
+public static VoxelShape SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D);
     public SolarBlock(int harvestLevel, float hardness) {
         super(Properties.create(Material.ROCK)
                 .hardnessAndResistance(hardness, 6.0F)
@@ -21,5 +21,7 @@ public class SolarBlock extends Block {
                 .harvestLevel(harvestLevel)
                 .harvestTool(ToolType.PICKAXE)
                 );
+    }
+    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) { return SHAPE;
     }
 }
