@@ -1,0 +1,9 @@
+{
+  "parent": "lumens:block/cube/cube_lumens_machine",
+  "textures": {
+    "bottom": "lumens:blocks/grinder_primitive_side",
+    "front": "lumens:blocks/grinder_primitive_front_on_1",
+    "side": "lumens:blocks/grinder_primitive_side",
+    "top": "lumens:blocks/grinder_primitive_top"
+  }
+}

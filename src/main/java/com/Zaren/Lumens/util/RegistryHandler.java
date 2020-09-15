@@ -347,6 +347,15 @@ public class RegistryHandler {
             public static final RegistryObject<Block> CELESTIAL_HELLBORN = BLOCKS.register("celestial_hellborn", () -> new SolarBlock(0, 3));
             public static final RegistryObject<Block> CELESTIAL_PRIMITIVE = BLOCKS.register("celestial_primitive", () -> new SolarBlock(0, 3));
             public static final RegistryObject<Block> CELESTIAL_QUANTUM = BLOCKS.register("celestial_quantum", () -> new SolarBlock(0, 3));
+            //Machines
+            public static final RegistryObject<Block> GRINDER_PRIMITIVE = BLOCKS.register("grinder_primitive", () -> new MachineBlock(0,3));
+            public static final RegistryObject<Block> FURNACE_PRIMITIVE = BLOCKS.register("furnace_primitive", () -> new MachineBlock(0,3));
+            public static final RegistryObject<Block> COMPACTOR_PRIMITIVE = BLOCKS.register("compactor_primitive", () -> new MachineBlock(0,3));
+            public static final RegistryObject<Block> ALLOY_FURNACE_PRIMITIVE = BLOCKS.register("alloy_furnace_primitive", () -> new MachineBlock(0,3));
+            public static final RegistryObject<Block> AETHER_HARVESTER_PRIMITIVE = BLOCKS.register("aether_harvester_primitive", () -> new MachineBlock(0,3));
+            public static final RegistryObject<Block> EXTRUDER_PRIMITIVE = BLOCKS.register("extruder_primitive", () -> new MachineBlock(0,3));
+            public static final RegistryObject<Block> SONICATOR_PRIMITIVE = BLOCKS.register("sonicator_primitive", () -> new MachineBlock(0,3));
+            public static final RegistryObject<Block> FLUID_REACTOR_PRIMITIVE = BLOCKS.register("fluid_reactor_primitive", () -> new MachineBlock(0,3));
     //Block Item Registry
         //Ores
             //Overworld Ores
@@ -424,4 +433,13 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CELESTIAL_HELLBORN_ITEM = ITEMS.register("celestial_hellborn", () -> new BlockItemBase(CELESTIAL_HELLBORN.get()));
     public static final RegistryObject<Item> CELESTIAL_PRIMITIVE_ITEM = ITEMS.register("celestial_primitive", () -> new BlockItemBase(CELESTIAL_PRIMITIVE.get()));
     public static final RegistryObject<Item> CELESTIAL_QUANTUM_ITEM = ITEMS.register("celestial_quantum", () -> new BlockItemBase(CELESTIAL_QUANTUM.get()));
+        //Machines
+    public static final RegistryObject<Item> GRINDER_PRIMITIVE_ITEM = ITEMS.register("grinder_primitive", () -> new BlockItemBase(GRINDER_PRIMITIVE.get()));
+    public static final RegistryObject<Item> FURNACE_PRIMITIVE_ITEM = ITEMS.register("furnace_primitive", () -> new BlockItemBase(FURNACE_PRIMITIVE.get()));
+    public static final RegistryObject<Item> COMPACTOR_PRIMITIVE_ITEM = ITEMS.register("compactor_primitive", () -> new BlockItemBase(COMPACTOR_PRIMITIVE.get()));
+    public static final RegistryObject<Item> ALLOY_FURNACE_PRIMITIVE_ITEM = ITEMS.register("alloy_furnace_primitive", () -> new BlockItemBase(ALLOY_FURNACE_PRIMITIVE.get()));
+    public static final RegistryObject<Item> AETHER_HARVESTER_PRIMITIVE_ITEM = ITEMS.register("aether_harvester_primitive", () -> new BlockItemBase(AETHER_HARVESTER_PRIMITIVE.get()));
+    public static final RegistryObject<Item> EXTRUDER_PRIMITIVE_ITEM = ITEMS.register("extruder_primitive", () -> new BlockItemBase(EXTRUDER_PRIMITIVE.get()));
+    public static final RegistryObject<Item> SONICATOR_PRIMITIVE_ITEM = ITEMS.register("sonicator_primitive", () -> new BlockItemBase(SONICATOR_PRIMITIVE.get()));
+    public static final RegistryObject<Item> FLUID_REACTOR_PRIMITIVE_ITEM = ITEMS.register("fluid_reactor_primitive", () -> new BlockItemBase(FLUID_REACTOR_PRIMITIVE.get()));
 }

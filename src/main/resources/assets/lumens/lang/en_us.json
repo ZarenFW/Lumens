@@ -268,6 +268,15 @@
   "block.lumens.celestial_hellborn": "Hellborn Celestial Panel",
   "block.lumens.celestial_quantum": "Quantum Celestial Panel",
   "block.lumens.celestial_dragonforged": "Dragonforged Celestial Panel",
+
+  "block.lumens.grinder_primitive": "Primitive Grinding Mill",
+  "block.lumens.furnace_primitive": "Primitive Electric Furnace",
+  "block.lumens.compactor_primitive": "Primitive Compactor",
+  "block.lumens.alloy_furnace_primitive": "Primitive Mixing Furnace",
+  "block.lumens.aether_harvester_primitive": "Primitive Aether Harvester",
+  "block.lumens.extruder_primitive": "Primitive Wire Extruder",
+  "block.lumens.sonicator_primitive": "Primitive Sonicator",
+  "block.lumens.fluid_reactor_primitive": "Primitive Fluid Reactor",
   
   "block.lumens.ore_aluminium": "Aluminium Ore",
   "block.lumens.ore_antarium": "Antarium Ore",

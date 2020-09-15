@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "lumens:block/compactor_primitive"
+    },
+    "facing=south": {
+      "model": "lumens:block/compactor_primitive",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "lumens:block/compactor_primitive",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "lumens:block/compactor_primitive",
+      "y": 270
+    }
+  }
+}

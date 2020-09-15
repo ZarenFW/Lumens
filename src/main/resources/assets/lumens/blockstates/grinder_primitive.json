@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "lumens:block/grinder_primitive"
+    },
+    "facing=south": {
+      "model": "lumens:block/grinder_primitive",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "lumens:block/grinder_primitive",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "lumens:block/grinder_primitive",
+      "y": 270
+    }
+  }
+}
