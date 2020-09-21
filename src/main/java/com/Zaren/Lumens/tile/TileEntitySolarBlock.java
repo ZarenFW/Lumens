@@ -12,6 +12,10 @@ import com.Zaren.Lumens.blocks.containers.SolarEliteContainer;
 import com.Zaren.Lumens.blocks.containers.SolarHellbornContainer;
 import com.Zaren.Lumens.blocks.containers.SolarQuantumContainer;
 import com.Zaren.Lumens.blocks.containers.SolarDragonforgedContainer;
+<<<<<<< HEAD
+=======
+import com.Zaren.Lumens.config.Config;
+>>>>>>> master
 import com.Zaren.Lumens.network.PacketHandler;
 import com.Zaren.Lumens.network.packet.UpdateSolar;
 import com.Zaren.Lumens.tools.CustomEnergyStorage;
@@ -34,6 +38,10 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.fml.network.PacketDistributor;
+<<<<<<< HEAD
+=======
+import org.lwjgl.system.CallbackI;
+>>>>>>> master
 
 public class TileEntitySolarBlock extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
@@ -41,7 +49,10 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
     private LazyOptional<IEnergyStorage> energy = LazyOptional.of(this::createEnergy);
     private int energyGeneration, maxEnergyOutput;
     public int maxEnergy;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     private SolarPanelLevel levelSolarPanel;
     public int energyClient, energyProductionClient;
 
@@ -49,12 +60,49 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
     {
         super(tileEntitySolarPanel);
         this.levelSolarPanel = levelSolarPanel;
+<<<<<<< HEAD
         energyGeneration = (int) Math.pow(8, levelSolarPanel.ordinal());
         maxEnergyOutput = energyGeneration * 2;
         maxEnergy = energyGeneration * 1000;
         energyClient = energyProductionClient = -1;
     }
 
+=======
+        if(levelSolarPanel.ordinal()==0){energyGeneration = PRIMITIVE_GEN;}
+        else if(levelSolarPanel.ordinal()==1){energyGeneration = BASIC_GEN;}
+        else if(levelSolarPanel.ordinal()==2){energyGeneration = ADVANCED_GEN;}
+        else if(levelSolarPanel.ordinal()==3){energyGeneration = ELITE_GEN;}
+        else if(levelSolarPanel.ordinal()==4){energyGeneration = HELLBORN_GEN;}
+        else if(levelSolarPanel.ordinal()==5){energyGeneration = QUANTUM_GEN;}
+        else {energyGeneration = DRAGONFORGED_GEN;}
+        maxEnergyOutput = energyGeneration * 10;
+        if(levelSolarPanel.ordinal()==0){maxEnergy = PRIMITIVE_MAX;}
+        else if(levelSolarPanel.ordinal()==1){maxEnergy = BASIC_MAX;}
+        else if(levelSolarPanel.ordinal()==2){maxEnergy = ADVANCED_MAX;}
+        else if(levelSolarPanel.ordinal()==3){maxEnergy = ELITE_MAX;}
+        else if(levelSolarPanel.ordinal()==4){maxEnergy = HELLBORN_MAX;}
+        else if(levelSolarPanel.ordinal()==5){maxEnergy = QUANTUM_MAX;}
+        else {maxEnergy = DRAGONFORGED_MAX;}
+        energyClient = energyProductionClient = -1;
+    }
+
+    int PRIMITIVE_GEN = Config.PRIMITIVE_SOLARBLOCK_GENERATE.get();
+    int BASIC_GEN = Config.BASIC_SOLARBLOCK_GENERATE.get();
+    int ADVANCED_GEN = Config.ADVANCED_SOLARBLOCK_GENERATE.get();
+    int ELITE_GEN = Config.ELITE_SOLARBLOCK_GENERATE.get();
+    int HELLBORN_GEN = Config.HELLBORN_SOLARBLOCK_GENERATE.get();
+    int QUANTUM_GEN = Config.QUANTUM_SOLARBLOCK_GENERATE.get();
+    int DRAGONFORGED_GEN = Config.DRAGONFORGED_SOLARBLOCK_GENERATE.get();
+
+    int PRIMITIVE_MAX = Config.PRIMITIVE_SOLARBLOCK_MAXPOWER.get();
+    int BASIC_MAX = Config.BASIC_SOLARBLOCK_MAXPOWER.get();
+    int ADVANCED_MAX = Config.ADVANCED_SOLARBLOCK_MAXPOWER.get();
+    int ELITE_MAX = Config.ELITE_SOLARBLOCK_MAXPOWER.get();
+    int HELLBORN_MAX = Config.HELLBORN_SOLARBLOCK_MAXPOWER.get();
+    int QUANTUM_MAX = Config.QUANTUM_SOLARBLOCK_MAXPOWER.get();
+    int DRAGONFORGED_MAX = Config.DRAGONFORGED_SOLARBLOCK_MAXPOWER.get();
+
+>>>>>>> master
     private IEnergyStorage createEnergy()
     {
         return new CustomEnergyStorage(maxEnergyOutput, maxEnergy);
