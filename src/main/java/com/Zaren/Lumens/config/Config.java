@@ -18,6 +18,8 @@ public class Config {
 
     //Categories
 
+    public static String CATEGORY_POWER = "power";
+    public static String SUB_CATEGORY_SOLAR = "solar";
     public static String CATEGORY_WORLDGEN = "worldgen";
     public static String SUB_CATEGORY_OVERWORLD = "overworld";
     public static String SUB_CATEGORY_NETHER = "nether";
@@ -72,7 +74,13 @@ public class Config {
     public static String ZINC_ORE = "zinc_ore";
 
 
-    //Ores Config
+    //Power Config
+    //Solar
+    public static ForgeConfigSpec.IntValue SOLARBLOCK_MAXPOWER;
+    public static ForgeConfigSpec.IntValue SOLARBLOCK_GENERATE;
+    public static ForgeConfigSpec.IntValue SOLARBLOCK_SEND;
+    public static ForgeConfigSpec.IntValue SOLARBLOCK_TICKS;
+        //Ores Config
     //ADAMANT
     public static ForgeConfigSpec.IntValue ADAMANT_ORE_CHANCES;
     public static ForgeConfigSpec.IntValue ADAMANT_ORE_VEINSIZE;
@@ -330,6 +338,19 @@ public class Config {
         setupWorldgenConfig();
         COMMON_CONFIG = COMMON_BUILDER.build();
 
+    }
+    private static void setupSolarConfig(ForgeConfigSpec.Builder SERVER_BUILDER, ForgeConfigSpec.Builder CLIENT_BUILDER) {
+        SERVER_BUILDER.comment("Solar settings").push(SUB_CATEGORY_SOLAR);
+
+        SOLARBLOCK_MAXPOWER = SERVER_BUILDER.comment("Max power for Solar generator")
+                .defineInRange("maxPower", 100000, 0, Integer.MAX_VALUE);
+        SOLARBLOCK_GENERATE = SERVER_BUILDER.comment("Power generation per tick")
+                .defineInRange("generate", 1000, 0, Integer.MAX_VALUE);
+        SOLARBLOCK_SEND = SERVER_BUILDER.comment("Power generation to send per tick")
+                .defineInRange("send", 100, 0, Integer.MAX_VALUE);
+        SOLARBLOCK_TICKS = SERVER_BUILDER.comment("Ticks per tick")
+                .defineInRange("ticks", 1, 1, Integer.MAX_VALUE);
+        SERVER_BUILDER.pop();
     }
     private static void setupWorldgenConfig() {
         COMMON_BUILDER.comment("Ore generation").push(CATEGORY_WORLDGEN);

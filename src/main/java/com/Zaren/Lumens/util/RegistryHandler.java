@@ -2,14 +2,19 @@ package com.Zaren.Lumens.util;
 
 import com.Zaren.Lumens.Lumens;
 import com.Zaren.Lumens.blocks.*;
+import com.Zaren.Lumens.blocks.containers.SolarPrimitiveContainer;
 import com.Zaren.Lumens.items.*;
+import com.Zaren.Lumens.tile.TileEntityPrimitiveSolar;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.lwjgl.system.CallbackI;
+import com.Zaren.Lumens.tools.SolarPanelLevel;
 
 import java.rmi.registry.Registry;
 
@@ -18,9 +23,13 @@ public class RegistryHandler {
     //Init Handler
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Lumens.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Lumens.MOD_ID);
+    public static final DeferredRegister<TileEntityType<?>> TILES = new DeferredRegister<>(ForgeRegistries.TILE_ENTITIES, Lumens.MOD_ID);
+    public static final DeferredRegister<ContainerType<?>> CONTAINERS = new DeferredRegister<>(ForgeRegistries.CONTAINERS, Lumens.MOD_ID);
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     //Item Registry
@@ -324,29 +333,29 @@ public class RegistryHandler {
             public static final RegistryObject<Block> ORE_XANDANZINE = BLOCKS.register("ore_xandanzine", () -> new OreBlock(5,3));
             public static final RegistryObject<Block> ORE_ZARITE = BLOCKS.register("ore_zarite", () -> new OreBlock(5,3));
             //Solar Panels
-            public static final RegistryObject<Block> SOLAR_ADVANCED = BLOCKS.register("solar_advanced", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> SOLAR_BASIC = BLOCKS.register("solar_basic", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> SOLAR_DRAGONFORGED = BLOCKS.register("solar_dragonforged", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> SOLAR_ELITE = BLOCKS.register("solar_elite", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> SOLAR_HELLBORN = BLOCKS.register("solar_hellborn", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> SOLAR_PRIMITIVE = BLOCKS.register("solar_primitive", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> SOLAR_QUANTUM = BLOCKS.register("solar_quantum", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> SOLAR_ADVANCED = BLOCKS.register("solar_advanced", () -> new SolarBlock(SolarPanelLevel.PRIMITIVE));
+            public static final RegistryObject<Block> SOLAR_BASIC = BLOCKS.register("solar_basic", () -> new SolarBlock(SolarPanelLevel.BASIC));
+            public static final RegistryObject<Block> SOLAR_DRAGONFORGED = BLOCKS.register("solar_dragonforged", () -> new SolarBlock(SolarPanelLevel.ADVANCED));
+            public static final RegistryObject<Block> SOLAR_ELITE = BLOCKS.register("solar_elite", () -> new SolarBlock(SolarPanelLevel.ELITE));
+            public static final RegistryObject<Block> SOLAR_HELLBORN = BLOCKS.register("solar_hellborn", () -> new SolarBlock(SolarPanelLevel.HELLBORN));
+            public static final RegistryObject<Block> SOLAR_PRIMITIVE = BLOCKS.register("solar_primitive", () -> new SolarBlock(SolarPanelLevel.QUANTUM));
+            public static final RegistryObject<Block> SOLAR_QUANTUM = BLOCKS.register("solar_quantum", () -> new SolarBlock(SolarPanelLevel.DRAGONFORGED));
             //Lunar Panels
-            public static final RegistryObject<Block> LUNAR_ADVANCED = BLOCKS.register("lunar_advanced", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> LUNAR_BASIC = BLOCKS.register("lunar_basic", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> LUNAR_DRAGONFORGED = BLOCKS.register("lunar_dragonforged", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> LUNAR_ELITE = BLOCKS.register("lunar_elite", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> LUNAR_HELLBORN = BLOCKS.register("lunar_hellborn", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> LUNAR_PRIMITIVE = BLOCKS.register("lunar_primitive", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> LUNAR_QUANTUM = BLOCKS.register("lunar_quantum", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> LUNAR_ADVANCED = BLOCKS.register("lunar_advanced", () -> new SolarBlock(SolarPanelLevel.PRIMITIVE));
+            public static final RegistryObject<Block> LUNAR_BASIC = BLOCKS.register("lunar_basic", () -> new SolarBlock(SolarPanelLevel.BASIC));
+            public static final RegistryObject<Block> LUNAR_DRAGONFORGED = BLOCKS.register("lunar_dragonforged", () -> new SolarBlock(SolarPanelLevel.ADVANCED));
+            public static final RegistryObject<Block> LUNAR_ELITE = BLOCKS.register("lunar_elite", () -> new SolarBlock(SolarPanelLevel.ELITE));
+            public static final RegistryObject<Block> LUNAR_HELLBORN = BLOCKS.register("lunar_hellborn", () -> new SolarBlock(SolarPanelLevel.HELLBORN));
+            public static final RegistryObject<Block> LUNAR_PRIMITIVE = BLOCKS.register("lunar_primitive", () -> new SolarBlock(SolarPanelLevel.QUANTUM));
+            public static final RegistryObject<Block> LUNAR_QUANTUM = BLOCKS.register("lunar_quantum", () -> new SolarBlock(SolarPanelLevel.DRAGONFORGED));;
             //Lunar Panels
-            public static final RegistryObject<Block> CELESTIAL_ADVANCED = BLOCKS.register("celestial_advanced", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> CELESTIAL_BASIC = BLOCKS.register("celestial_basic", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> CELESTIAL_DRAGONFORGED = BLOCKS.register("celestial_dragonforged", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> CELESTIAL_ELITE = BLOCKS.register("celestial_elite", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> CELESTIAL_HELLBORN = BLOCKS.register("celestial_hellborn", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> CELESTIAL_PRIMITIVE = BLOCKS.register("celestial_primitive", () -> new SolarBlock(0, 3));
-            public static final RegistryObject<Block> CELESTIAL_QUANTUM = BLOCKS.register("celestial_quantum", () -> new SolarBlock(0, 3));
+            public static final RegistryObject<Block> CELESTIAL_ADVANCED = BLOCKS.register("celestial_advanced", () -> new SolarBlock(SolarPanelLevel.PRIMITIVE));;
+            public static final RegistryObject<Block> CELESTIAL_BASIC = BLOCKS.register("celestial_basic", () -> new SolarBlock(SolarPanelLevel.BASIC));;
+            public static final RegistryObject<Block> CELESTIAL_DRAGONFORGED = BLOCKS.register("celestial_dragonforged", () -> new SolarBlock(SolarPanelLevel.ADVANCED));;
+            public static final RegistryObject<Block> CELESTIAL_ELITE = BLOCKS.register("celestial_elite", () -> new SolarBlock(SolarPanelLevel.ELITE));;
+            public static final RegistryObject<Block> CELESTIAL_HELLBORN = BLOCKS.register("celestial_hellborn", () -> new SolarBlock(SolarPanelLevel.HELLBORN));;
+            public static final RegistryObject<Block> CELESTIAL_PRIMITIVE = BLOCKS.register("celestial_primitive", () -> new SolarBlock(SolarPanelLevel.QUANTUM));;
+            public static final RegistryObject<Block> CELESTIAL_QUANTUM = BLOCKS.register("celestial_quantum", () -> new SolarBlock(SolarPanelLevel.DRAGONFORGED));;
             //Machines
             public static final RegistryObject<Block> GRINDER_PRIMITIVE = BLOCKS.register("grinder_primitive", () -> new MachineBlock(0,3));
             public static final RegistryObject<Block> FURNACE_PRIMITIVE = BLOCKS.register("furnace_primitive", () -> new MachineBlock(0,3));
@@ -442,4 +451,39 @@ public class RegistryHandler {
     public static final RegistryObject<Item> EXTRUDER_PRIMITIVE_ITEM = ITEMS.register("extruder_primitive", () -> new BlockItemBase(EXTRUDER_PRIMITIVE.get()));
     public static final RegistryObject<Item> SONICATOR_PRIMITIVE_ITEM = ITEMS.register("sonicator_primitive", () -> new BlockItemBase(SONICATOR_PRIMITIVE.get()));
     public static final RegistryObject<Item> FLUID_REACTOR_PRIMITIVE_ITEM = ITEMS.register("fluid_reactor_primitive", () -> new BlockItemBase(FLUID_REACTOR_PRIMITIVE.get()));
+    //Tile Entities
+    //Solars
+    public static final RegistryObject<TileEntityType<TileEntityPrimitiveSolar>> PRIMITIVE_SOLAR_TILE = TILES.register("solar_primitive", () -> TileEntityType.Builder.create(TileEntityPrimitiveSolar::new, SOLAR_PRIMITIVE.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityPrimitiveSolar>> BASIC_SOLAR_TILE = TILES.register("solar_basic", () -> TileEntityType.Builder.create(TileEntityPrimitiveSolar::new, SOLAR_BASIC.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityPrimitiveSolar>> ADVANCED_SOLAR_TILE = TILES.register("solar_advanced", () -> TileEntityType.Builder.create(TileEntityPrimitiveSolar::new, SOLAR_ADVANCED.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityPrimitiveSolar>> ELITE_SOLAR_TILE = TILES.register("solar_elite", () -> TileEntityType.Builder.create(TileEntityPrimitiveSolar::new, SOLAR_ELITE.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityPrimitiveSolar>> HELLBORN_SOLAR_TILE = TILES.register("solar_hellborn", () -> TileEntityType.Builder.create(TileEntityPrimitiveSolar::new, SOLAR_HELLBORN.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityPrimitiveSolar>> QUANTUM_SOLAR_TILE = TILES.register("solar_quantum", () -> TileEntityType.Builder.create(TileEntityPrimitiveSolar::new, SOLAR_QUANTUM.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityPrimitiveSolar>> DRAGONFORGED_SOLAR_TILE = TILES.register("solar_dragonforged", () -> TileEntityType.Builder.create(TileEntityPrimitiveSolar::new, SOLAR_DRAGONFORGED.get()).build(null));
+    //Containers
+    //Solars
+    public static final RegistryObject<ContainerType<SolarPrimitiveContainer>> PRIMITIVE_SOLAR_CONTAINER = CONTAINERS.register("solar_primitive", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new SolarPrimitiveContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<SolarPrimitiveContainer>> BASIC_SOLAR_CONTAINER = CONTAINERS.register("solar_basic", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new SolarPrimitiveContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<SolarPrimitiveContainer>> ADVANCED_SOLAR_CONTAINER = CONTAINERS.register("solar_advanced", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new SolarPrimitiveContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<SolarPrimitiveContainer>> ELITE_SOLAR_CONTAINER = CONTAINERS.register("solar_elite", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new SolarPrimitiveContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<SolarPrimitiveContainer>> HELLBORN_SOLAR_CONTAINER = CONTAINERS.register("solar_hellborn", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new SolarPrimitiveContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<SolarPrimitiveContainer>> QUANTUM_SOLAR_CONTAINER = CONTAINERS.register("solar_quantum", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new SolarPrimitiveContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<SolarPrimitiveContainer>> DRAGONFORGED_SOLAR_CONTAINER = CONTAINERS.register("solar_dragonforged", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new SolarPrimitiveContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+
 }
+
+

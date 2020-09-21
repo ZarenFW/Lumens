@@ -1,22 +1,25 @@
 package com.Zaren.Lumens.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.IProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
+import java.util.Random;
 
 public class MachineBlock extends Block {
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+    public static final BooleanProperty ACTIVE = BlockStateProperties.LIT;
 
     public MachineBlock(int harvestLevel, float hardness) {
         super(Properties.create(Material.ROCK)
@@ -26,6 +29,8 @@ public class MachineBlock extends Block {
                 .harvestTool(ToolType.PICKAXE)
                 );
     }
+
+
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
@@ -41,6 +46,8 @@ public class MachineBlock extends Block {
     }
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder){
-        builder.add(FACING);
+        builder.add(FACING, ACTIVE);
+
     }
+
 }
