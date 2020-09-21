@@ -1,23 +1,12 @@
 package com.Zaren.Lumens.tile;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import com.Zaren.Lumens.blocks.containers.SolarPrimitiveContainer;
-import com.Zaren.Lumens.blocks.containers.SolarBasicContainer;
-import com.Zaren.Lumens.blocks.containers.SolarAdvancedContainer;
-import com.Zaren.Lumens.blocks.containers.SolarEliteContainer;
-import com.Zaren.Lumens.blocks.containers.SolarHellbornContainer;
-import com.Zaren.Lumens.blocks.containers.SolarQuantumContainer;
-import com.Zaren.Lumens.blocks.containers.SolarDragonforgedContainer;
+import com.Zaren.Lumens.blocks.containers.*;
 import com.Zaren.Lumens.config.Config;
 import com.Zaren.Lumens.network.PacketHandler;
-import com.Zaren.Lumens.network.packet.UpdateSolar;
+import com.Zaren.Lumens.network.packet.UpdateLunar;
 import com.Zaren.Lumens.tools.CustomEnergyStorage;
-import com.Zaren.Lumens.tools.ProductionSolar;
-import com.Zaren.Lumens.tools.SolarPanelLevel;
+import com.Zaren.Lumens.tools.ProductionLunar;
+import com.Zaren.Lumens.tools.LunarPanelLevel;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
@@ -35,35 +24,38 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.fml.network.PacketDistributor;
-import org.lwjgl.system.CallbackI;
 
-public class TileEntitySolarBlock extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class TileEntityLunarBlock extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
     // Energy
     private LazyOptional<IEnergyStorage> energy = LazyOptional.of(this::createEnergy);
     private int energyGeneration, maxEnergyOutput;
     public int maxEnergy;
-    private SolarPanelLevel levelSolarPanel;
+    private LunarPanelLevel levelLunarPanel;
     public int energyClient, energyProductionClient;
 
-    public TileEntitySolarBlock(SolarPanelLevel levelSolarPanel, TileEntityType<?> tileEntitySolarPanel)
+    public TileEntityLunarBlock(LunarPanelLevel levelLunarPanel, TileEntityType<?> tileEntityLunarPanel)
     {
-        super(tileEntitySolarPanel);
-        this.levelSolarPanel = levelSolarPanel;
-        if(levelSolarPanel.ordinal()==0){energyGeneration = PRIMITIVE_GEN;}
-        else if(levelSolarPanel.ordinal()==1){energyGeneration = BASIC_GEN;}
-        else if(levelSolarPanel.ordinal()==2){energyGeneration = ADVANCED_GEN;}
-        else if(levelSolarPanel.ordinal()==3){energyGeneration = ELITE_GEN;}
-        else if(levelSolarPanel.ordinal()==4){energyGeneration = HELLBORN_GEN;}
-        else if(levelSolarPanel.ordinal()==5){energyGeneration = QUANTUM_GEN;}
+        super(tileEntityLunarPanel);
+        this.levelLunarPanel = levelLunarPanel;
+        if(levelLunarPanel.ordinal()==0){energyGeneration = PRIMITIVE_GEN;}
+        else if(levelLunarPanel.ordinal()==1){energyGeneration = BASIC_GEN;}
+        else if(levelLunarPanel.ordinal()==2){energyGeneration = ADVANCED_GEN;}
+        else if(levelLunarPanel.ordinal()==3){energyGeneration = ELITE_GEN;}
+        else if(levelLunarPanel.ordinal()==4){energyGeneration = HELLBORN_GEN;}
+        else if(levelLunarPanel.ordinal()==5){energyGeneration = QUANTUM_GEN;}
         else {energyGeneration = DRAGONFORGED_GEN;}
         maxEnergyOutput = energyGeneration * 10;
-        if(levelSolarPanel.ordinal()==0){maxEnergy = PRIMITIVE_MAX;}
-        else if(levelSolarPanel.ordinal()==1){maxEnergy = BASIC_MAX;}
-        else if(levelSolarPanel.ordinal()==2){maxEnergy = ADVANCED_MAX;}
-        else if(levelSolarPanel.ordinal()==3){maxEnergy = ELITE_MAX;}
-        else if(levelSolarPanel.ordinal()==4){maxEnergy = HELLBORN_MAX;}
-        else if(levelSolarPanel.ordinal()==5){maxEnergy = QUANTUM_MAX;}
+        if(levelLunarPanel.ordinal()==0){maxEnergy = PRIMITIVE_MAX;}
+        else if(levelLunarPanel.ordinal()==1){maxEnergy = BASIC_MAX;}
+        else if(levelLunarPanel.ordinal()==2){maxEnergy = ADVANCED_MAX;}
+        else if(levelLunarPanel.ordinal()==3){maxEnergy = ELITE_MAX;}
+        else if(levelLunarPanel.ordinal()==4){maxEnergy = HELLBORN_MAX;}
+        else if(levelLunarPanel.ordinal()==5){maxEnergy = QUANTUM_MAX;}
         else {maxEnergy = DRAGONFORGED_MAX;}
         energyClient = energyProductionClient = -1;
     }
@@ -99,7 +91,7 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
             if(energyClient != getEnergy() || energyProductionClient != currentAmountEnergyProduced())
             {
                 int energyProduced = (getEnergy() != getMaxEnergy()) ? currentAmountEnergyProduced() : 0;
-                PacketHandler.INSTANCE.send(PacketDistributor.ALL.noArg(), new UpdateSolar(getPos(), getEnergy(), energyProduced));
+                PacketHandler.INSTANCE.send(PacketDistributor.ALL.noArg(), new UpdateLunar(getPos(), getEnergy(), energyProduced));
             }
         }
     }
@@ -116,7 +108,7 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
 
     private int currentAmountEnergyProduced()
     {
-        return (int) (energyGeneration * ProductionSolar.computeSunIntensity(world, getPos(), levelSolarPanel));
+        return (int) (energyGeneration * ProductionLunar.computeMoonIntensity(world, getPos(), levelLunarPanel));
     }
 
     private void sendEnergy()
@@ -183,22 +175,22 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
     @Override
     public Container createMenu(int id, PlayerInventory playerInventory, PlayerEntity playerEntity)
     {
-        switch (levelSolarPanel)
+        switch (levelLunarPanel)
         {
             case PRIMITIVE:
-                return new SolarPrimitiveContainer(id, world, pos, playerEntity);
+                return new LunarPrimitiveContainer(id, world, pos, playerEntity);
             case BASIC:
-                return new SolarBasicContainer(id, world, pos, playerEntity);
+                return new LunarBasicContainer(id, world, pos, playerEntity);
             case ADVANCED:
-                return new SolarAdvancedContainer(id, world, pos, playerEntity);
+                return new LunarAdvancedContainer(id, world, pos, playerEntity);
             case ELITE:
-                return new SolarEliteContainer(id, world, pos, playerEntity);
+                return new LunarEliteContainer(id, world, pos, playerEntity);
             case HELLBORN:
-                return new SolarHellbornContainer(id, world, pos, playerEntity);
+                return new LunarHellbornContainer(id, world, pos, playerEntity);
             case QUANTUM:
-                return new SolarQuantumContainer(id, world, pos, playerEntity);
+                return new LunarQuantumContainer(id, world, pos, playerEntity);
             case DRAGONFORGED:
-                return new SolarDragonforgedContainer(id, world, pos, playerEntity);
+                return new LunarDragonforgedContainer(id, world, pos, playerEntity);
             default:
                 return null;
         }

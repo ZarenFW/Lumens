@@ -1,6 +1,7 @@
 package com.Zaren.Lumens.network;
 
 import com.Zaren.Lumens.Lumens;
+import com.Zaren.Lumens.network.packet.UpdateLunar;
 import com.Zaren.Lumens.network.packet.UpdateSolar;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkDirection;
@@ -22,6 +23,7 @@ public class PacketHandler {
     {
         int id = 0;
         INSTANCE.registerMessage(id++, UpdateSolar.class, UpdateSolar::toBytes, UpdateSolar::new, UpdateSolar::handle, Optional.of(NetworkDirection.PLAY_TO_CLIENT));
+        INSTANCE.registerMessage(id++, UpdateLunar.class, UpdateLunar::toBytes, UpdateLunar::new, UpdateLunar::handle, Optional.of(NetworkDirection.PLAY_TO_CLIENT));
     };
 }
 

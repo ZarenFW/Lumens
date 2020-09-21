@@ -1,50 +1,39 @@
 package com.Zaren.Lumens.blocks;
 
 import com.Zaren.Lumens.tile.*;
-import com.Zaren.Lumens.tools.SolarPanelLevel;
-import com.Zaren.Lumens.tools.Tooltip;
-import net.minecraft.block.*;
+import com.Zaren.Lumens.tools.LunarPanelLevel;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.*;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
-import java.util.List;
 
-public class SolarBlock extends Block {
-    private final SolarPanelLevel levelSolarPanel;
+public class LunarBlock extends Block {
+    private final LunarPanelLevel levelLunarPanel;
     private static final BooleanProperty WATERLOGGED = BooleanProperty.create("waterlogged");
 public static VoxelShape SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D);
-    public SolarBlock(SolarPanelLevel levelSolarPanel) {
+    public LunarBlock(LunarPanelLevel levelLunarPanel) {
         super(Properties.create(Material.ROCK)
                 .hardnessAndResistance(5F, 6.0F)
                 .sound(SoundType.METAL)
                 .harvestLevel(1)
                 .harvestTool(ToolType.PICKAXE));
-        this.levelSolarPanel = levelSolarPanel;
+        this.levelLunarPanel = levelLunarPanel;
         this.setDefaultState(getDefaultState().with(WATERLOGGED, false));
     }
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {return SHAPE;
@@ -53,22 +42,22 @@ public static VoxelShape SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world)
     {
-        switch (this.levelSolarPanel)
+        switch (this.levelLunarPanel)
         {
             case PRIMITIVE:
-                return new TileEntityPrimitiveSolar();
+                return new TileEntityPrimitiveLunar();
             case BASIC:
-                return new TileEntityBasicSolar();
+                return new TileEntityBasicLunar();
             case ADVANCED:
-                return new TileEntityAdvancedSolar();
+                return new TileEntityAdvancedLunar();
             case ELITE:
-                return new TileEntityEliteSolar();
+                return new TileEntityEliteLunar();
             case HELLBORN:
-                return new TileEntityHellbornSolar();
+                return new TileEntityHellbornLunar();
             case QUANTUM:
-                return new TileEntityQuantumSolar();
+                return new TileEntityQuantumLunar();
             case DRAGONFORGED:
-                return new TileEntityDragonforgedSolar();
+                return new TileEntityDragonforgedLunar();
             default:
                 return null;
         }
