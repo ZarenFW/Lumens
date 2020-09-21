@@ -1,9 +1,0 @@
-{
-  "parent": "lumens:block/cube/cube_lumens_machine",
-  "textures": {
-    "bottom": "lumens:blocks/machine_side_primitive",
-    "front": "lumens:blocks/fluid_reactor_primitive_front_off",
-    "side": "lumens:blocks/machine_side_primitive",
-    "top": "lumens:blocks/machine_top_primitive"
-  }
-}
