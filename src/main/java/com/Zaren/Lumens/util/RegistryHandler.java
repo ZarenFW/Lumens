@@ -5,6 +5,7 @@ import com.Zaren.Lumens.blocks.*;
 import com.Zaren.Lumens.blocks.containers.*;
 import com.Zaren.Lumens.items.*;
 import com.Zaren.Lumens.tile.*;
+import com.Zaren.Lumens.tools.CelestialPanelLevel;
 import com.Zaren.Lumens.tools.LunarPanelLevel;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.container.ContainerType;
@@ -85,13 +86,13 @@ public class RegistryHandler {
             public static final RegistryObject<Block> LUNAR_QUANTUM = BLOCKS.register("lunar_quantum", () -> new LunarBlock(LunarPanelLevel.QUANTUM));
             public static final RegistryObject<Block> LUNAR_DRAGONFORGED = BLOCKS.register("lunar_dragonforged", () -> new LunarBlock(LunarPanelLevel.DRAGONFORGED));
             //Celestial Panels
-            public static final RegistryObject<Block> CELESTIAL_PRIMITIVE = BLOCKS.register("celestial_primitive", () -> new LunarBlock(LunarPanelLevel.PRIMITIVE));
-            public static final RegistryObject<Block> CELESTIAL_BASIC = BLOCKS.register("celestial_basic", () -> new LunarBlock(LunarPanelLevel.BASIC));
-            public static final RegistryObject<Block> CELESTIAL_ADVANCED = BLOCKS.register("celestial_advanced", () -> new LunarBlock(LunarPanelLevel.ADVANCED));
-            public static final RegistryObject<Block> CELESTIAL_ELITE = BLOCKS.register("celestial_elite", () -> new LunarBlock(LunarPanelLevel.ELITE));
-            public static final RegistryObject<Block> CELESTIAL_HELLBORN = BLOCKS.register("celestial_hellborn", () -> new LunarBlock(LunarPanelLevel.HELLBORN));
-            public static final RegistryObject<Block> CELESTIAL_QUANTUM = BLOCKS.register("celestial_quantum", () -> new LunarBlock(LunarPanelLevel.QUANTUM));
-            public static final RegistryObject<Block> CELESTIAL_DRAGONFORGED = BLOCKS.register("celestial_dragonforged", () -> new LunarBlock(LunarPanelLevel.DRAGONFORGED));
+            public static final RegistryObject<Block> CELESTIAL_PRIMITIVE = BLOCKS.register("celestial_primitive", () -> new CelestialBlock(CelestialPanelLevel.PRIMITIVE));
+            public static final RegistryObject<Block> CELESTIAL_BASIC = BLOCKS.register("celestial_basic", () -> new CelestialBlock(CelestialPanelLevel.BASIC));
+            public static final RegistryObject<Block> CELESTIAL_ADVANCED = BLOCKS.register("celestial_advanced", () -> new CelestialBlock(CelestialPanelLevel.ADVANCED));
+            public static final RegistryObject<Block> CELESTIAL_ELITE = BLOCKS.register("celestial_elite", () -> new CelestialBlock(CelestialPanelLevel.ELITE));
+            public static final RegistryObject<Block> CELESTIAL_HELLBORN = BLOCKS.register("celestial_hellborn", () -> new CelestialBlock(CelestialPanelLevel.HELLBORN));
+            public static final RegistryObject<Block> CELESTIAL_QUANTUM = BLOCKS.register("celestial_quantum", () -> new CelestialBlock(CelestialPanelLevel.QUANTUM));
+            public static final RegistryObject<Block> CELESTIAL_DRAGONFORGED = BLOCKS.register("celestial_dragonforged", () -> new CelestialBlock(CelestialPanelLevel.DRAGONFORGED));
 
     //Block Item Registry
 
@@ -137,6 +138,14 @@ public class RegistryHandler {
     public static final RegistryObject<TileEntityType<TileEntityHellbornLunar>> HELLBORN_LUNAR_TILE = TILES.register("lunar_hellborn", () -> TileEntityType.Builder.create(TileEntityHellbornLunar::new, LUNAR_HELLBORN.get()).build(null));
     public static final RegistryObject<TileEntityType<TileEntityQuantumLunar>> QUANTUM_LUNAR_TILE = TILES.register("lunar_quantum", () -> TileEntityType.Builder.create(TileEntityQuantumLunar::new, LUNAR_QUANTUM.get()).build(null));
     public static final RegistryObject<TileEntityType<TileEntityDragonforgedLunar>> DRAGONFORGED_LUNAR_TILE = TILES.register("lunar_dragonforged", () -> TileEntityType.Builder.create(TileEntityDragonforgedLunar::new, LUNAR_DRAGONFORGED.get()).build(null));
+    //Celestials
+    public static final RegistryObject<TileEntityType<TileEntityPrimitiveCelestial>> PRIMITIVE_CELESTIAL_TILE = TILES.register("celestial_primitive", () -> TileEntityType.Builder.create(TileEntityPrimitiveCelestial::new, CELESTIAL_PRIMITIVE.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityBasicCelestial>> BASIC_CELESTIAL_TILE = TILES.register("celestial_basic", () -> TileEntityType.Builder.create(TileEntityBasicCelestial::new, CELESTIAL_BASIC.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityAdvancedCelestial>> ADVANCED_CELESTIAL_TILE = TILES.register("celestial_advanced", () -> TileEntityType.Builder.create(TileEntityAdvancedCelestial::new, CELESTIAL_ADVANCED.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityEliteCelestial>> ELITE_CELESTIAL_TILE = TILES.register("celestial_elite", () -> TileEntityType.Builder.create(TileEntityEliteCelestial::new, CELESTIAL_ELITE.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityHellbornCelestial>> HELLBORN_CELESTIAL_TILE = TILES.register("celestial_hellborn", () -> TileEntityType.Builder.create(TileEntityHellbornCelestial::new, CELESTIAL_HELLBORN.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityQuantumCelestial>> QUANTUM_CELESTIAL_TILE = TILES.register("celestial_quantum", () -> TileEntityType.Builder.create(TileEntityQuantumCelestial::new, CELESTIAL_QUANTUM.get()).build(null));
+    public static final RegistryObject<TileEntityType<TileEntityDragonforgedCelestial>> DRAGONFORGED_CELESTIAL_TILE = TILES.register("celestial_dragonforged", () -> TileEntityType.Builder.create(TileEntityDragonforgedCelestial::new, CELESTIAL_DRAGONFORGED.get()).build(null));
     //Containers    
     //Solars
     public static final RegistryObject<ContainerType<SolarPrimitiveContainer>> PRIMITIVE_SOLAR_CONTAINER = CONTAINERS.register("solar_primitive", () -> IForgeContainerType.create((windowId, inv, data) -> {
@@ -182,7 +191,28 @@ public class RegistryHandler {
     public static final RegistryObject<ContainerType<LunarDragonforgedContainer>> DRAGONFORGED_LUNAR_CONTAINER = CONTAINERS.register("lunar_dragonforged", () -> IForgeContainerType.create((windowId, inv, data) -> {
         return new LunarDragonforgedContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
     }));
-
+    //Celestials
+    public static final RegistryObject<ContainerType<CelestialPrimitiveContainer>> PRIMITIVE_CELESTIAL_CONTAINER = CONTAINERS.register("celestial_primitive", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new CelestialPrimitiveContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<CelestialBasicContainer>> BASIC_CELESTIAL_CONTAINER = CONTAINERS.register("celestial_basic", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new CelestialBasicContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<CelestialAdvancedContainer>> ADVANCED_CELESTIAL_CONTAINER = CONTAINERS.register("celestial_advanced", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new CelestialAdvancedContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<CelestialEliteContainer>> ELITE_CELESTIAL_CONTAINER = CONTAINERS.register("celestial_elite", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new CelestialEliteContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<CelestialHellbornContainer>> HELLBORN_CELESTIAL_CONTAINER = CONTAINERS.register("celestial_hellborn", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new CelestialHellbornContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<CelestialQuantumContainer>> QUANTUM_CELESTIAL_CONTAINER = CONTAINERS.register("celestial_quantum", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new CelestialQuantumContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
+    public static final RegistryObject<ContainerType<CelestialDragonforgedContainer>> DRAGONFORGED_CELESTIAL_CONTAINER = CONTAINERS.register("celestial_dragonforged", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        return new CelestialDragonforgedContainer(windowId, Lumens.proxy.getClientWorld(), data.readBlockPos(), Lumens.proxy.getClientPlayer());
+    }));
 }
 
 

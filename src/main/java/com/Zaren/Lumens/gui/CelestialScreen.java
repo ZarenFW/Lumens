@@ -1,10 +1,10 @@
 package com.Zaren.Lumens.gui;
 
 import com.Zaren.Lumens.Lumens;
-import com.Zaren.Lumens.blocks.containers.LunarContainer;
-import com.Zaren.Lumens.blocks.containers.LunarContainer;
-import com.Zaren.Lumens.tile.TileEntityLunarBlock;
-import com.Zaren.Lumens.tile.TileEntityLunarBlock;
+import com.Zaren.Lumens.blocks.containers.CelestialContainer;
+import com.Zaren.Lumens.blocks.containers.CelestialContainer;
+import com.Zaren.Lumens.tile.TileEntityCelestialBlock;
+import com.Zaren.Lumens.tile.TileEntityCelestialBlock;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
@@ -17,12 +17,12 @@ import java.text.DecimalFormat;
 import java.util.Collections;
 
 @OnlyIn(Dist.CLIENT)
-public class LunarScreen extends ContainerScreen<LunarContainer> {
+public class CelestialScreen extends ContainerScreen<CelestialContainer> {
 
-    private static final ResourceLocation TEXTURES = new ResourceLocation(Lumens.MOD_ID, "textures/gui/lunar_panel.png");
-    private final TileEntityLunarBlock tile;
+    private static final ResourceLocation TEXTURES = new ResourceLocation(Lumens.MOD_ID, "textures/gui/celestial_panel.png");
+    private final TileEntityCelestialBlock tile;
 
-    public LunarScreen(LunarContainer container, PlayerInventory inv, ITextComponent name)
+    public CelestialScreen(CelestialContainer container, PlayerInventory inv, ITextComponent name)
     {
         super(container, inv, name);
         this.guiLeft = 0;
@@ -64,10 +64,10 @@ public class LunarScreen extends ContainerScreen<LunarContainer> {
         // Energy
         int y = this.getEnergyScaled(60);
         this.blit(this.guiLeft + 10, this.guiTop + 12 + y, 176, 0, 16, 60 - y);
-        // Moon
+        // Star
         int on = tile.currentAmountEnergyProduced();
         if(on>0) {
-            this.blit(this.guiLeft + 162, this.guiTop + 71, 192, 0, 16, 16);
+            this.blit(this.guiLeft + 156, this.guiTop + 70, 192, 0, 17, 17);
         }
 
     }
@@ -104,3 +104,4 @@ public class LunarScreen extends ContainerScreen<LunarContainer> {
     }
 
 }
+

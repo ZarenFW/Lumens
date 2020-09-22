@@ -2,6 +2,7 @@
   "itemGroup.LumensTab": "Lumens",
   "solar.tooltip": "Generation Rate in the \u00A76day\u00A7f: ",
   "lunar.tooltip": "Generation Rate at \u00A75night\u00A7f: ",
+  "celestial.tooltip": "Generation Rate at \u00A7ball times\u00A7f: ",
   "item.lumens.pvb_primitive": "Primitive PVB",
   "item.lumens.pvb_basic": "Basic PVB",
   "item.lumens.pvb_advanced": "Advanced PVB",
@@ -31,8 +32,6 @@
   "item.lumens.reflector_lunar_quantum": "Quantum Lunar Reflector",
   "item.lumens.reflector_lunar_dragonforged": "Dragonforged Lunar Reflector",
   "block.lumens.solar_primitive": "Primitive Solar Panel",
-  "solar.tooltip": "Generation Rate in the \u00A76day\u00A7f: ",
-  "lunar.tooltip": "Generation Rate at \u00A75night\u00A7f: ",
   "block.lumens.solar_basic": "Basic Solar Panel",
   "block.lumens.solar_advanced": "Advanced Solar Panel",
   "block.lumens.solar_elite": "Elite Solar Panel",
@@ -53,4 +52,5 @@
   "block.lumens.celestial_hellborn": "Hellborn Celestial Panel",
   "block.lumens.celestial_quantum": "Quantum Celestial Panel",
   "block.lumens.celestial_dragonforged": "Dragonforged Celestial Panel"
+
 }

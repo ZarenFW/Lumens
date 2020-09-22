@@ -1,6 +1,9 @@
 package com.Zaren.Lumens.gui;
 
+import java.text.DecimalFormat;
 import java.util.Collections;
+
+import com.Zaren.Lumens.tools.ProductionSolar;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 import com.Zaren.Lumens.Lumens;
@@ -13,7 +16,10 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+@OnlyIn(Dist.CLIENT)
 public class SolarScreen extends ContainerScreen<SolarContainer> {
 
     private static final ResourceLocation TEXTURES = new ResourceLocation(Lumens.MOD_ID, "textures/gui/solar_panel.png");
@@ -22,6 +28,10 @@ public class SolarScreen extends ContainerScreen<SolarContainer> {
     public SolarScreen(SolarContainer container, PlayerInventory inv, ITextComponent name)
     {
         super(container, inv, name);
+        this.guiLeft = 0;
+        this.guiTop = 0;
+        this.xSize = 176;
+        this.ySize = 90;
         this.tile = container.tile;
     }
 
@@ -31,7 +41,7 @@ public class SolarScreen extends ContainerScreen<SolarContainer> {
         this.renderBackground();
         super.render(mouseX, mouseY, partialTicks);
         this.renderHoveredToolTip(mouseX, mouseY);
-        if(mouseX > guiLeft + 7 && mouseX < guiLeft + 29 && mouseY > guiTop + 10 && mouseY < guiTop + 77)
+        if(mouseX > guiLeft + 8 && mouseX < guiLeft + 27 && mouseY > guiTop + 10 && mouseY < guiTop + 73)
             this.renderTooltip(Collections.singletonList("Energy: " + getPercent() + "%"), mouseX, mouseY, font);
     }
 
@@ -44,7 +54,7 @@ public class SolarScreen extends ContainerScreen<SolarContainer> {
         String maxEnergy = "Max capacity: " + getEnergyFormatted(tile.maxEnergy);
         this.font.drawString(maxEnergy, (xSize / 2 - font.getStringWidth(maxEnergy) / 2) + 14, 30, 4210752);
 
-        String generation = "Generation: " + tile.energyProductionClient + " FE/t";
+        String generation = "Generation: " + tile.energyProductionClient + " RF/t";
         this.font.drawString(generation, (xSize / 2 - font.getStringWidth(generation) / 2) + 14, 40, 4210752);
     }
     @Override
@@ -57,14 +67,28 @@ public class SolarScreen extends ContainerScreen<SolarContainer> {
         // Energy
         int y = this.getEnergyScaled(60);
         this.blit(this.guiLeft + 10, this.guiTop + 12 + y, 176, 0, 16, 60 - y);
+        // Sun
+        int on = tile.currentAmountEnergyProduced();
+        if(on>0) {
+            this.blit(this.guiLeft + 157, this.guiTop + 71, 192, 0, 16, 16);
+        }
 
     }
-    private String getEnergyFormatted(int energy)
+    private static DecimalFormat df = new DecimalFormat("0.00");
+    private double energyNew;
+    private String getEnergyFormatted(double energy)
     {
-        if(energy >= 1000000)
-            return (energy / 1000) + " kFE";
+        if(energy>=1000000000){
+            energyNew = energy/1000000000;
+            return(df.format(energyNew)) + "GRF";}
+        else if(energy>= 1000000){
+            energyNew = energy/1000000;
+            return(df.format(energyNew)) + "MRF";}
+        else if(energy >= 1000){
+            energyNew = energy/1000;
+            return(df.format(energyNew)) + " kRF";}
         else
-            return energy + " FE";
+            return energy + " RF";
     }
 
     private int getEnergyScaled(int pixels)

@@ -35,6 +35,14 @@ public class Config {
     public static String HELLBORN_LUNAR = "hellborn lunar";
     public static String QUANTUM_LUNAR = "quantum lunar";
     public static String DRAGONFORGED_LUNAR = "dragonforged lunar";
+    public static String SUB_CATEGORY_CELESTIAL = "celestial";
+    public static String PRIMITIVE_CELESTIAL = "primitive celestial";
+    public static String BASIC_CELESTIAL = "basic celestial";
+    public static String ADVANCED_CELESTIAL = "advanced celestial";
+    public static String ELITE_CELESTIAL = "elite celestial";
+    public static String HELLBORN_CELESTIAL = "hellborn celestial";
+    public static String QUANTUM_CELESTIAL = "quantum celestial";
+    public static String DRAGONFORGED_CELESTIAL = "dragonforged celestial";
 
     //Power Config
     //Solar
@@ -67,7 +75,21 @@ public class Config {
     public static ForgeConfigSpec.IntValue QUANTUM_LUNARBLOCK_GENERATE;
     public static ForgeConfigSpec.IntValue DRAGONFORGED_LUNARBLOCK_MAXPOWER;
     public static ForgeConfigSpec.IntValue DRAGONFORGED_LUNARBLOCK_GENERATE;
-
+    //Celestial
+    public static ForgeConfigSpec.IntValue PRIMITIVE_CELESTIALBLOCK_MAXPOWER;
+    public static ForgeConfigSpec.IntValue PRIMITIVE_CELESTIALBLOCK_GENERATE;
+    public static ForgeConfigSpec.IntValue BASIC_CELESTIALBLOCK_MAXPOWER;
+    public static ForgeConfigSpec.IntValue BASIC_CELESTIALBLOCK_GENERATE;
+    public static ForgeConfigSpec.IntValue ADVANCED_CELESTIALBLOCK_MAXPOWER;
+    public static ForgeConfigSpec.IntValue ADVANCED_CELESTIALBLOCK_GENERATE;
+    public static ForgeConfigSpec.IntValue ELITE_CELESTIALBLOCK_MAXPOWER;
+    public static ForgeConfigSpec.IntValue ELITE_CELESTIALBLOCK_GENERATE;
+    public static ForgeConfigSpec.IntValue HELLBORN_CELESTIALBLOCK_MAXPOWER;
+    public static ForgeConfigSpec.IntValue HELLBORN_CELESTIALBLOCK_GENERATE;
+    public static ForgeConfigSpec.IntValue QUANTUM_CELESTIALBLOCK_MAXPOWER;
+    public static ForgeConfigSpec.IntValue QUANTUM_CELESTIALBLOCK_GENERATE;
+    public static ForgeConfigSpec.IntValue DRAGONFORGED_CELESTIALBLOCK_MAXPOWER;
+    public static ForgeConfigSpec.IntValue DRAGONFORGED_CELESTIALBLOCK_GENERATE;
 
 
     public static void loadConfig(ForgeConfigSpec spec, Path path) {
@@ -91,7 +113,7 @@ public class Config {
 
         COMMON_BUILDER.comment("Primitive Solar").push(PRIMITIVE_SOLAR);
         PRIMITIVE_SOLARBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Solar generator")
-                .defineInRange("maxPower", 160000, 0, 2147483647);
+                .defineInRange("maxPower", 16000, 0, 2147483647);
         PRIMITIVE_SOLARBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
                 .defineInRange("generate", 4, 0, 2147483647);
         COMMON_BUILDER.pop();
@@ -127,7 +149,7 @@ public class Config {
         COMMON_BUILDER.pop();
         COMMON_BUILDER.comment("Dragonforged Solar").push(DRAGONFORGED_SOLAR);
         DRAGONFORGED_SOLARBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Solar generator")
-                .defineInRange("maxPower", 2147483647, 0, 2147483647);
+                .defineInRange("maxPower", 2000000000, 0, 2147483647);
         DRAGONFORGED_SOLARBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
                 .defineInRange("generate", 1048576, 0, 2147483647);
         COMMON_BUILDER.pop();
@@ -136,7 +158,7 @@ public class Config {
 
         COMMON_BUILDER.comment("Primitive Lunar").push(PRIMITIVE_LUNAR);
         PRIMITIVE_LUNARBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Lunar generator")
-                .defineInRange("maxPower", 160000, 0, 2147483647);
+                .defineInRange("maxPower", 16000, 0, 2147483647);
         PRIMITIVE_LUNARBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
                 .defineInRange("generate", 4, 0, 2147483647);
         COMMON_BUILDER.pop();
@@ -172,8 +194,53 @@ public class Config {
         COMMON_BUILDER.pop();
         COMMON_BUILDER.comment("Dragonforged Lunar").push(DRAGONFORGED_LUNAR);
         DRAGONFORGED_LUNARBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Lunar generator")
-                .defineInRange("maxPower", 2147483647, 0, 2147483647);
+                .defineInRange("maxPower", 2000000000, 0, 2147483647);
         DRAGONFORGED_LUNARBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
+                .defineInRange("generate", 1048576, 0, 2147483647);
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.comment("Celestials").push(SUB_CATEGORY_CELESTIAL);
+
+        COMMON_BUILDER.comment("Primitive Celestial").push(PRIMITIVE_CELESTIAL);
+        PRIMITIVE_CELESTIALBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Celestial generator")
+                .defineInRange("maxPower", 16000, 0, 2147483647);
+        PRIMITIVE_CELESTIALBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
+                .defineInRange("generate", 4, 0, 2147483647);
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.comment("Basic Celestial").push(BASIC_CELESTIAL);
+        BASIC_CELESTIALBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Celestial generator")
+                .defineInRange("maxPower", 128000, 0, 2147483647);
+        BASIC_CELESTIALBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
+                .defineInRange("generate", 32, 0, 2147483647);
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.comment("Advanced Celestial").push(ADVANCED_CELESTIAL);
+        ADVANCED_CELESTIALBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Celestial generator")
+                .defineInRange("maxPower", 1024000, 0, 2147483647);
+        ADVANCED_CELESTIALBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
+                .defineInRange("generate", 256, 0, 2147483647);
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.comment("Elite Celestial").push(ELITE_CELESTIAL);
+        ELITE_CELESTIALBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Celestial generator")
+                .defineInRange("maxPower", 8192000, 0, 2147483647);
+        ELITE_CELESTIALBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
+                .defineInRange("generate", 2048, 0, 2147483647);
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.comment("Hellborn Celestial").push(HELLBORN_CELESTIAL);
+        HELLBORN_CELESTIALBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Celestial generator")
+                .defineInRange("maxPower", 65536000, 0, 2147483647);
+        HELLBORN_CELESTIALBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
+                .defineInRange("generate", 16384, 0, 2147483647);
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.comment("Quantum Celestial").push(QUANTUM_CELESTIAL);
+        QUANTUM_CELESTIALBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Celestial generator")
+                .defineInRange("maxPower", 524288000, 0, 2147483647);
+        QUANTUM_CELESTIALBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
+                .defineInRange("generate", 131072, 0, 2147483647);
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.comment("Dragonforged Celestial").push(DRAGONFORGED_CELESTIAL);
+        DRAGONFORGED_CELESTIALBLOCK_MAXPOWER = COMMON_BUILDER.comment("Max power for Celestial generator")
+                .defineInRange("maxPower", 2000000000, 0, 2147483647);
+        DRAGONFORGED_CELESTIALBLOCK_GENERATE = COMMON_BUILDER.comment("Power generation per tick")
                 .defineInRange("generate", 1048576, 0, 2147483647);
         COMMON_BUILDER.pop();
         COMMON_BUILDER.pop();
