@@ -12,10 +12,7 @@ import com.Zaren.Lumens.blocks.containers.SolarEliteContainer;
 import com.Zaren.Lumens.blocks.containers.SolarHellbornContainer;
 import com.Zaren.Lumens.blocks.containers.SolarQuantumContainer;
 import com.Zaren.Lumens.blocks.containers.SolarDragonforgedContainer;
-<<<<<<< HEAD
-=======
 import com.Zaren.Lumens.config.Config;
->>>>>>> master
 import com.Zaren.Lumens.network.PacketHandler;
 import com.Zaren.Lumens.network.packet.UpdateSolar;
 import com.Zaren.Lumens.tools.CustomEnergyStorage;
@@ -38,10 +35,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.fml.network.PacketDistributor;
-<<<<<<< HEAD
-=======
 import org.lwjgl.system.CallbackI;
->>>>>>> master
 
 public class TileEntitySolarBlock extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
@@ -49,10 +43,6 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
     private LazyOptional<IEnergyStorage> energy = LazyOptional.of(this::createEnergy);
     private int energyGeneration, maxEnergyOutput;
     public int maxEnergy;
-<<<<<<< HEAD
-
-=======
->>>>>>> master
     private SolarPanelLevel levelSolarPanel;
     public int energyClient, energyProductionClient;
 
@@ -60,14 +50,6 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
     {
         super(tileEntitySolarPanel);
         this.levelSolarPanel = levelSolarPanel;
-<<<<<<< HEAD
-        energyGeneration = (int) Math.pow(8, levelSolarPanel.ordinal());
-        maxEnergyOutput = energyGeneration * 2;
-        maxEnergy = energyGeneration * 1000;
-        energyClient = energyProductionClient = -1;
-    }
-
-=======
         if(levelSolarPanel.ordinal()==0){energyGeneration = PRIMITIVE_GEN;}
         else if(levelSolarPanel.ordinal()==1){energyGeneration = BASIC_GEN;}
         else if(levelSolarPanel.ordinal()==2){energyGeneration = ADVANCED_GEN;}
@@ -102,7 +84,6 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
     int QUANTUM_MAX = Config.QUANTUM_SOLARBLOCK_MAXPOWER.get();
     int DRAGONFORGED_MAX = Config.DRAGONFORGED_SOLARBLOCK_MAXPOWER.get();
 
->>>>>>> master
     private IEnergyStorage createEnergy()
     {
         return new CustomEnergyStorage(maxEnergyOutput, maxEnergy);
