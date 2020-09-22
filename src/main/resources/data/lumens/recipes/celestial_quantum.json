@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gsg",
+    "eee",
+    "glg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    "e":
+    {
+      "item": "minecraft:obsidian"
+    },
+    "s":
+    {
+      "item": "lumens:solar_quantum"
+    },
+    "l":
+    {
+      "item": "lumens:lunar_quantum"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:celestial_quantum",
+    "count": 1
+  }
+}

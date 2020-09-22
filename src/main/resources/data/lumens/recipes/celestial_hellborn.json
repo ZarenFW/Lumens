@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gsg",
+    "eee",
+    "glg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:magma_cream"
+    },
+    "e":
+    {
+      "item": "minecraft:nether_brick"
+    },
+    "s":
+    {
+      "item": "lumens:solar_hellborn"
+    },
+    "l":
+    {
+      "item": "lumens:lunar_hellborn"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:celestial_hellborn",
+    "count": 1
+  }
+}
