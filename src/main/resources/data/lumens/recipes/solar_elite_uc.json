@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:solar_advanced"
+    },
+    {
+      "item": "lumens:upgrade_core_elite"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:solar_elite",
+    "count": 1
+  }
+}

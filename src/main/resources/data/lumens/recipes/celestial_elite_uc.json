@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:celestial_advanced"
+    },
+    {
+      "item": "lumens:upgrade_core_lunar_elite"
+    },
+    {
+      "item": "lumens:upgrade_core_elite"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:celestial_elite",
+    "count": 1
+  }
+}
