@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gmg",
+    "mem",
+    "gmg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:glass"
+    },
+    "e":
+    {
+      "item": "minecraft:end_rod"
+    },
+    "m":
+    {
+      "item": "minecraft:purpur_block"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:reflector_dragonforged",
+    "count": 1
+  }
+}

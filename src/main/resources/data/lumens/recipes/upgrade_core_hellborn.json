@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:reflector_hellborn"
+    },
+    {
+      "item": "lumens:pvb_hellborn"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:upgrade_core_hellborn",
+    "count": 1
+  }
+}

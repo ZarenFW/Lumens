@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "grg",
+    "rer",
+    "grg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:emerald"
+    },
+    "r":
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "e":
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:lvb_elite",
+    "count": 1
+  }
+}

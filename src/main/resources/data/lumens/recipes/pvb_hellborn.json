@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "grg",
+    "rer",
+    "grg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:nether_brick"
+    },
+    "r":
+    {
+      "item": "minecraft:redstone"
+    },
+    "e":
+    {
+      "item": "minecraft:magma_cream"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:pvb_hellborn",
+    "count": 1
+  }
+}

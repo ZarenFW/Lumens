@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gmg",
+    "mem",
+    "gmg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:glass"
+    },
+    "e":
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    "m":
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:reflector_lunar_basic",
+    "count": 1
+  }
+}
