@@ -67,6 +67,21 @@ public class RegistryHandler {
         public static final RegistryObject<Item> HELLBORN_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_hellborn", ItemReflector::new);
         public static final RegistryObject<Item> QUANTUM_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_quantum", ItemReflector::new);
         public static final RegistryObject<Item> DRAGONFORGED_LUNAR_REFLECTOR = ITEMS.register("reflector_lunar_dragonforged", ItemReflector::new);
+        // Upgrade Cores
+        public static final RegistryObject<Item> PRIMITIVE_UPGRADE_CORE = ITEMS.register("upgrade_core_primitive", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> BASIC_UPGRADE_CORE = ITEMS.register("upgrade_core_basic", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> ADVANCED_UPGRADE_CORE = ITEMS.register("upgrade_core_advanced", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> ELITE_UPGRADE_CORE = ITEMS.register("upgrade_core_elite", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> HELLBORN_UPGRADE_CORE = ITEMS.register("upgrade_core_hellborn", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> QUANTUM_UPGRADE_CORE = ITEMS.register("upgrade_core_quantum", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> DRAGONFORGED_UPGRADE_CORE = ITEMS.register("upgrade_core_dragonforged", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> PRIMITIVE_LUNAR_UPGRADE_CORE = ITEMS.register("upgrade_core_lunar_primitive", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> BASIC_LUNAR_UPGRADE_CORE = ITEMS.register("upgrade_core_lunar_basic", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> ADVANCED_LUNAR_UPGRADE_CORE = ITEMS.register("upgrade_core_lunar_advanced", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> ELITE_LUNAR_UPGRADE_CORE = ITEMS.register("upgrade_core_lunar_elite", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> HELLBORN_LUNAR_UPGRADE_CORE = ITEMS.register("upgrade_core_lunar_hellborn", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> QUANTUM_LUNAR_UPGRADE_CORE = ITEMS.register("upgrade_core_lunar_quantum", ItemUpgradeCore::new);
+        public static final RegistryObject<Item> DRAGONFORGED_LUNAR_UPGRADE_CORE = ITEMS.register("upgrade_core_lunar_dragonforged", ItemUpgradeCore::new);
         // Block Registry
 
             //Solar Panels

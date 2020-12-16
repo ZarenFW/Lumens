@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "grg",
+    "rer",
+    "grg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:diamond"
+    },
+    "r":
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "e":
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:lvb_advanced",
+    "count": 1
+  }
+}

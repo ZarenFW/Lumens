@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gmg",
+    "mem",
+    "gmg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:glass"
+    },
+    "e":
+    {
+      "item": "minecraft:magma_cream"
+    },
+    "m":
+    {
+      "item": "minecraft:nether_brick"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:reflector_hellborn",
+    "count": 1
+  }
+}
