@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gsg",
+    "eee",
+    "glg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "e":
+    {
+      "item": "minecraft:coal"
+    },
+    "s":
+    {
+      "item": "lumens:solar_primitive"
+    },
+    "l":
+    {
+      "item": "lumens:lunar_primitive"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:celestial_primitive",
+    "count": 1
+  }
+}

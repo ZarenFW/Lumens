@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gsg",
+    "eee",
+    "glg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:diamond"
+    },
+    "e":
+    {
+      "item": "minecraft:redstone"
+    },
+    "s":
+    {
+      "item": "lumens:solar_advanced"
+    },
+    "l":
+    {
+      "item": "lumens:lunar_advanced"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:celestial_advanced",
+    "count": 1
+  }
+}
