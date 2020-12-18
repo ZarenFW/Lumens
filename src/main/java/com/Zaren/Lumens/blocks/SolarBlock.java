@@ -11,7 +11,6 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
@@ -86,7 +85,7 @@ public class SolarBlock extends Block {
     @SuppressWarnings("deprecation")
 
     @Override
-    public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity player, boolean willHarvest, IFluidState fluid) {
+    public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity player, boolean willHarvest, FluidState fluid) {
         return willHarvest || super.removedByPlayer(state, world, pos, player, willHarvest, fluid);
     }
 
@@ -112,7 +111,7 @@ public class SolarBlock extends Block {
         return true;
     }
     @Override
-    public IFluidState getFluidState(BlockState state)
+    public FluidState getFluidState(BlockState state)
     {
         return (FluidState) (state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state));
     }
