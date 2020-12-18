@@ -5,28 +5,27 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.Zaren.Lumens.blocks.containers.SolarPrimitiveContainer;
-import com.Zaren.Lumens.blocks.containers.SolarBasicContainer;
-import com.Zaren.Lumens.blocks.containers.SolarAdvancedContainer;
-import com.Zaren.Lumens.blocks.containers.SolarEliteContainer;
-import com.Zaren.Lumens.blocks.containers.SolarHellbornContainer;
-import com.Zaren.Lumens.blocks.containers.SolarQuantumContainer;
-import com.Zaren.Lumens.blocks.containers.SolarDragonforgedContainer;
+import com.Zaren.Lumens.blocks.containers.*;
 import com.Zaren.Lumens.config.Config;
 import com.Zaren.Lumens.network.PacketHandler;
 import com.Zaren.Lumens.network.packet.UpdateSolar;
 import com.Zaren.Lumens.tools.CustomEnergyStorage;
 import com.Zaren.Lumens.tools.ProductionSolar;
 import com.Zaren.Lumens.tools.SolarPanelLevel;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.capabilities.Capability;
@@ -37,7 +36,7 @@ import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.fml.network.PacketDistributor;
 import org.lwjgl.system.CallbackI;
 
-public class TileEntitySolarBlock extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
+public class TileEntitySolarBlock extends TileEntity implements ITickableTileEntity, INamedContainerProvider, IEnergyStorage {
 
     // Energy
     private LazyOptional<IEnergyStorage> energy = LazyOptional.of(this::createEnergy);
@@ -45,6 +44,7 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
     public int maxEnergy;
     private SolarPanelLevel levelSolarPanel;
     public int energyClient, energyProductionClient;
+    private SolarContainer delegate;
 
     public TileEntitySolarBlock(SolarPanelLevel levelSolarPanel, TileEntityType<?> tileEntitySolarPanel)
     {
@@ -88,7 +88,7 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
     {
         return new CustomEnergyStorage(maxEnergyOutput, maxEnergy);
     }
-
+    public long energy_long;
     @Override
     public void tick()
     {
@@ -96,21 +96,21 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
         {
             energy.ifPresent(e -> ((CustomEnergyStorage) e).generatePower(currentAmountEnergyProduced()));
             sendEnergy();
-            if(energyClient != getEnergy() || energyProductionClient != currentAmountEnergyProduced())
+            if(energyClient != getEnergyStored() || energyProductionClient != currentAmountEnergyProduced())
             {
-                int energyProduced = (getEnergy() != getMaxEnergy()) ? currentAmountEnergyProduced() : 0;
-                PacketHandler.INSTANCE.send(PacketDistributor.ALL.noArg(), new UpdateSolar(getPos(), getEnergy(), energyProduced));
+                int energyProduced = (getEnergyStored() != getMaxEnergyStored()) ? currentAmountEnergyProduced() : 0;
+                PacketHandler.INSTANCE.send(PacketDistributor.ALL.noArg(), new UpdateSolar(getPos(), getEnergyStored(), energyProduced));
             }
         }
     }
 
-    private int getMaxEnergy()
-    {
+    @Override
+    public int getMaxEnergyStored() {
         return getCapability(CapabilityEnergy.ENERGY).map(IEnergyStorage::getMaxEnergyStored).orElse(0);
     }
 
-    private int getEnergy()
-    {
+    @Override
+    public int getEnergyStored() {
         return getCapability(CapabilityEnergy.ENERGY).map(IEnergyStorage::getEnergyStored).orElse(0);
     }
 
@@ -157,28 +157,41 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
         }
         return super.getCapability(capability, facing);
     }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    public void read(CompoundNBT compound)
+    private void writeNBT(CompoundNBT nbt)
     {
-        CompoundNBT energyTag = compound.getCompound("energy");
-        energy.ifPresent(h -> ((INBTSerializable<CompoundNBT>) h).deserializeNBT(energyTag));
-        super.read(compound);
+         nbt.putInt("Energy", getEnergyStored());
     }
-
-    @SuppressWarnings("unchecked")
     @Override
     public CompoundNBT write(CompoundNBT compound)
     {
-        energy.ifPresent(h ->
-        {
-            CompoundNBT tag = ((INBTSerializable<CompoundNBT>) h).serializeNBT();
-            compound.put("energy", tag);
-        });
-        return super.write(compound);
+            CompoundNBT panel;
+            writeNBT(panel = new CompoundNBT());
+            compound.put("panel", panel);
+            return super.write(compound);
     }
-
+    @SuppressWarnings("unchecked")
+    private void readNBT(CompoundNBT nbt)
+    {
+        nbt.getInt("Energy");
+    }
+    @Override
+    public void read(BlockState stateIn, CompoundNBT compound)
+    {
+        readNBT(compound.getCompound("panel"));
+        super.read(stateIn, compound);
+    }
+    @Override
+    public void onDataPacket(NetworkManager net, SUpdateTileEntityPacket pkt)
+    {
+        readNBT(pkt.getNbtCompound());
+    }
+    @Override
+    public CompoundNBT getUpdateTag()
+    {
+        CompoundNBT nbt = new CompoundNBT();
+        writeNBT(nbt);
+        return nbt;
+    }
     @Nullable
     @Override
     public Container createMenu(int id, PlayerInventory playerInventory, PlayerEntity playerEntity)
@@ -203,10 +216,41 @@ public class TileEntitySolarBlock extends TileEntity implements ITickableTileEnt
                 return null;
         }
     }
-
+    public ItemStack generateItem(IItemProvider item)
+    {
+        ItemStack stack = new ItemStack(item);
+        stack.setTag(new CompoundNBT());
+         return stack;
+    }
+    @Override
+    public CompoundNBT serializeNBT()
+    {
+        CompoundNBT nbt = new CompoundNBT();
+        nbt.putString("Delegate", delegate.toString());
+        return nbt;
+    }
     @Override
     public ITextComponent getDisplayName()
     {
         return new TranslationTextComponent(this.getBlockState().getBlock().getTranslationKey());
+    }
+
+    @Override
+    public int receiveEnergy(int maxReceive, boolean simulate) {
+        return 0;
+    }
+
+    @Override
+    public int extractEnergy(int maxExtract, boolean simulate) {
+        return maxExtract;
+    }
+    @Override
+    public boolean canExtract() {
+        return true;
+    }
+
+    @Override
+    public boolean canReceive() {
+        return false;
     }
 }

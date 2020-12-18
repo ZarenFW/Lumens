@@ -151,12 +151,11 @@ public class TileEntityLunarBlock extends TileEntity implements ITickableTileEnt
     }
 
     @SuppressWarnings("unchecked")
-    @Override
     public void read(CompoundNBT compound)
     {
         CompoundNBT energyTag = compound.getCompound("energy");
         energy.ifPresent(h -> ((INBTSerializable<CompoundNBT>) h).deserializeNBT(energyTag));
-        super.read(compound);
+        super.read(getBlockState(),compound);
     }
 
     @SuppressWarnings("unchecked")

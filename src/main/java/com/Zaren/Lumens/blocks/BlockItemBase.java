@@ -24,69 +24,69 @@ public class BlockItemBase extends BlockItem {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         //Solars
        if (stack.getTranslationKey().contains("solar_primitive")) {
-                tooltip.add(new TranslationTextComponent( "solar.tooltip").appendText(Config.PRIMITIVE_SOLARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                tooltip.add(new TranslationTextComponent( "solar.tooltip").appendString(Config.PRIMITIVE_SOLARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
        }
        else if(stack.getTranslationKey().contains("solar_basic")){
-           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendText(Config.BASIC_SOLARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendString(Config.BASIC_SOLARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
        }
        else if(stack.getTranslationKey().contains("solar_advanced")){
-           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendText(Config.ADVANCED_SOLARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendString(Config.ADVANCED_SOLARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
        }
        else if(stack.getTranslationKey().contains("solar_elite")){
-           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendText(Config.ELITE_SOLARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendString(Config.ELITE_SOLARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
        }
        else if(stack.getTranslationKey().contains("solar_hellborn")){
-           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendText(Config.HELLBORN_SOLARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendString(Config.HELLBORN_SOLARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
        }
        else if(stack.getTranslationKey().contains("solar_quantum")){
-           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendText(Config.QUANTUM_SOLARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendString(Config.QUANTUM_SOLARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
        }
        else if(stack.getTranslationKey().contains("solar_dragonforged")){
-           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendText(Config.DRAGONFORGED_SOLARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+           tooltip.add(new TranslationTextComponent( "solar.tooltip").appendString(Config.DRAGONFORGED_SOLARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
        }
             //Lunars
                 if (stack.getTranslationKey().contains("lunar_primitive")) {
-                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendText(Config.PRIMITIVE_LUNARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendString(Config.PRIMITIVE_LUNARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                 }
                 else if(stack.getTranslationKey().contains("lunar_basic")){
-                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendText(Config.BASIC_LUNARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendString(Config.BASIC_LUNARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                 }
                 else if(stack.getTranslationKey().contains("lunar_advanced")){
-                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendText(Config.ADVANCED_LUNARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendString(Config.ADVANCED_LUNARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                 }
                 else if(stack.getTranslationKey().contains("lunar_elite")){
-                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendText(Config.ELITE_LUNARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendString(Config.ELITE_LUNARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                 }
                 else if(stack.getTranslationKey().contains("lunar_hellborn")){
-                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendText(Config.HELLBORN_LUNARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendString(Config.HELLBORN_LUNARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                 }
                 else if(stack.getTranslationKey().contains("lunar_quantum")){
-                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendText(Config.QUANTUM_LUNARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendString(Config.QUANTUM_LUNARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                 }
                 else if(stack.getTranslationKey().contains("lunar_dragonforged")){
-                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendText(Config.DRAGONFORGED_LUNARBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                    tooltip.add(new TranslationTextComponent( "lunar.tooltip").appendString(Config.DRAGONFORGED_LUNARBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                 }
                         //Celestial
                         if (stack.getTranslationKey().contains("celestial_primitive")) {
-                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendText(Config.PRIMITIVE_CELESTIALBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendString(Config.PRIMITIVE_CELESTIALBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                         }
                         else if(stack.getTranslationKey().contains("celestial_basic")){
-                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendText(Config.BASIC_CELESTIALBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendString(Config.BASIC_CELESTIALBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                         }
                         else if(stack.getTranslationKey().contains("celestial_advanced")){
-                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendText(Config.ADVANCED_CELESTIALBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendString(Config.ADVANCED_CELESTIALBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                         }
                         else if(stack.getTranslationKey().contains("celestial_elite")){
-                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendText(Config.ELITE_CELESTIALBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendString(Config.ELITE_CELESTIALBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                         }
                         else if(stack.getTranslationKey().contains("celestial_hellborn")){
-                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendText(Config.HELLBORN_CELESTIALBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendString(Config.HELLBORN_CELESTIALBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                         }
                         else if(stack.getTranslationKey().contains("celestial_quantum")){
-                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendText(Config.QUANTUM_CELESTIALBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendString(Config.QUANTUM_CELESTIALBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                         }
                         else if(stack.getTranslationKey().contains("celestial_dragonforged")){
-                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendText(Config.DRAGONFORGED_CELESTIALBLOCK_GENERATE.get().toString()).appendText("RF/t"));
+                            tooltip.add(new TranslationTextComponent( "celestial.tooltip").appendString(Config.DRAGONFORGED_CELESTIALBLOCK_GENERATE.get().toString()).appendString("RF/t"));
                         }
        
     }
