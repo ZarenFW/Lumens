@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:reflector_elite"
+    },
+    {
+      "item": "lumens:pvb_elite"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:upgrade_core_elite",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:reflector_lunar_hellborn"
+    },
+    {
+      "item": "lumens:lvb_hellborn"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:upgrade_core_lunar_hellborn",
+    "count": 1
+  }
+}

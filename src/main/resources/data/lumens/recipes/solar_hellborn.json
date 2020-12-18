@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ggg",
+    "ara",
+    "ava"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:glass_pane"
+    },
+    "a":
+    {
+      "item": "minecraft:magma_cream"
+    },
+    "r":
+    {
+      "item": "lumens:reflector_hellborn"
+    },
+    "v":
+    {
+      "item": "lumens:pvb_hellborn"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:solar_hellborn",
+    "count": 1
+  }
+}

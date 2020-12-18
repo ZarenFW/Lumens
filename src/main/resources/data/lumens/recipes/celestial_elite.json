@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gsg",
+    "eee",
+    "glg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:emerald"
+    },
+    "e":
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    "s":
+    {
+      "item": "lumens:solar_elite"
+    },
+    "l":
+    {
+      "item": "lumens:lunar_elite"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:celestial_elite",
+    "count": 1
+  }
+}

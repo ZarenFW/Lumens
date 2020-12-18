@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:celestial_hellborn"
+    },
+    {
+      "item": "lumens:upgrade_core_lunar_quantum"
+    },
+    {
+      "item": "lumens:upgrade_core_quantum"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:celestial_quantum",
+    "count": 1
+  }
+}

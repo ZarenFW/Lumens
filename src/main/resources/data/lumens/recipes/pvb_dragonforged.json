@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "grg",
+    "rer",
+    "grg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:purpur_block"
+    },
+    "r":
+    {
+      "item": "minecraft:redstone"
+    },
+    "e":
+    {
+      "item": "minecraft:shulker_shell"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:pvb_dragonforged",
+    "count": 1
+  }
+}

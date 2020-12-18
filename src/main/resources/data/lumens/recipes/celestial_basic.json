@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gsg",
+    "eee",
+    "glg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    "e":
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "s":
+    {
+      "item": "lumens:solar_basic"
+    },
+    "l":
+    {
+      "item": "lumens:lunar_basic"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:celestial_basic",
+    "count": 1
+  }
+}

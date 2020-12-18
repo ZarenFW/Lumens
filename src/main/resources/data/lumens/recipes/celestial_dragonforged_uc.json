@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:celestial_quantum"
+    },
+    {
+      "item": "lumens:upgrade_core_lunar_dragonforged"
+    },
+    {
+      "item": "lumens:upgrade_core_dragonforged"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:celestial_dragonforged",
+    "count": 1
+  }
+}

@@ -5,7 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class LunarBasicContainer extends SolarContainer{
+public class LunarBasicContainer extends LunarContainer{
     public LunarBasicContainer(int windowId, World world, BlockPos pos, PlayerEntity player)
     {
         super(RegistryHandler.BASIC_LUNAR_CONTAINER.get(), windowId, world, pos, player);

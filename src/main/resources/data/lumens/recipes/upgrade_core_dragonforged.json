@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:reflector_dragonforged"
+    },
+    {
+      "item": "lumens:pvb_dragonforged"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:upgrade_core_dragonforged",
+    "count": 1
+  }
+}

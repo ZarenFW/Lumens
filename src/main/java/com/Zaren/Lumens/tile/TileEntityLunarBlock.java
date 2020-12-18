@@ -60,21 +60,21 @@ public class TileEntityLunarBlock extends TileEntity implements ITickableTileEnt
         energyClient = energyProductionClient = -1;
     }
 
-    int PRIMITIVE_GEN = Config.PRIMITIVE_SOLARBLOCK_GENERATE.get();
-    int BASIC_GEN = Config.BASIC_SOLARBLOCK_GENERATE.get();
-    int ADVANCED_GEN = Config.ADVANCED_SOLARBLOCK_GENERATE.get();
-    int ELITE_GEN = Config.ELITE_SOLARBLOCK_GENERATE.get();
-    int HELLBORN_GEN = Config.HELLBORN_SOLARBLOCK_GENERATE.get();
-    int QUANTUM_GEN = Config.QUANTUM_SOLARBLOCK_GENERATE.get();
-    int DRAGONFORGED_GEN = Config.DRAGONFORGED_SOLARBLOCK_GENERATE.get();
+    int PRIMITIVE_GEN = Config.PRIMITIVE_LUNARBLOCK_GENERATE.get();
+    int BASIC_GEN = Config.BASIC_LUNARBLOCK_GENERATE.get();
+    int ADVANCED_GEN = Config.ADVANCED_LUNARBLOCK_GENERATE.get();
+    int ELITE_GEN = Config.ELITE_LUNARBLOCK_GENERATE.get();
+    int HELLBORN_GEN = Config.HELLBORN_LUNARBLOCK_GENERATE.get();
+    int QUANTUM_GEN = Config.QUANTUM_LUNARBLOCK_GENERATE.get();
+    int DRAGONFORGED_GEN = Config.DRAGONFORGED_LUNARBLOCK_GENERATE.get();
 
-    int PRIMITIVE_MAX = Config.PRIMITIVE_SOLARBLOCK_MAXPOWER.get();
-    int BASIC_MAX = Config.BASIC_SOLARBLOCK_MAXPOWER.get();
-    int ADVANCED_MAX = Config.ADVANCED_SOLARBLOCK_MAXPOWER.get();
-    int ELITE_MAX = Config.ELITE_SOLARBLOCK_MAXPOWER.get();
-    int HELLBORN_MAX = Config.HELLBORN_SOLARBLOCK_MAXPOWER.get();
-    int QUANTUM_MAX = Config.QUANTUM_SOLARBLOCK_MAXPOWER.get();
-    int DRAGONFORGED_MAX = Config.DRAGONFORGED_SOLARBLOCK_MAXPOWER.get();
+    int PRIMITIVE_MAX = Config.PRIMITIVE_LUNARBLOCK_MAXPOWER.get();
+    int BASIC_MAX = Config.BASIC_LUNARBLOCK_MAXPOWER.get();
+    int ADVANCED_MAX = Config.ADVANCED_LUNARBLOCK_MAXPOWER.get();
+    int ELITE_MAX = Config.ELITE_LUNARBLOCK_MAXPOWER.get();
+    int HELLBORN_MAX = Config.HELLBORN_LUNARBLOCK_MAXPOWER.get();
+    int QUANTUM_MAX = Config.QUANTUM_LUNARBLOCK_MAXPOWER.get();
+    int DRAGONFORGED_MAX = Config.DRAGONFORGED_LUNARBLOCK_MAXPOWER.get();
 
     private IEnergyStorage createEnergy()
     {
@@ -106,7 +106,7 @@ public class TileEntityLunarBlock extends TileEntity implements ITickableTileEnt
         return getCapability(CapabilityEnergy.ENERGY).map(IEnergyStorage::getEnergyStored).orElse(0);
     }
 
-    private int currentAmountEnergyProduced()
+    public int currentAmountEnergyProduced()
     {
         return (int) (energyGeneration * ProductionLunar.computeMoonIntensity(world, getPos(), levelLunarPanel));
     }
@@ -151,12 +151,11 @@ public class TileEntityLunarBlock extends TileEntity implements ITickableTileEnt
     }
 
     @SuppressWarnings("unchecked")
-    @Override
     public void read(CompoundNBT compound)
     {
         CompoundNBT energyTag = compound.getCompound("energy");
         energy.ifPresent(h -> ((INBTSerializable<CompoundNBT>) h).deserializeNBT(energyTag));
-        super.read(compound);
+        super.read(getBlockState(),compound);
     }
 
     @SuppressWarnings("unchecked")

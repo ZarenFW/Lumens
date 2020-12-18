@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gmg",
+    "mem",
+    "gmg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:glass"
+    },
+    "e":
+    {
+      "item": "minecraft:emerald"
+    },
+    "m":
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:reflector_lunar_elite",
+    "count": 1
+  }
+}

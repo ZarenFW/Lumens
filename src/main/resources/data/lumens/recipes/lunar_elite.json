@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ggg",
+    "ara",
+    "ava"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:glass_pane"
+    },
+    "a":
+    {
+      "item": "minecraft:emerald"
+    },
+    "r":
+    {
+      "item": "lumens:reflector_lunar_elite"
+    },
+    "v":
+    {
+      "item": "lumens:lvb_elite"
+    }
+  },
+
+  "result":
+  {
+    "item": "lumens:lunar_elite",
+    "count": 1
+  }
+}

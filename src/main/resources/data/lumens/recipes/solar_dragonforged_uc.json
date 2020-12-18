@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:solar_quantum"
+    },
+    {
+      "item": "lumens:upgrade_core_dragonforged"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:solar_dragonforged",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:lunar_basic"
+    },
+    {
+      "item": "lumens:upgrade_core_lunar_advanced"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:lunar_advanced",
+    "count": 1
+  }
+}

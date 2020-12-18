@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lumens:solar_hellborn"
+    },
+    {
+      "item": "lumens:upgrade_core_quantum"
+    }
+  ],
+  "result":
+  {
+    "item": "lumens:solar_quantum",
+    "count": 1
+  }
+}
